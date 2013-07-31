@@ -26,11 +26,9 @@
 }
 
 .rotateTitle{
-    border-radius: 5px 5px 5px 5px;
-    float: left;
     height: 100%;
     color: white;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
 
     transform: rotate(-90deg);
@@ -52,4 +50,10 @@
 }
 #people-content .people{
     width: 30%;
+}
+#people-content .people p{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-weight: bold;
 }
