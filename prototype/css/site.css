@@ -26,10 +26,30 @@
 }
 
 .rotateTitle{
-     background: none repeat scroll 0 0 gray;
     border-radius: 5px 5px 5px 5px;
     float: left;
     height: 100%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
     transform: rotate(-90deg);
-    width: 50px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    writing-mode: tb-rl;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#people-content .thumbnail{
+    border: none;
+    box-shadow: none;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#people-content #myCarousel{
+    width: 100%;
+}
+#people-content .people{
+    width: 30%;
 }
