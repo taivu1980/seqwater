@@ -22,21 +22,23 @@
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
-	<!-- START MENU -->
-	<div id="header"></div>
-	<!-- END MENU -->
-
-	<!-- START RENDER BANNER -->
-	<div id="banner">
-		<div id="pitch" class="span3">
-			<ul class="nav">
-				<li class="active"><a href="#">Managing water efficiently</a></li>
-				<li><a href="#">Conserving water</a></li>
-				<li><a href="#">Planning and Demand Management</a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- END RENDER BANNER -->
+    <div id="header">
+    	<!-- START MENU -->
+    	<div id="menu"></div>
+    	<!-- END MENU -->
+    
+    	<!-- START RENDER BANNER -->
+    	<div id="banner">
+    		<div id="pitch" class="span3">
+    			<ul class="nav">
+    				<li class="active"><a href="#">Managing water efficiently</a></li>
+    				<li><a href="#">Conserving water</a></li>
+    				<li><a href="#">Planning and Demand Management</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<!-- END RENDER BANNER -->
+    </div>
 
 	<!-- START RENDER PEOPLE BLOCK -->
 	<div id="people"></div>
@@ -82,7 +84,7 @@
 	<script src="js/holder/holder.js"></script>
 	
 	<script>
-    $("#header").load("header.html");
+    $("#menu").load("menu.html");
     $("#banner").load("banner.html");
     $("#people").load("people.html");
     $("#live").load("live.html");

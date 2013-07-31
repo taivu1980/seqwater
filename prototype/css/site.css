@@ -1,13 +1,15 @@
 
 /* --------------------header-----------------------*/
 #header{
-    padding: 20px 0;
-}
-
-#banner{
     background: url("../img/shasta.jpg")  no-repeat scroll center center / cover  transparent;
     width: 100%;
     height: 500px;
+}
+
+#menu{
+    background: white;
+    padding: 8px 0;
+    opacity: 0.5;
 }
 
 #pitch{
@@ -22,7 +24,13 @@
 
 #people{
     padding-top: 20px;
-    background: rgb(0,153,169);
+    background: rgb(0,176,240);
+    position: relative;
+}
+#live{
+    padding-top: 20px;
+    background: rgb(89,135,105);
+    position: relative;
 }
 
 .rotateTitle{
@@ -38,22 +46,21 @@
     writing-mode: tb-rl;
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
+
 #people .thumbnail{
     border: none;
     box-shadow: none;
-    padding-left: 10px;
-    padding-right: 20px;
 }
 
-#people #myCarousel{
-    width: 100%;
+.title-block{
+    position: absolute;
+    left: 0;
+    top: 40px;
 }
-#people .people{
-    width: 30%;
-}
-#people .people p{
-    text-align: center;
-    padding-top: 10px;
+
+#people .thumbnail p{
+    padding-top: 20px;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
