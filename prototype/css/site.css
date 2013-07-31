@@ -1,0 +1,35 @@
+
+/* --------------------header-----------------------*/
+#header{
+    padding: 20px 0;
+}
+
+#big-banner{
+    background: url("../img/shasta.jpg")  no-repeat scroll center center / cover  transparent;
+    width: 100%;
+    height: 500px;
+}
+
+#pitch{
+    padding-top: 100px;
+}
+
+#pitch li{
+    background: none repeat scroll 0 0 white;
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+#people-content{
+    padding-top: 20px;
+    background: rgb(0,153,169);
+}
+
+.rotateTitle{
+     background: none repeat scroll 0 0 gray;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 100%;
+    transform: rotate(-90deg);
+    width: 50px;
+}
