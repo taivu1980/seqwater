@@ -1,15 +1,15 @@
 
 /* --------------------header-----------------------*/
 #header{
-    background: url("../img/shasta.jpg")  no-repeat scroll center center / cover  transparent;
+    background: url("../img/banner1.jpg")  no-repeat scroll center center / cover  transparent;
     width: 100%;
-    height: 500px;
+    height: 745px;
 }
 
 #menu{
     background: white;
-    padding: 8px 0;
-    opacity: 0.5;
+    padding: 5px 0;
+    opacity: 0.8;
 }
 
 #pitch{
@@ -22,16 +22,6 @@
     opacity: 0.6;
 }
 
-#people{
-    padding-top: 20px;
-    background: rgb(0,176,240);
-    position: relative;
-}
-#live{
-    padding-top: 20px;
-    background: rgb(89,135,105);
-    position: relative;
-}
 
 .rotateTitle{
     height: 100%;
@@ -46,21 +36,65 @@
     writing-mode: tb-rl;
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-
-#people .thumbnail{
-    border: none;
-    box-shadow: none;
-}
-
 .title-block{
     position: absolute;
     left: 0;
     top: 40px;
 }
 
+/* --------------------------PEOPLE-------------------------*/
+#people{
+    padding-top: 20px;
+    background: rgb(0,176,240);
+    position: relative;
+}
+#people .thumbnail{
+    border: none;
+    box-shadow: none;
+}
 #people .thumbnail p{
     padding-top: 20px;
     color: white;
     font-weight: bold;
     text-align: center;
+}
+
+
+/* --------------------------LIVE-------------------------*/
+#live{
+    padding-top: 20px;
+    background: rgb(89,135,105);
+    position: relative;
+    color: white;
+}
+.flood-image {
+    background-image: url("../img/visual assets.png");
+    background-position: 30px 236px;
+    display: inline-block;
+    height: 40px;
+    width: 70px;
+}
+#live .title-live{
+    color: white;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.live-description{
+    padding-bottom: 20px;
+}
+.live-description,.live-content{
+    float:left;
+    width: 100%;
+}
+.live-content-left{
+    text-align: right;
+    text-transform: uppercase;
+    font: 14px;
+}
+.live-content-right{
+      font-size: 24px;
+    font-weight: bold;
 }
