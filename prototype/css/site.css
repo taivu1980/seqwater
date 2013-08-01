@@ -8,8 +8,18 @@
 
 #menu{
     background: white;
-    padding: 5px 0;
     opacity: 0.8;
+}
+
+.list-menu{
+    height: 80px;
+}
+.navbar .nav > li a{
+    
+}
+.navbar .nav > li .active,.navbar .nav > li .active:hover{
+    background-color: rgb(0,176,240);
+    height: 60px;
 }
 
 #pitch{
@@ -36,10 +46,20 @@
     writing-mode: tb-rl;
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-.title-block{
-    position: absolute;
-    left: 0;
-    top: 40px;
+div.center, p.center, img.center, a.center {
+    display: block;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+}
+.logo-images {
+    background-image: url("../img/visual assets.png");
+    background-position: 0 2px;
+    display: inline-block;
+    height: 80px;
+    width: 265px;
+    opacity: 1;
 }
 
 /* --------------------------PEOPLE-------------------------*/
@@ -58,14 +78,64 @@
     font-weight: bold;
     text-align: center;
 }
+#people .title-block{
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+#myCarousel{
+    position: relative;
+}
+.carousel-control-customize-left{
+    left: 0px;
+    position: absolute;
+    top: 40%;
+    width: 70px;
+    height: 40px;
+}
 
+.carousel-control-customize-right {
+    left: auto;
+    right: 0px;
+    position: absolute;
+    top: 40%;
+    width: 70px;
+    height: 40px;
+}
+
+.carousel-narrow-left {
+    background-image: url("../img/visual assets.png");
+    background-position: -32px 711px;
+    display: inline-block;
+    height: 55px;
+    width: 50px;
+}
+.carousel-narrow-right{
+    background-image: url("../img/visual assets.png");
+    background-position: 28px 711px;
+    display: inline-block;
+    height: 50px;
+    width: 66px;
+}
+#people .carousel,#people .thumbnails > li{
+    /*margin-bottom: 0px;*/
+}
 
 /* --------------------------LIVE-------------------------*/
 #live{
-    padding-top: 20px;
-    background: rgb(89,135,105);
+    padding: 20px 0;
+    background: rgb(0,153,169);
     position: relative;
     color: white;
+}
+.live-border{
+    border-left: 1px solid #C5C5C5;
+    border-right:1px solid #C5C5C5;
+}
+#live .title-block{
+    position: absolute;
+    left: 0;
+    top: 60px;
 }
 .flood-image {
     background-image: url("../img/visual assets.png");
@@ -74,9 +144,26 @@
     height: 40px;
     width: 70px;
 }
+
+.dam-image {
+    background-image: url("../img/visual assets.png");
+    background-position: -31px 236px;
+    display: inline-block;
+    height: 40px;
+    width: 67px;
+}
+
+
+.news-image {
+    background-image: url("../img/visual assets.png");
+    background-position: -92px 236px;
+    display: inline-block;
+    height: 40px;
+    width: 56px;
+}
+
 #live .title-live{
     color: white;
-    float: left;
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
@@ -85,16 +172,74 @@
 .live-description{
     padding-bottom: 20px;
 }
-.live-description,.live-content{
-    float:left;
+.live-description-customize{
     width: 100%;
+}
+.live-description,.live-content{
+    float:left !important;
+    width: 100% !important;
+}
+.live-content{
+    padding-bottom: 10px;
 }
 .live-content-left{
     text-align: right;
     text-transform: uppercase;
-    font: 14px;
+    font-size: 11px;
+}
+.live-content-right,.live-content-right-customize{
+    font-weight: bold;
 }
 .live-content-right{
       font-size: 24px;
+}
+.live-content-right-customize{
+    font-size: 14px;
+}
+
+.live-news-update-button,.live-media-button,.live-alerts-button{
+    float: left;
+    height: 19px;
+    width: 42px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+.live-news-update-button {
+    background: none repeat scroll 0 0 #598769;
+    padding: 0 10px;
+}
+.live-media-button {
+    background: none repeat scroll 0 0 rgb(0,176,240);
+    padding: 0 10px;
+}
+.live-alerts-button {
+    background: none repeat scroll 0 0 #E64D1F;
+    padding: 0 10px;
+}
+
+.live-content-new{
+    width: 100%;
+}
+.live-content-news{
+    padding-top: 10px;
+}
+.news-update-date,.news-update-information{
+    font-size: 14px;
+}
+.news-update-information{
     font-weight: bold;
+}
+
+/* --------------------------PLAY BLOCK-------------------------*/
+#play{
+    padding: 20px 0;
+    background: rgb(102,102,102);
+    position: relative;
+    color: black;
+}
+#play .title-block{
+    position: absolute;
+    left: 0;
+    top: 60px;
 }

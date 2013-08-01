@@ -8,7 +8,9 @@
 }
 
 @media (max-width: 767px) {
-
+    .live-content-left,.live-content-right,.live-content-right-customize{
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
