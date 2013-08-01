@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
+<!-- Bootstrapcdn
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+ -->
 
 <!-- Le styles -->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -18,6 +22,8 @@
       <script src="../js/html5shiv.js"></script>
     <![endif]-->
 <link rel="shortcut icon" href="http://seqwater.com.au/favicon.ico">
+
+
 </head>
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -57,7 +63,7 @@
 	<!-- END RENDER work BLOCK -->
 
 	<!-- START RENDER service BLOCK -->
-	<div id="service"></div>
+	<div id="services"></div>
 	<!-- END RENDER service BLOCK -->
 
 	<!-- START RENDER education BLOCK -->
@@ -84,16 +90,19 @@
 	<script src="js/holder/holder.js"></script>
 	
 	<script>
-    $("#menu").load("menu.html");
-    $("#banner").load("banner.html");
-    $("#people").load("people.html");
-    $("#live").load("live.html");
-    $("#play").load("play.html");
-    $("#work").load("work.html");
-    $("#education").load("education.html");
-    $("#ads").load("ads.html");
-    $("#footer").load("footer.html");
 
+	path="";
+	path = "file:///home/tyanhly/env/php-projects1/seqwater/prototype/";
+    $("#header").load(path + "header.html");
+    $("#banner").load(path + "banner.html");
+    $("#people").load(path + "people.html");
+    $("#live").load(path + "live.html");
+    $("#play").load(path + "play.html");
+    $("#work").load(path + "work.html");
+    $("#services").load(path + "services.html");
+    $("#education").load(path + "education.html");
+    $("#ads").load(path + "ads.html");
+    $("#footer").load(path + "footer.html");
     /* very simple to use */
         $(document).ready(function() {
             $('#myCarousel').carousel('pause');
