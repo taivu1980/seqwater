@@ -1,3 +1,9 @@
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
 
 /* --------------------header-----------------------*/
 #header{
@@ -14,12 +20,26 @@
 .list-menu{
     height: 80px;
 }
-.navbar .nav > li a{
-    
+.menu-main-title{
+    float: left;
+    font-size: 15px;
+    margin-top: 17px;
+    text-transform: uppercase;
+}
+.dropdown, .menu-main-name{
+    float: left;
+    height: 60px;
+    color: rgb(89,135,105);
+}
+
+.navbar .nav > li a:hover{
+    background-color: rgb(0,176,240) !important;
+    color: white !important;
 }
 .navbar .nav > li .active,.navbar .nav > li .active:hover{
     background-color: rgb(0,176,240);
     height: 60px;
+    color: white;
 }
 
 #pitch{
@@ -46,7 +66,7 @@
     writing-mode: tb-rl;
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-div.center, p.center, img.center, a.center {
+div.center, p.center, img.center, a.center , span.center {
     display: block;
     float: none !important;
     margin-left: auto !important;
@@ -77,6 +97,7 @@ div.center, p.center, img.center, a.center {
     color: white;
     font-weight: bold;
     text-align: center;
+    font-size: 18px;
 }
 #people .title-block{
     position: absolute;
@@ -120,6 +141,9 @@ div.center, p.center, img.center, a.center {
 #people .carousel,#people .thumbnails > li{
     /*margin-bottom: 0px;*/
 }
+#people .img-circle{
+    border: 4px solid white;
+}
 
 /* --------------------------LIVE-------------------------*/
 #live{
@@ -134,7 +158,7 @@ div.center, p.center, img.center, a.center {
 }
 #live .title-block{
     position: absolute;
-    left: 0;
+    left: -15px;
     top: 60px;
 }
 .flood-image {
@@ -186,6 +210,7 @@ div.center, p.center, img.center, a.center {
     text-align: right;
     text-transform: uppercase;
     font-size: 11px;
+    font-weight: bold;
 }
 .live-content-right,.live-content-right-customize{
     font-weight: bold;
@@ -204,6 +229,7 @@ div.center, p.center, img.center, a.center {
     margin-right: 10px;
     font-size: 12px;
     text-align: center;
+    font-style: italic;
 }
 .live-news-update-button {
     background: none repeat scroll 0 0 #598769;
@@ -231,15 +257,85 @@ div.center, p.center, img.center, a.center {
     font-weight: bold;
 }
 
+
+.live-btn-more-text {
+    background: none repeat scroll 0 0 #006C8D;
+    border: 1px solid white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 56px;
+    padding: 12px 30px;
+    text-align: center;
+    width: 214px;
+}
+
+.live-main-content {
+    float: left;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
 /* --------------------------PLAY BLOCK-------------------------*/
 #play{
     padding: 20px 0;
-    background: rgb(102,102,102);
+    background: #cccccc;
     position: relative;
     color: black;
 }
 #play .title-block{
     position: absolute;
-    left: 0;
-    top: 60px;
+    left: -28px;
+    top: 70px;
 }
+#play .thumbnail{
+    border: none;
+    box-shadow: none;
+}
+#play .thumbnail p{
+    padding-top: 20px;
+    font-size: 14px;
+}
+.btn-more-detail-hp{
+    height: 34px;
+    width: 124px;
+    background: none repeat scroll 0 0 #00B0F0;
+    float: right;
+    color: white;
+    text-align: center;
+}
+.btn-more-text-hp{
+    float: left;
+    padding: 7px 14px;
+}
+#play .rotateTitle{
+    color: #00B0F0;
+}
+
+
+/* --------------------------WORK BLOCK-------------------------*/
+#work{
+    padding: 20px 0;
+    background: white;
+    position: relative;
+    color: rgb(102,102,102);
+}
+#work .title-block{
+    position: absolute;
+    left: -40px;
+    top: 80px;
+}
+#work .rotateTitle{
+    color: rgb(102,102,102);
+}
+.work-title{
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.work-content{
+    padding-bottom: 20px;
+}
+
+
+
