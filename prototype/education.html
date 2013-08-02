@@ -11,10 +11,12 @@ div.circle {
 	border-radius: 50%;
 	border: 2px solid #fefafa;
 }
-.education-img-container{
-    height: 670px;
+
+.education-img-container {
+	height: 670px;
 }
-.education-img-container, .ads-img-container {
+
+.education-img-container,.ads-img-container {
 	position: relative;
 }
 
@@ -72,38 +74,51 @@ div.circle {
 	background-image: url(img/visual\ assets.png);
 	background-position: -190px -170px;
 }
-.education-description{
-    padding-left: 13px;
-    font-size: 21px; 
+
+.education-description {
+	padding-left: 13px;
+	font-size: 21px;
 }
+
 .education-img-text {
 	text-align: center;
 	font-weight: 500;
 	font-size: 18px;
 }
-.educate-items{
-    margin: 100px 0px 0 100px;
+
+.educate-items {
+	margin: 100px 0px 0 0;
 }
-.educate-item{
-    width: 400px;
+
+.educate-item {
+	height: 40px;
+	margin-top: 6px;
+	margin-right:30px;
+	line-height: 40px;
+	color: #e0e0e0;
+	background: #333333;
+	
+	vertical-align: middle;
+	padding-right: 30px;
+	box-shadow: 1px 1px 3px #444;
+	position: relative;
+}
+
+.educate-item div {
+	padding-left: 20px;
+	height: inherit;
+	background-color: inherit;
+}
+.educate-item span.arrow{
+    display: inline-block;
+    width: 30px;
     height: 40px;
-    margin-top:6px;
-    line-height:40px;
-    color:#e0e0e0;
-    background: #333333; 
-    background-position: 320px -130px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: -79px -131px;
     background-image: url(img/visual\ assets.png);
-    vertical-align:middle;
-    padding-right: 30px;
-    box-shadow: 1px 1px 3px #444;
-
 }
-.educate-item div{
-    padding-left:20px;
-    height: inherit;
-    background-color: inherit;
-}
-
 </style>
 
 
@@ -119,47 +134,55 @@ div.circle {
 	<div class="row">
 		<div class="span5 education-img-container">
 
+
+			<div id="education3-img" class="circle"></div>
+
+
+			<div id="education4-img" class="circle"></div>
+
 			<div id="education1-img" class="circle">
 				<div class="binoculars"></div>
 				<div class="education-img-text">LEARNING</div>
 			</div>
-
-			<div id="education3-img" class="circle"></div>
 
 			<div id="education2-img" class="circle">
 				<div class="tour"></div>
 				<div class="education-img-text">TOUR</div>
 
 			</div>
-
-			<div id="education4-img" class="circle"></div>
 		</div>
 		<div class="span7">
-			<div class="education-description">SEQWater recognises the importance of education and offers
-				a range of activities and tours to increase understaning of the
-				urban water cycle in an unpredictable climate</div>
-			<div class="educate-items">
-			<div class="educate-item">
-                 <div>
-                 SEQWATER LEARNING CENTER
-                 </div>
-            </div>
-            <div class="educate-item">
-                 <div>
-                 SITE TOURS
-                 </div>
-            </div>
-            <div class="educate-item">
-                 <div>
-                 VIRTUAL TOUR SUITE
-                 </div>
-            </div>
-            <div class="educate-item">
-                 <div>
-                 WATER ISLAND GAME
-                 </div>
-            </div>
-            </div>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="education-description">SEQWater recognises the
+						importance of education and offers a range of activities and tours
+						to increase understaning of the urban water cycle in an
+						unpredictable climate</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4"></div>
+				<div class="span8">
+					<div class="educate-items">
+						<div class="educate-item">
+						    <span class="arrow" />
+							<div>SEQWATER LEARNING CENTER</div>
+						</div>
+						<div class="educate-item">
+                            <span class="arrow" />
+							<div>SITE TOURS</div>
+						</div>
+						<div class="educate-item">
+                            <span class="arrow" />
+							<div>VIRTUAL TOUR SUITE</div>
+						</div>
+						<div class="educate-item">
+                            <span class="arrow" />
+							<div>WATER ISLAND GAME</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
