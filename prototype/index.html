@@ -28,23 +28,11 @@
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
-    <div id="header">
-    	<!-- START MENU -->
-    	<div id="menu"></div>
-    	<!-- END MENU -->
-    
-    	<!-- START RENDER BANNER -->
-    	<div id="banner">
-    		<div id="pitch" class="span3">
-    			<ul class="nav">
-    				<li class="active"><a href="#">Managing water efficiently</a></li>
-    				<li><a href="#">Conserving water</a></li>
-    				<li><a href="#">Planning and Demand Management</a></li>
-    			</ul>
-    		</div>
-    	</div>
-    	<!-- END RENDER BANNER -->
-    </div>
+	<!-- START MENU -->
+    <div id="menu"></div>
+    <!-- END MENU -->
+
+    <div id="header"></div>
 
 	<!-- START RENDER PEOPLE BLOCK -->
 	<div id="people"></div>
@@ -94,7 +82,8 @@
 	path="";
     $("#header").load(path + "header.html");
     $("#menu").load(path + "menu.html");
-    $("#banner").load(path + "banner.html");
+    //$("#banner").load(path + "banner.html");
+
     $("#people").load(path + "people.html");
     $("#live").load(path + "live.html");
     $("#play").load(path + "play.html");
@@ -104,9 +93,69 @@
     $("#ads").load(path + "ads.html");
     $("#footer").load(path + "footer.html");
     /* very simple to use */
+
+    var clickSearch = false;
+    var clickSmallButton = false;
+
         $(document).ready(function() {
             $('#myCarousel').carousel('pause');
             $('.js-activated').dropdownHover().dropdown();
+            
+           
+            	$(".search-images").click(function(){
+            		if(!clickSearch){
+            			$(".search-box").show();
+            			clickSearch = true;
+            		}
+            		else {
+            			$(".search-box").hide();
+            			clickSearch = false;
+            		}
+            	});
+            	
+            	
+            	$(".btn-show-menu").click(function(){
+            		if(!clickSmallButton){
+            			$(".menu-small").show();
+            			clickSmallButton = true;
+            		}
+            		else {
+            			$(".menu-small").hide();
+            			clickSmallButton = false;
+            		}
+            	});
+            	
+            	//when window is resized by customer
+            	$(window).resize(function () {
+            		resizeHeightMenu();
+            	});
+
+            	function resizeHeightMenu(){
+            	    var bodyWidth = $(window).width();
+            	    if(bodyWidth > 748){
+            	    	$(".menu-small").hide();
+            	    }
+            	}
+            	
+               $('#myCarousel2').carousel({
+                    interval: 15000
+               });
+
+               $(".pitch1").click(function(){
+                   var item = 0;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+               $(".pitch2").click(function(){
+                   var item = 1;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+               $(".pitch3").click(function(){
+                   var item = 2;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
         });
     </script>
 

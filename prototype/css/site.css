@@ -7,14 +7,28 @@
 
 /* --------------------header-----------------------*/
 #header{
-    background: url("../img/banner1.jpg")  no-repeat scroll center center / cover  transparent;
     width: 100%;
     height: 745px;
+    position: relative;
 }
-
+#banner{
+	position: absolute;
+	top: 150px;
+	left: 20px;
+}
+#header .carousel-caption{
+	color: white;
+	background: none;
+}
 #menu{
-    background: white;
+    background-color: white !important;
+    height: 80px;
+    left: 0;
     opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
 }
 
 .list-menu{
@@ -42,12 +56,45 @@
     color: white;
 }
 
+.dropdown-small-menu > li > a {
+    clear: both;
+    color: #333333;
+    display: block;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 3px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-small-menu {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    float: left;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 20px;
+    top: 100%;
+    z-index: 1000;
+}
+.menu-small{
+	position: absolute;
+	top: 60px;
+	right: 0px;
+	display: none;
+}
+
 #pitch{
-    padding-top: 100px;
+    position: absolute;
+    left: 50px;
+    top: 150px;
 }
 
 #pitch li{
-    background: none repeat scroll 0 0 white;
+    background: white;
     margin-bottom: 10px;
     opacity: 0.6;
 }
@@ -82,6 +129,27 @@ div.center, p.center, img.center, a.center , span.center {
     opacity: 1;
 }
 
+.search-images {
+    background-image: url("../img/visual assets.png");
+    background-position: 6px 335px;
+    display: inline-block;
+    height: 38px;
+    opacity: 1;
+    width: 50px;
+    margin-top: 10px !important;
+}
+.li-search-box{
+	position: relative;
+}
+.search-box{
+	position: absolute;
+	right: 0px;
+	display: none;
+	height: 50px;
+	background-color: white;
+	padding: 10px 10px 0;
+}
+
 /* --------------------------PEOPLE-------------------------*/
 #people{
     padding-top: 20px;
@@ -101,7 +169,7 @@ div.center, p.center, img.center, a.center , span.center {
 }
 #people .title-block{
     position: absolute;
-    left: 0;
+    left: -10px;
     top: 40px;
 }
 #myCarousel{
@@ -158,7 +226,7 @@ div.center, p.center, img.center, a.center , span.center {
 }
 #live .title-block{
     position: absolute;
-    left: -15px;
+    left: -25px;
     top: 60px;
 }
 .flood-image {
@@ -284,7 +352,7 @@ div.center, p.center, img.center, a.center , span.center {
 }
 #play .title-block{
     position: absolute;
-    left: -28px;
+    left: -34px;
     top: 70px;
 }
 #play .thumbnail{
@@ -321,7 +389,7 @@ div.center, p.center, img.center, a.center , span.center {
 }
 #work .title-block{
     position: absolute;
-    left: -40px;
+    left: -50px;
     top: 80px;
 }
 #work .rotateTitle{
