@@ -68,7 +68,7 @@
     opacity: 0.8;
 }
 .menu-main-name{
-    border-left: 1px solid #C5C5C5;
+    border-left: 1px solid #ddd;
 	padding:10px 17px !important;
 }
 .dropdown, .menu-main-name{
@@ -245,7 +245,7 @@ div.center, p.center, img.center, a.center , span.center {
 #people .title-block{
     position: absolute;
     left: -10px;
-    top: 40px;
+    top: 50px;
 }
 #myCarousel{
     position: relative;
@@ -305,7 +305,7 @@ div.center, p.center, img.center, a.center , span.center {
 #live .title-block{
     position: absolute;
     left: -25px;
-    top: 60px;
+    top: 70px;
 }
 .flood-image {
     background-image: url("../img/visual assets.png");
@@ -431,7 +431,7 @@ div.center, p.center, img.center, a.center , span.center {
 #play .title-block{
     position: absolute;
     left: -34px;
-    top: 70px;
+    top: 80px;
 }
 #play .thumbnail{
     border: none;
@@ -468,7 +468,7 @@ div.center, p.center, img.center, a.center , span.center {
 #work .title-block{
     position: absolute;
     left: -50px;
-    top: 80px;
+    top: 90px;
 }
 #work .rotateTitle{
     color: rgb(102,102,102);
