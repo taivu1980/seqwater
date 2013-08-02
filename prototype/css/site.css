@@ -11,6 +11,16 @@
     height: 745px;
     position: relative;
 }
+#logo{
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+#menu-content{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
 #banner{
 	position: absolute;
 	top: 150px;
@@ -30,15 +40,34 @@
     width: 100%;
     z-index: 9999999;
 }
-
+#main-menu{
+    position: relative;
+}
 .list-menu{
     height: 80px;
 }
+
 .menu-main-title{
     float: left;
     font-size: 15px;
     margin-top: 17px;
     text-transform: uppercase;
+}
+.menu-main-title-call-center {
+    float: left;
+    font-size: 13px;
+    line-height: 25px;
+    margin-top: 1px;
+    text-transform: uppercase;
+    width: 125px;
+}
+.menu-main-title-call-center b{
+    font-weight: normal !important;
+    font-size: 18px;
+    opacity: 0.8;
+}
+.menu-main-name{
+    border-left: 1px solid #C5C5C5;
 }
 .dropdown, .menu-main-name{
     float: left;
@@ -89,14 +118,44 @@
 
 #pitch{
     position: absolute;
-    left: 50px;
-    top: 150px;
+    left: 0px;
+    top: 250px;
+    margin-left: 0px !important;
 }
 
-#pitch li{
-    background: white;
-    margin-bottom: 10px;
+#pitch ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#pitch li {
+    background: none repeat scroll 0 0 black;
+    height: 50px;
+    margin-bottom: 5px;
     opacity: 0.6;
+    margin-left: 0px;
+}
+#pitch a {
+    color: white;
+    font-size: 22px;
+    padding-left: 30px;
+    padding-top: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    float: left;
+}
+#pitch a:hover, #pitch a:active {
+    color: white;
+    background: none repeat scroll 0 0 black;
+    text-decoration: none;
+    float: left;
+}
+.search-text{
+    height: 30px !important;
+    background-color: white;
+    z-index: 9999999999;
+    border-radius: 0 0 0 0 !important;
 }
 
 
@@ -141,13 +200,26 @@ div.center, p.center, img.center, a.center , span.center {
 .li-search-box{
 	position: relative;
 }
-.search-box{
-	position: absolute;
-	right: 0px;
-	display: none;
-	height: 50px;
-	background-color: white;
-	padding: 10px 10px 0;
+.search-box {
+    background-color: white;
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 92px;
+    z-index: 99999999999999;
+}
+.search-box-follow {
+    background-color: white;
+    display: none;
+    height: 50px;
+    opacity: 0.5;
+    padding: 10px 15px 5px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+.search-box form{
+    margin:0px;
 }
 
 /* --------------------------PEOPLE-------------------------*/

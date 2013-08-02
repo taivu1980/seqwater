@@ -7,7 +7,7 @@
                 <div class="span12">
                     <div class="carousel jcarousel span12" id="myCarousel">
                         <div class="carousel-inner">
-                            <div class="item active">
+                            <div class="item active small-viewport-custom">
                                   <div class="row">
                                     <div class="span4">
                                         <div class="thumbnail">
@@ -145,26 +145,6 @@
                 return false;
             }
         });
-
-        /*$('#myCarousel').live('swipeleft swiperight',function(event){
-            if (event.type == "swiperight") {
-                if (_slider.position().left > stop_pos && _slider.position().left === _slider.data('to')) {
-                    _slider.data('to', _slider.position().left - item_width);
-                    _slider.animate({
-                        left: "-=" + item_width + "px"
-                    }, 'fast');
-                }
-            }
-            if (event.type == "swipeleft") {
-                if (_slider.position().left < 0 && _slider.position().left === _slider.data('to')) {
-                    _slider.data('to', _slider.position().left + item_width); // lets set the .data('to') property to the final value so we can check if the carousel is at it's final destination before moving it again
-                    _slider.animate({
-                        left: "+=" + item_width + "px"
-                    }, 'fast'); // lets move the slider
-                }
-            }
-            event.preventDefault();
-        });*/
 
     });
 

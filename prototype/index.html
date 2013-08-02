@@ -82,7 +82,6 @@
 	path="";
     $("#header").load(path + "header.html");
     $("#menu").load(path + "menu.html");
-    //$("#banner").load(path + "banner.html");
 
     $("#people").load(path + "people.html");
     $("#live").load(path + "live.html");
@@ -100,34 +99,41 @@
         $(document).ready(function() {
             $('#myCarousel').carousel('pause');
             $('.js-activated').dropdownHover().dropdown();
-            
-           
-            	$(".search-images").click(function(){
-            		if(!clickSearch){
-            			$(".search-box").show();
-            			clickSearch = true;
-            		}
-            		else {
-            			$(".search-box").hide();
-            			clickSearch = false;
-            		}
-            	});
-            	
-            	
-            	$(".btn-show-menu").click(function(){
-            		if(!clickSmallButton){
-            			$(".menu-small").show();
-            			clickSmallButton = true;
-            		}
-            		else {
-            			$(".menu-small").hide();
-            			clickSmallButton = false;
-            		}
-            	});
-            	
+
+            $(".li-search-box").click(function(){
+                console.log(clickSearch);
+
+                if(!clickSearch){
+                    console.log("show");
+                    $(".search-box").show();
+                    $(".search-box-follow").show();
+                    clickSearch = true;
+                }
+                else {
+                    console.log("hide");
+                    $(".search-box").hide();
+                    $(".search-box-follow").hide();
+                    clickSearch = false;
+                }
+            });
+
+            $(".btn-show-menu").click(function(){
+                if(!clickSmallButton){
+                    $(".menu-small").show();
+                    clickSmallButton = true;
+                }
+                else {
+                    $(".menu-small").hide();
+                    clickSmallButton = false;
+                }
+            });
+
+            resizePeopleBlock();
+
             	//when window is resized by customer
             	$(window).resize(function () {
             		resizeHeightMenu();
+            		resizePeopleBlock();
             	});
 
             	function resizeHeightMenu(){
@@ -135,7 +141,20 @@
             	    if(bodyWidth > 748){
             	    	$(".menu-small").hide();
             	    }
+            	    else{
+            	    	$("#logo").attr("class","");
+            	    }
             	}
+            	function resizePeopleBlock(){
+                    var bodyWidth = $(window).width();
+                    if(bodyWidth < 748){
+                        $("#people").hide();
+                    }
+                    else{
+                    	$("#people").show();
+                    }
+                }
+            	
             	
                $('#myCarousel2').carousel({
                     interval: 15000
@@ -153,6 +172,16 @@
                });
                $(".pitch3").click(function(){
                    var item = 2;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+               $(".pitch4").click(function(){
+                   var item = 3;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+               $(".pitch5").click(function(){
+                   var item = 4;
                    $('#myCarousel2').carousel(item);
                    return false;
                });
