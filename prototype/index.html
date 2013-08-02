@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Seqwater</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Bootstrapcdn
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+ -->
+
+<!-- Le styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/site.css" rel="stylesheet">
+<link href="css/responsive-customize.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+<link rel="shortcut icon" href="http://seqwater.com.au/favicon.ico">
+
+
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+	<!-- START MENU -->
+    <div id="menu"></div>
+    <!-- END MENU -->
+
+    <div id="header"></div>
+
+	<!-- START RENDER PEOPLE BLOCK -->
+	<div id="people"></div>
+	<!-- END RENDER PEOPLE BLOCK -->
+
+	<!-- START RENDER live BLOCK -->
+	<div id="live"></div>
+	<!-- END RENDER live BLOCK -->
+
+	<!-- START RENDER play BLOCK -->
+	<div id="play"></div>
+	<!-- END RENDER play BLOCK -->
+
+	<!-- START RENDER work BLOCK -->
+	<div id="work"></div>
+	<!-- END RENDER work BLOCK -->
+
+	<!-- START RENDER service BLOCK -->
+	<div id="services"></div>
+	<!-- END RENDER service BLOCK -->
+
+	<!-- START RENDER education BLOCK -->
+	<div id="education"></div>
+	<!-- END RENDER education BLOCK -->
+
+	<!-- START RENDER ads BLOCK -->
+	<div id="ads"></div>
+	<!-- END RENDER ads BLOCK -->
+
+	<!-- START RENDER footer BLOCK -->
+	<div id="footer"></div>
+	<!-- END RENDER footer BLOCK -->
+
+
+	<!-- Le javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<script src="js/jquery.js"></script>
+	<script src="js/application.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/twitter-bootstrap-hover-dropdown.js"></script>
+	<script src="js/holder/holder.js"></script>
+	
+	<script>
+
+	path="";
+    $("#header").load(path + "header.html");
+    $("#menu").load(path + "menu.html");
+    //$("#banner").load(path + "banner.html");
+
+    $("#people").load(path + "people.html");
+    $("#live").load(path + "live.html");
+    $("#play").load(path + "play.html");
+    $("#work").load(path + "work.html");
+    $("#services").load(path + "services.html");
+    $("#education").load(path + "education.html");
+    $("#ads").load(path + "ads.html");
+    $("#footer").load(path + "footer.html");
+    /* very simple to use */
+
+    var clickSearch = false;
+    var clickSmallButton = false;
+
+        $(document).ready(function() {
+            $('#myCarousel').carousel('pause');
+            $('.js-activated').dropdownHover().dropdown();
+            
+           
+            	$(".search-images").click(function(){
+            		if(!clickSearch){
+            			$(".search-box").show();
+            			clickSearch = true;
+            		}
+            		else {
+            			$(".search-box").hide();
+            			clickSearch = false;
+            		}
+            	});
+            	
+            	
+            	$(".btn-show-menu").click(function(){
+            		if(!clickSmallButton){
+            			$(".menu-small").show();
+            			clickSmallButton = true;
+            		}
+            		else {
+            			$(".menu-small").hide();
+            			clickSmallButton = false;
+            		}
+            	});
+            	
+            	//when window is resized by customer
+            	$(window).resize(function () {
+            		resizeHeightMenu();
+            	});
+
+            	function resizeHeightMenu(){
+            	    var bodyWidth = $(window).width();
+            	    if(bodyWidth > 748){
+            	    	$(".menu-small").hide();
+            	    }
+            	}
+            	
+               $('#myCarousel2').carousel({
+                    interval: 15000
+               });
+
+               $(".pitch1").click(function(){
+                   var item = 0;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+               $(".pitch2").click(function(){
+                   var item = 1;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+               $(".pitch3").click(function(){
+                   var item = 2;
+                   $('#myCarousel2').carousel(item);
+                   return false;
+               });
+        });
+    </script>
+
+
+</body>
+</html>

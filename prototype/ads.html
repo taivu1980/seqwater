@@ -1,0 +1,130 @@
+<style>
+#ads {
+	background: #fff;
+	color: #000;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#ads1-img,#ads2-img,#ads3-img {
+	width: 100px;
+	height: 100px;
+	border: 4px solid #ddd;
+	margin: 0 auto;
+}
+
+#ads1-img div,#ads2-img div,#ads3-img div {
+	margin: 10px auto;
+	width: 70px;
+	height: 70px;
+	background-image: url(img/visual\ assets.png);
+}
+
+#ads1-img>div {
+	background-position: -0px -338px;
+}
+
+#ads2-img>div {
+	background-position: -70px -336px;
+}
+
+#ads3-img>div {
+	background-position: -146px -338px;
+}
+
+.ads-popover {
+	width: 140px;
+	color: #fff;
+	margin: 10px auto;
+	position: relative;
+	padding: 16px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.ads-popover>div {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	position: absolute;
+	top: -5px;
+	left: 85px;
+}
+
+#ads1-popover {
+	background: #f25623;
+}
+
+#ads1-popover>div {
+	border-bottom: 5px solid #f25623;
+}
+
+#ads2-popover {
+	background: #009aa6;
+}
+
+#ads2-popover>div {
+	border-bottom: 5px solid #009aa6;
+}
+
+#ads3-popover {
+	background: #004e7e;
+}
+
+#ads3-popover>div {
+	border-bottom: 5px solid #004e7e;
+}
+
+.ads-description{
+    font-size: 14px;
+    font-style: italic;
+    color:#666;
+    text-align: center;
+}
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="span4 ">
+			<div id="ads1-img" class="circle">
+				<div></div>
+			</div>
+			<div id="ads1-popover" class="ads-popover">
+				<div></div>
+				<span>REGISTER FOR DAM RELEASE ALERTS</span>
+			</div>
+			<div class="ads-description">Seqwater provides a free Dam Release
+				Notification service which can provide subscribers with
+				notifications by email, SMS / text messages to mobile phones or
+				recorded messages to telephone landlines</div>
+		</div>
+
+		<div class="span4 ">
+			<div id="ads2-img" class="circle">
+				<div></div>
+			</div>
+			<div id="ads2-popover" class="ads-popover">
+				<div></div>
+				<span> CHECK YOUR WATER QUALITY </span>
+			</div>
+			<div class="ads-description">**THE CUSTOMER CONFIDENCE REPORT IS
+				CURRENTLY DOWN**</div>
+		</div>
+
+		<div class="span4">
+			<div id="ads3-img" class="circle">
+				<div></div>
+			</div>
+			<div id="ads3-popover" class="ads-popover">
+				<div></div>
+				<span>OPERATIONAL SAFETY CAMERA</span>
+			</div>
+			<div class="ads-description">As the viewing platform Wivenhoe Dam
+				remains closed for safety reasons, members of the public wishing to
+				observe gate release operations may do so online via the Operational
+				Safety Camera</div>
+		</div>
+	</div>
+
+</div>
