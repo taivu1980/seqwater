@@ -1,6 +1,219 @@
+/* ----------------START EDUCATION BLOCK------------------ */
+#education {
+    background: #c4a974;
+    color: #fff;
+}
+
+div.circle {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #fefafa;
+}
+
+.education-img-container {
+    height: 670px;
+}
+
+.education-img-container,.ads-img-container {
+    position: relative;
+}
+
+#education1-img {
+    width: 150px;
+    height: 150px;
+    background: #f25623;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+
+#education2-img {
+    width: 150px;
+    height: 150px;
+    background: #00adef;
+    position: absolute;
+    top: 370px;
+    left: 10px;
+}
+
+#education3-img {
+    width: 320px;
+    height: 320px;
+    background: url(../img/edu1.jpg);
+    position: absolute;
+    top: 100px;
+    left: 0px;
+}
+
+#education4-img {
+    width: 250px;
+    height: 250px;
+    background: #00adef;
+    background: url(../img/edu2.jpg);
+    position: absolute;
+    top: 390px;
+    right: 0px;
+}
+
+.binoculars {
+    margin: 40px auto;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 40px;
+    background-image: url("../img/visual assets.png");
+    background-position: -140px -170px;
+}
+
+.tour {
+    margin: 40px auto;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 40px;
+    background-image: url("../img/visual assets.png");
+    background-position: -190px -170px;
+}
+
+.education-description {
+    padding-left: 13px;
+    font-size: 21px;
+}
+
+.education-img-text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.educate-items {
+    margin: 100px 0px 0 0;
+}
+
+.educate-item {
+    height: 40px;
+    margin-top: 6px;
+    margin-right:30px;
+    line-height: 40px;
+    color: #e0e0e0;
+    background: #333333;
+    
+    vertical-align: middle;
+    padding-right: 30px;
+    box-shadow: 1px 1px 3px #444;
+    position: relative;
+}
+
+.educate-item div {
+    padding-left: 20px;
+    height: inherit;
+    background-color: inherit;
+}
+.educate-item span.arrow{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: -79px -131px;
+    background-image: url("../img/visual assets.png");
+}
+/* ----------------END EDUCATION BLOCK------------------ */
+
+
+/* ----------------START ADS BLOCK------------------ */
+#ads {
+    background: #fff;
+    color: #000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#ads1-img,#ads2-img,#ads3-img {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #ddd;
+    margin: 0 auto;
+}
+
+#ads1-img div,#ads2-img div,#ads3-img div {
+    margin: 10px auto;
+    width: 70px;
+    height: 70px;
+    background-image: url("../img/visual assets.png");
+}
+
+#ads1-img>div {
+    background-position: -0px -338px;
+}
+
+#ads2-img>div {
+    background-position: -70px -336px;
+}
+
+#ads3-img>div {
+    background-position: -146px -338px;
+}
+
+.ads-popover {
+    width: 140px;
+    color: #fff;
+    margin: 10px auto;
+    position: relative;
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ads-popover>div {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -5px;
+    left: 85px;
+}
+
+#ads1-popover {
+    background: #f25623;
+}
+
+#ads1-popover>div {
+    border-bottom: 5px solid #f25623;
+}
+
+#ads2-popover {
+    background: #009aa6;
+}
+
+#ads2-popover>div {
+    border-bottom: 5px solid #009aa6;
+}
+
+#ads3-popover {
+    background: #004e7e;
+}
+
+#ads3-popover>div {
+    border-bottom: 5px solid #004e7e;
+}
+
+.ads-description{
+    font-size: 14px;
+    font-style: italic;
+    color:#666;
+    text-align: center;
+}
+/* ----------------END ADS BLOCK------------------ */
+
+
+
 /* ----------------START SERVICE BLOCK------------------ */
-#services, #education {
+#services{
     background: #7AA37B;
+}
+#services, #education {
     width: 100%;
     color: #ECF2EB;
     text-transform: uppercase;
