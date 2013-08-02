@@ -308,7 +308,7 @@ div.center, p.center, img.center, a.center , span.center {
     background-image: url("../img/visual assets.png");
     background-position: 30px 236px;
     display: inline-block;
-    height: 40px;
+    height: 34px;
     width: 70px;
 }
 
@@ -316,7 +316,7 @@ div.center, p.center, img.center, a.center , span.center {
     background-image: url("../img/visual assets.png");
     background-position: -31px 236px;
     display: inline-block;
-    height: 40px;
+    height: 32px;
     width: 67px;
 }
 
@@ -325,7 +325,7 @@ div.center, p.center, img.center, a.center , span.center {
     background-image: url("../img/visual assets.png");
     background-position: -92px 236px;
     display: inline-block;
-    height: 40px;
+    height: 34px;
     width: 56px;
 }
 
