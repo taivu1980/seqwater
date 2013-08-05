@@ -235,7 +235,7 @@ div.center, p.center, img.center, a.center , span.center {
     border: none;
     box-shadow: none;
 }
-#people .thumbnail p{
+#people .thumbnails p{
     padding-top: 20px;
     color: white;
     font-weight: bold;
@@ -286,6 +286,13 @@ div.center, p.center, img.center, a.center , span.center {
 }
 #people .img-circle{
     border: 4px solid white;
+}
+#myCarousel3 p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
 }
 
 /* --------------------------LIVE-------------------------*/

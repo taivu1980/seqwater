@@ -193,46 +193,77 @@
             <div class="container">
                         <div class="row">
                             <div class="span12">
-                                <div class="carousel jcarousel span12" id="myCarousel">
+
+                            <div id="showCarouselInLarge">
+                                  <div class="carousel slide" id="myCarousel">
                                     <div class="carousel-inner">
-                                        <div class="item active small-viewport-custom">
-                                              <div class="row">
-                                                <div class="span4">
+                                      <div class="item active">
+                                            <ul class="thumbnails">
+                                                <li class="span4">
                                                     <div class="thumbnail">
-                                                            <img class="img-circle" data-src="holder.js/140x140" src="img/people1.jpg">
-                                                            <p>JOHN,<br/>LOOK AFTER OUR DAMS</p>
-                                                     </div>
-                                                </div>
-                                                <div class="span4">
-                                                        <div class="thumbnail">
-                                                            <img class="img-circle" data-src="holder.js/140x140" src="img/people3.jpg">
-                                                            <p>HELEN,<br/>LOOK AFTER OUR PARKS</p>
-                                                        </div>
-                                                </div>
-                                                <div class="span4">
-                                                        <div class="thumbnail">
-                                                            <img class="img-circle" data-src="holder.js/140x140" src="img/people2.jpg">
-                                                            <p>BLAKE,<br/>ENGINEER PROJECT</p>
-                                                        </div>
-                                                </div>
-                                                <div class="span4">
-                                                        <div class="thumbnail">
-                                                            <img class="img-circle" data-src="holder.js/140x140" src="img/people6.jpg">
-                                                            <p>TONY,<br/>ENGINEER PROJECT</p>
-                                                        </div>
-                                                </div>
-                                                <div class="span4">
-                                                        <div class="thumbnail">
-                                                            <img class="img-circle" data-src="holder.js/140x140" src="img/people7.jpg">
-                                                            <p>DAVID,<br/>ENGINEER PROJECT</p>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="img/people1.jpg">
+                                                    </div>
+                                                    <p>JOHN,<br/>LOOK AFTER OUR DAMS</p>
+                                                </li>
+                                                <li class="span4">
+                                                    <div class="thumbnail">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="img/people3.jpg">
+                                                    </div>
+                                                    <p>HELEN,<br/>LOOK AFTER OUR PARKS</p>
+                                                </li>
+                                                <li class="span4">
+                                                    <div class="thumbnail">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="img/people2.jpg">
+                                                    </div>
+                                                    <p>BLAKE,<br/>ENGINEER PROJECT</p>
+                                                </li>
+                                            </ul>
+                                      </div>
+                                      <div class="item">
+                                            <ul class="thumbnails">
+                                                <li class="span4">
+                                                    <div class="thumbnail">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="img/people6.jpg">
+                                                    </div>
+                                                    <p>TONY,<br/>ENGINEER PROJECT</p>
+                                                </li>
+                                                <li class="span4">
+                                                    <div class="thumbnail">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="img/people7.jpg">
+                                                    </div>
+                                                    <p>DAVID,<br/>ENGINEER PROJECT</p>
+                                                </li>
+                                            </ul>
+                                      </div>
                                     </div>
-                                    <a data-slide="prev" href="#myCarousel" class="carousel-control-customize-left"><span class="carousel-narrow-left"></span></a>
-                                    <a data-slide="next" href="#myCarousel" class="carousel-control-customize-right"><span class="carousel-narrow-right"></span></a>
-                                </div>
+                                        <a data-slide="prev" href="#myCarousel" class="carousel-control-customize-left"><span class="carousel-narrow-left"></span></a>
+                                        <a data-slide="next" href="#myCarousel" class="carousel-control-customize-right"><span class="carousel-narrow-right"></span></a>
+                                  </div>
+                              </div>
+                              <div id="showCarouselInSmall">
+                                          <div id="myCarousel3" class="carousel slide">
+                                                <div class="carousel-inner">
+                                                  <div class="item active">
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="img/people1.jpg"><p>JOHN,<br/>LOOK AFTER OUR DAMS</p></div>
+                                                  </div>
+                                                  <div class="item">
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="img/people3.jpg"><p>HELEN,<br/>LOOK AFTER OUR PARKS</p></div>
+                                                  </div>
+                                                  <div class="item">
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="img/people2.jpg"><p>BLAKE,<br/>ENGINEER PROJECT</p></div>
+                                                  </div>
+                                                  <div class="item">
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="img/people6.jpg"><p>TONY,<br/>ENGINEER PROJECT</p></div>
+                                                  </div>
+                                                  <div class="item">
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="img/people7.jpg"><p>DAVID,<br/>ENGINEER PROJECT</p></div>
+                                                  </div>
+                                                </div>
+                                                <a data-slide="prev" href="#myCarousel3" class="carousel-control-customize-left"><span class="carousel-narrow-left"></span></a>
+                                                <a data-slide="next" href="#myCarousel3" class="carousel-control-customize-right"><span class="carousel-narrow-right"></span></a>
+                                          </div>
+                              </div>
+
                             </div>
                         </div>
                     </div>
@@ -681,98 +712,76 @@
 	<script src="js/holder/holder.js"></script>
 	
 	<script>
-
     var clickSearch = false;
     var clickSmallButton = false;
 
         $(document).ready(function() {
             $('#myCarousel').carousel('pause');
+            $('#myCarousel3').carousel('pause');
             $('.js-activated').dropdownHover().dropdown();
 
-            $(".li-search-box").click(function(){
-                console.log(clickSearch);
 
+            $(".li-search-box").click(function(){
                 if(!clickSearch){
-                    console.log("show");
                     $(".search-box").show();
-                    $(".search-box-follow").show();
-                    clickSearch = true;
+                    $(".search-box-follow").show();clickSearch = true;
                 }
                 else {
-                    console.log("hide");
                     $(".search-box").hide();
-                    $(".search-box-follow").hide();
-                    clickSearch = false;
+                    $(".search-box-follow").hide();clickSearch = false;
                 }
             });
 
             $(".btn-show-menu").click(function(){
                 if(!clickSmallButton){
-                    $(".menu-small").show();
-                    clickSmallButton = true;
+                    $(".menu-small").show();clickSmallButton = true;
                 }
                 else {
-                    $(".menu-small").hide();
-                    clickSmallButton = false;
+                    $(".menu-small").hide();clickSmallButton = false;
                 }
             });
 
             resizePeopleBlock();
-
             	//when window is resized by customer
             	$(window).resize(function () {
-            		resizeHeightMenu();
-            		resizePeopleBlock();
+            		resizeHeightMenu();resizePeopleBlock();
             	});
 
             	function resizeHeightMenu(){
             	    var bodyWidth = $(window).width();
-            	    if(bodyWidth > 748){
-            	    	$(".menu-small").hide();
-            	    }
-            	    else{
-            	    	$("#logo").attr("class","");
-            	    }
+            	    if(bodyWidth > 748) $(".menu-small").hide();
+            	    else $("#logo").attr("class","");
             	}
-            	function resizePeopleBlock(){
+                function resizePeopleBlock(){
                     var bodyWidth = $(window).width();
-                    if(bodyWidth < 748){
-                        $("#people").hide();
+                    if(bodyWidth > 748) {
+                        $("#showCarouselInSmall").hide();
+                        $("#showCarouselInLarge").show();
                     }
-                    else{
-                    	$("#people").show();
+                    else {
+                        $("#showCarouselInLarge").hide();
+                        $("#showCarouselInSmall").show();
                     }
                 }
-            	
-            	
+
                $('#myCarousel2').carousel({
                     interval: 5000
                });
 
                $(".pitch1").click(function(){
-                   var item = 0;
-                   $('#myCarousel2').carousel(item);
-                   return false;
+                   var item = 0;$('#myCarousel2').carousel(item);return false;
                });
                $(".pitch2").click(function(){
-                   var item = 1;
-                   $('#myCarousel2').carousel(item);
-                   return false;
+                   var item = 1;$('#myCarousel2').carousel(item);return false;
                });
                $(".pitch3").click(function(){
-                   var item = 2;
-                   $('#myCarousel2').carousel(item);
-                   return false;
+                   var item = 2;$('#myCarousel2').carousel(item);return false;
                });
                $(".pitch4").click(function(){
-                   var item = 3;
-                   $('#myCarousel2').carousel(item);
-                   return false;
+                   var item = 3;$('#myCarousel2').carousel(item);return false;
                });
                $(".pitch5").click(function(){
-                   var item = 4;
-                   $('#myCarousel2').carousel(item);
-                   return false;
+                   var item = 4;$('#myCarousel2').carousel(item);return false;
                });
         });
     </script>
