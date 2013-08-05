@@ -1,0 +1,165 @@
+body {
+    font-family: Arial,'Lucida Grande',Helvetica,sans-serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    background: url("/sites/all/themes/tweme/assets/img/Hero_homenew2.jpg") no-repeat top right !important;
+    min-height: 600px;
+}
+.main-menu{
+    float: right;
+    text-align: right;
+    padding-top: 10px;
+}
+.navbar .brand img{
+    height: 58px !important;
+}
+.navbar .nav{
+}
+.nav li a{
+    color: #094266 !important;
+    font-size: 16px;
+}
+.nav li a:hover{
+    color: #79A27A !important;
+    font-size: 16px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125) inset !important;
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
+    background: none !important;
+    /*box-shadow: none !important;*/
+}
+#navbar{
+    padding-bottom: 50px;
+}
+
+
+#top_menu{
+    float: right;
+}
+.top_menu{
+    float: right;
+}
+#top_menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    text-align: right;
+}
+#top_menu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#top_menu li a{
+    color: #959595;
+    display: block;
+    margin: 0 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* - -----------------header-------------------- */
+#header{
+    
+}
+#header h1{
+     color: #00AEEF;
+    font-family: 'Geometric415LiteA','Arial',Helvetica,sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
+    display: none;
+}
+#header .breadcrumb{
+    display: none;
+}
+.field-items h2 {
+    color: #888888 !important;
+    font-family: 'Geometric415LiteA','Arial',Helvetica,sans-serif !important;
+    font-size: 18px !important;
+    font-weight: lighter !important;
+}
+
+.region-main-menu h2{
+    display: none;
+}
+
+
+/* - -----------------news & events -------------------- */
+.row-recent-news{
+    padding-bottom: 20px;
+}
+.row-recent-news .news{
+    background: none repeat scroll 0 0 #79A27A;
+    border: 1px solid #5F8F60;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 9px;
+    font-weight: 700;
+    height: 11px;
+    margin: 0 3px 0 0;
+    padding: 3px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+}
+.row-recent-news .btn-news{
+    padding-bottom: 2px;
+}
+.row-recent-news a:hover{
+    text-decoration: none;
+}
+.row-recent-news .views-field-created{
+    font-weight: bold;
+    color: black;
+}
+
+
+/* - -----------------footer-------------------- */
+#main-footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#footer-copyright{
+    text-align: right;
+}
+#footer-copyright ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+#footer-copyright li{
+    float: left;
+    margin: 0;
+    padding-right: 10px;
+}
+#footer-copyright li a{
+    color: #959595;
+    display: block;
+    margin: 0 3px;
+    padding: 3px;
+    font-size: 10px;
+}
+
+#safe-secure-sustainable-wrapper{
+    background: url("/sites/all/themes/tweme/assets/img/safesecure.gif");
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 39px;
+    width: 100%;
+}
+#safe-secure-sustainable {
+    height: 39px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: right;
+    background: url("/sites/all/themes/tweme/assets/img/safe-secure-sustainable.gif") no-repeat right;
+}
