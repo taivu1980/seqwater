@@ -274,7 +274,7 @@ div.circle {
 #service-description-gallery div.table > div > div img.img-border {
     width: 98%;
     height: 98%;
-    border: 2px solid white;
+    border: 1px solid white;
 }
 
 #service-description-gallery div.table {
@@ -288,7 +288,7 @@ div.circle {
 
 #service-description-gallery div.table > div > div {
     display: table-cell;
-    padding: 2px 2px;
+    padding: 4px 3px;
 }
 
 /* ------------START FOOTER BLOCK--------------*/
