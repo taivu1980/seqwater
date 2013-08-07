@@ -12,12 +12,14 @@
 
 jQuery(document).ready(function(){
 
-    for(var i in CKEDITOR.instances) {
-        CKEDITOR.instances[CKEDITOR.instances[i].name].on("instanceReady", function(){
-            this.document.on("keyup", function(){
-                windowEvent();
+    if(typeof(CKEDITOR) !== 'undefined') {
+        for(var i in CKEDITOR.instances) {
+            CKEDITOR.instances[CKEDITOR.instances[i].name].on("instanceReady", function(){
+                this.document.on("keyup", function(){
+                    windowEvent();
+                });
             });
-        });
+        }
     }
 
     // for submit buttons
