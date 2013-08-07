@@ -4,62 +4,40 @@
  * Custom theme implementation to display a single Drupal page.
  */
 ?>
-<div id="wrapper">
 
-	<div class="container">
-		<?php if ($page['top_menu']): ?>
-		  <div id="top_menu" class="top_menu">
-		    <?php print render($page['top_menu']); ?>
-		  </div>
-		<?php endif; ?>
-	</div>
-
-	<!-- Navbar -->
-	<div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
-		<div class="navbar-inner container">
-			        <?php print $navbar_toggler ?>
-					<?php print $navbar_brand ?>
-
+<!----------------------------------------- START MENU -------------------------------------->
+    <div id="menu">
+        <div id="main-menu">
+        	<div class="span3" id="logo"><img src="sites/all/themes/tweme/assets/img/logo.png" title="Seqwater"/></div>
+        	<div id="menu-content">
+                <div class="span10 list-menu">
 			        <?php if ($page['main_menu']): ?>
-					<nav class="nav-collapse collapse main-menu" role="navigation">
-			        	<?php print render($page['main_menu']); ?>
-			      	</nav>
+			            <?php print render($page['main_menu']) ?>
 					<?php endif ?>
-		</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------------------------------------- END MENU -------------------------------------->
+
+
+    <div id="header" class="header-second-style">
+			<img style="height:445px; width:100%" src="sites/all/themes/tweme/assets/img/dam.jpg" alt="">
 	</div>
 
-
-	<?php if ($page['featured']): ?>
-	<!-- Featured -->
-	<div id="featured" class="container-wrapper hidden-phone">
-	  <div class="container">
-	    <?php print render($page['featured']) ?>
-	  </div>
-	</div>
-	<?php endif ?>
-
-	<?php if ($preface): ?>
-	<!-- Header -->
-	<header id="header" class="container-wrapper">
-	  <div class="container">
-	    <?php print $preface ?>
-	  </div>
-	</header>
-	<?php endif ?>
+	    <div class="search-box span5">
+            <form class="form-search" method="get" action="">
+                <input class="span5 search-text" type="text" placeholder="SEARCH..." name="name">
+            </form>
+        </div>
+        <div class="search-box-follow span5"></div>
 
 
 	<!-- Main -->
-	<div id="main">
+	<div id="main" class="main-second-style">
 	  <div class="container">
 	    <?php print $messages ?>
 	    <div class="row row-toggle">
-	      <?php if ($has_sidebar_first): ?>
-	      <!-- Sidebar first -->
-	      <aside id="sidebar-first" class="sidebar span3 hidden-phone">
-	        <?php print render($page['sidebar_first']) ?>
-	        <?php print render($page['sidebar_first_affix']) ?>
-	      </aside>
-	      <?php endif ?>
 	      <!-- Content -->
 	      <section id="content" class="span<?php print $content_cols ?>">
 	        <?php print render($page['content']) ?>
@@ -75,32 +53,77 @@
 		</div>
 	</div>
 
+
+<!-- START RENDER footer BLOCK -->
+<div id="footer">
+<div class="container">
+    <div class="row">
+    <div class="span12">
+        <div class="span4 footer-item">
+            <div class="right-line"><div class="right-sub-line">
+                <div class="footer-header">CONTACT THE SEQWATER CALL CENTER</div>
+                <div>
+                    <p>
+                        <span class="phone-number">(07) 3035 5500</span> (MONDAY TO
+                        FRIDAY, 8.30AM TO 5.00PM)
+                    </p>
+                    <p>
+                        <span class="phone-number">1800 737 928</span> (AFTER HOURS AND ON
+                        WEEKENDS)
+                    </p>
+                    <p>EMAIL: COMMUNICATIONS@SEQWATER.COM.AU</p>
+                    <p>MAIL: PO BOX 16146</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        CITY EAST QLD 400</p>
+
+                </div>
+                <div class="footer-bottom">
+                    WATER RELEASE HOTLINE: <span class="phone-number">1800 613
+                        122</span>
+                </div>
+            </div></div>
+        </div>
+        <div class="span4 footer-item ">
+            <div class="right-line"><div class="right-sub-line">
+                <div class="footer-header">IRRIGATION CUSTOMER BILLING
+                    ENQUIRIES:</div>
+                <div>
+                    <p>
+                        <span class="phone-number">1800 077 005</span> (MONDAY TO FRIDAY,
+                        8.30AM TO 5.00PM)
+                    </p>
+                    <p>EMAIL: IRRIGATORQUESTIONS@SEQWATER.COM.AU</p>
+                    <p>MAIL: PO BOX 16146</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        CITY EAST QLD 4002</p>
+
+                </div>
+                <div class="footer-bottom">
+                    FOLLOW US: <span class="facebook-icon"></span> <span
+                        class="twitter-icon"></span> <span class="rss-icon"></span>
+                </div>
+            </div></div>
+        </div>
+        <div class="line"></div>
+        <div class="span4 footer-item">
+            <div class="footer-header" style="text-decoration: none;">CONTACT</div>
+            <div>
+                <form>
+                    <fieldset>
+                        <label class="text"> <input type="text" placeholder="NAME">
+                        </label> <label class="email"> <input type="email"
+                            placeholder="EMAIL">
+                        </label> <label> <textarea rows="4" placeholder="MESSAGE"></textarea>
+                        </label>
+                        <div class="footer-bottom">
+                            <button type="submit" class="btn send-input">SEND</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>
-
-	<div id="safe-secure-sustainable-wrapper">
-		<div class="container">
-			<div id="safe-secure-sustainable"></div>
-		</div>
-	</div>
-
-
-
-<!-- Footer -->
-<footer id="footer" class="container-wrapper">
-
-
-	<?php if ($page['main_footer']): ?>
-	<div id="main-footer" class="container">
-	    <?php print render($page['main_footer']); ?>
-	</div>
-	<?php endif; ?>
-
-
-	<?php if ($page['footer_copyright']): ?>
-	<div id="footer-copyright" class="container">
-		<?php print render($page['footer_copyright']); ?>
-	</div>
-	<?php endif;?>
-
-
-</footer>
+</div>
+<!-- END RENDER footer BLOCK -->

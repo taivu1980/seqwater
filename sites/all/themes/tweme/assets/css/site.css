@@ -5,6 +5,12 @@
     float: right;
 }
 /* --------------------header-----------------------*/
+.header-second-style{
+    height: 445px !important;
+}
+.main-second-style{
+    padding-top: 20px;
+}
 #header{
     width: 100%;
     height: 745px;
@@ -37,7 +43,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    /*z-index: 9999999;*/
+    z-index: 9999999;
 }
 #menu h2{
     display: none;

@@ -40,7 +40,7 @@ div.circle {
 #education3-img {
     width: 320px;
     height: 320px;
-    background: url(/sites/all/themes/tweme/assets/img/edu1.jpg);
+    background: url(sites/all/themes/tweme/assets/img/edu1.jpg);
     position: absolute;
     top: 160px;
     left: 0px;
@@ -50,7 +50,7 @@ div.circle {
     width: 250px;
     height: 250px;
     background: #00adef;
-    background: url(/sites/all/themes/tweme/assets/img/edu2.jpg);
+    background: url(sites/all/themes/tweme/assets/img/edu2.jpg);
     position: absolute;
     top: 390px;
     right: 0px;
@@ -61,7 +61,7 @@ div.circle {
     margin-bottom: 10px;
     width: 50px;
     height: 40px;
-    background-image: url("/sites/all/themes/tweme/assets/img/visual assets.png");
+    background-image: url("sites/all/themes/tweme/assets/img/visual assets.png");
     background-position: -140px -170px;
 }
 
@@ -70,7 +70,7 @@ div.circle {
     margin-bottom: 10px;
     width: 50px;
     height: 40px;
-    background-image: url("/sites/all/themes/tweme/assets/img/visual assets.png");
+    background-image: url("sites/all/themes/tweme/assets/img/visual assets.png");
     background-position: -190px -170px;
 }
 
@@ -118,7 +118,7 @@ div.circle {
     right: 0;
     top: 0;
     background-position: -79px -131px;
-    background-image: url("/sites/all/themes/tweme/assets/img/visual assets.png");
+    background-image: url("sites/all/themes/tweme/assets/img/visual assets.png");
 }
 /* ----------------END EDUCATION BLOCK------------------ */
 
@@ -142,7 +142,7 @@ div.circle {
     margin: 10px auto;
     width: 70px;
     height: 70px;
-    background-image: url("/sites/all/themes/tweme/assets/img/visual assets.png");
+    background-image: url("sites/all/themes/tweme/assets/img/visual assets.png");
 }
 
 #ads1-img>div {
@@ -335,11 +335,11 @@ div.circle {
     margin-left: 20px;
     width: 30px;
     height: 36px;
-    background-image: url(/sites/all/themes/tweme/assets/img/visual\ assets.png);
+    background-image: url(sites/all/themes/tweme/assets/img/visual assets.png);
     margin-left: 20px;
     width: 30px;
     height: 36px;
-    background-image: url(/sites/all/themes/tweme/assets/img/visual\ assets.png);
+    background-image: url(sites/all/themes/tweme/assets/img/visual assets.png);
     background-position: -42px -85px;
 }
 
@@ -349,7 +349,7 @@ div.circle {
     margin-left: 10px;
     width: 30px;
     height: 36px;
-    background-image: url(/sites/all/themes/tweme/assets/img/visual\ assets.png);
+    background-image: url(sites/all/themes/tweme/assets/img/visual assets.png);
     background-position: -74px -85px;
 }
 
@@ -359,7 +359,7 @@ div.circle {
     margin-left: 10px;
     width: 30px;
     height: 36px;
-    background-image: url(/sites/all/themes/tweme/assets/img/visual\ assets.png);
+    background-image: url(sites/all/themes/tweme/assets/img/visual assets.png);
     background-position: -106px -85px;
 }
 
