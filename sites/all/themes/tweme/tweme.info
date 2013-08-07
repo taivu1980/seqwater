@@ -2,8 +2,8 @@ name = SeqWater
 description = Lightweight responsive theme based on Twitter Bootstrap.
 core = 7.x
 
-stylesheets[all][] = assets/css/bootstrap-responsive.css
 stylesheets[all][] = assets/css/bootstrap.css
+stylesheets[all][] = assets/css/bootstrap-responsive.css
 stylesheets[all][] = assets/css/drupal.css
 stylesheets[all][] = assets/css/style.css
 stylesheets[all][] = assets/css/responsive-customize.css
