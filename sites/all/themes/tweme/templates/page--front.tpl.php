@@ -14,6 +14,11 @@
 			        <?php if ($page['main_menu']): ?>
 			            <?php print render($page['main_menu']) ?>
 					<?php endif ?>
+
+                         <ul class="extra-menu">
+                             <li class="li-search-box"><a href="#" class="menu-main-name"><span class="menu-main-title search-images"></span></a></li>
+                             <li><a href="#" class="menu-main-name"><span class="menu-main-title-call-center">CALL CENTER <b>1800 771 491</b></span></a></li>
+                         </ul>
                 </div>
             </div>
         </div>

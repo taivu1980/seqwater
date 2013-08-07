@@ -11,6 +11,9 @@ var clickSmallButton = false;
 	            if($("#toolbar").html() != ''){
 	                $("#menu").css("top","65px");
 	                $("#menu").css("z-index","9999");
+
+	                $(".search-box").css("top","157px");
+	                $(".search-box-follow").css("top","145px");
 	                //$("#wraper-content").css("padding-top","80px");
 	            }
             }

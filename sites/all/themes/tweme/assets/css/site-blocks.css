@@ -330,12 +330,12 @@ div.circle {
 }
 
 .facebook-icon {
+    background-image: url("../img/visual assets.png");
     display: inline-block;
     vertical-align: middle;
     margin-left: 20px;
     width: 30px;
     height: 36px;
-    background-image: url(../img/visual assets.png);
     background-position: -42px -85px;
 }
 
@@ -345,7 +345,7 @@ div.circle {
     margin-left: 10px;
     width: 30px;
     height: 36px;
-    background-image: url(../img/visual assets.png);
+    background-image: url("../img/visual assets.png");
     background-position: -74px -85px;
 }
 
@@ -355,7 +355,7 @@ div.circle {
     margin-left: 10px;
     width: 30px;
     height: 36px;
-    background-image: url(../img/visual assets.png);
+    background-image: url("../img/visual assets.png");
     background-position: -106px -85px;
 }
 

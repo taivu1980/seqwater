@@ -4,6 +4,58 @@
 .right {
     float: right;
 }
+body{
+    padding-top: 0px !important;
+}
+
+/* --------------------fix super fish menu-----------------------*/
+.sf-menu a{
+    color: #777777 !important;
+    text-shadow: 0 1px 0 #FFFFFF;
+    font-size: 14px !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+.sf-menu a:hover,.sf-menu a:active{
+    color: white !important;
+    background-color: #00B0F0 !important;
+}
+ul.menu li{
+    margin: 0px !important;
+}
+.sf-menu a:active{
+    
+}
+.sf-menu > li{
+    height: 80px;
+}
+.sf-menu > li > a{
+    padding-top: 25px !important;
+}
+.sf-menu > li > a > .sf-sub-indicator{
+    top: 29px !important;
+}
+
+.sf-menu > li > a{
+    border-left: 1px solid #DDDDDD !important;
+    height: 44px;
+    border-top: 0px !important;
+}
+.sf-menu.sf-style-default li li,.sf-menu.sf-style-default li, .sf-menu.sf-style-default.sf-navbar{
+    background: none !important;
+}
+.sf-menu > li > ul a{
+    border: none !important;
+    background-color: black !important;
+    color: white !important;
+}
+.extra-menu{
+    margin: 0px;
+    pause: 0px;
+    list-style-type: none;
+}
+
+
 /* --------------------header-----------------------*/
 .header-second-style{
     height: 445px !important;
@@ -23,8 +75,6 @@
 }
 #menu-content{
     position: absolute;
-    top: 0px;
-    right: 0px;
 }
 #banner{
 	position: absolute;
