@@ -1,0 +1,11 @@
+name        = Warning CKEditor
+description = "Exit without save warning: CKeditor warning when attempting to exit without saving changes."
+core        = 7.x
+package     = User interface
+configure   = admin/config/content/warning_ckeditor
+
+; Information added by drupal.org packaging script on 2013-04-12
+version = "7.x"
+core = "7.x"
+project = "warning_ckeditor"
+datestamp = "1365759619"
