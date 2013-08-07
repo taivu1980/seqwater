@@ -8,7 +8,7 @@
 <!----------------------------------------- START MENU -------------------------------------->
     <div id="menu">
         <div id="main-menu">
-        	<div class="span3" id="logo"><img src="/sites/all/themes/tweme/assets/img/logo.png" title="Seqwater"/></div>
+        	<div class="span3" id="logo"><img src="sites/all/themes/tweme/assets/img/logo.png" title="Seqwater"/></div>
         	<div id="menu-content">
                 <div class="span10 list-menu">
 			        <?php if ($page['main_menu']): ?>
@@ -51,19 +51,19 @@
                                             <ul class="thumbnails">
                                                 <li class="span4">
                                                     <div class="thumbnail">
-                                                        <img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people1.jpg">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people1.jpg">
                                                     </div>
                                                     <p>JOHN,<br/>LOOK AFTER OUR DAMS</p>
                                                 </li>
                                                 <li class="span4">
                                                     <div class="thumbnail">
-                                                        <img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people3.jpg">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people3.jpg">
                                                     </div>
                                                     <p>HELEN,<br/>LOOK AFTER OUR PARKS</p>
                                                 </li>
                                                 <li class="span4">
                                                     <div class="thumbnail">
-                                                        <img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people2.jpg">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people2.jpg">
                                                     </div>
                                                     <p>BLAKE,<br/>ENGINEER PROJECT</p>
                                                 </li>
@@ -73,13 +73,13 @@
                                             <ul class="thumbnails">
                                                 <li class="span4">
                                                     <div class="thumbnail">
-                                                        <img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people6.jpg">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people6.jpg">
                                                     </div>
                                                     <p>TONY,<br/>ENGINEER PROJECT</p>
                                                 </li>
                                                 <li class="span4">
                                                     <div class="thumbnail">
-                                                        <img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people7.jpg">
+                                                        <img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people7.jpg">
                                                     </div>
                                                     <p>DAVID,<br/>ENGINEER PROJECT</p>
                                                 </li>
@@ -94,19 +94,19 @@
                                           <div id="myCarousel3" class="carousel slide">
                                                 <div class="carousel-inner">
                                                   <div class="item active">
-                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people1.jpg"><p>JOHN,<br/>LOOK AFTER OUR DAMS</p></div>
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people1.jpg"><p>JOHN,<br/>LOOK AFTER OUR DAMS</p></div>
                                                   </div>
                                                   <div class="item">
-                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people3.jpg"><p>HELEN,<br/>LOOK AFTER OUR PARKS</p></div>
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people3.jpg"><p>HELEN,<br/>LOOK AFTER OUR PARKS</p></div>
                                                   </div>
                                                   <div class="item">
-                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people2.jpg"><p>BLAKE,<br/>ENGINEER PROJECT</p></div>
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people2.jpg"><p>BLAKE,<br/>ENGINEER PROJECT</p></div>
                                                   </div>
                                                   <div class="item">
-                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people6.jpg"><p>TONY,<br/>ENGINEER PROJECT</p></div>
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people6.jpg"><p>TONY,<br/>ENGINEER PROJECT</p></div>
                                                   </div>
                                                   <div class="item">
-                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="/sites/all/themes/tweme/assets/img/people7.jpg"><p>DAVID,<br/>ENGINEER PROJECT</p></div>
+                                                        <div class="thumbnail"><img class="img-circle" data-src="holder.js/140x140" src="sites/all/themes/tweme/assets/img/people7.jpg"><p>DAVID,<br/>ENGINEER PROJECT</p></div>
                                                   </div>
                                                 </div>
                                                 <a data-slide="prev" href="#myCarousel3" class="carousel-control-customize-left"><span class="carousel-narrow-left"></span></a>
@@ -217,21 +217,21 @@
         <div class="row-fluid">
             <div class="span4 play-content-1">
                   <div class="thumbnail">
-                        <img class="" src="/sites/all/themes/tweme/assets/img/play3.jpg">
+                        <img class="" src="sites/all/themes/tweme/assets/img/play3.jpg">
                         <p>"Last week, the Eash Queenland primary students visited the Borumba dam and had participated in rowing activity."</p>
                         <div class="btn-more-detail-hp"><span class="btn-more-text-hp">MORE DETAIL</span></div>
                   </div>
             </div>
             <div class="span4 play-content-2">
                 <div class="thumbnail">
-                        <img class="" src="/sites/all/themes/tweme/assets/img/play2.jpg">
+                        <img class="" src="sites/all/themes/tweme/assets/img/play2.jpg">
                         <p>"Next Sunday, a BBQ is organised by the South East Queenland council to celebrate the completion of the maintenance/upgrade work for the Gold Creek dam..."</p>
                         <div class="btn-more-detail-hp"><span class="btn-more-text-hp">MORE DETAIL</span></div>
                   </div>
             </div>
             <div class="span4">
                 <div class="thumbnail">
-                        <img class="" src="/sites/all/themes/tweme/assets/img/play1.jpg">
+                        <img class="" src="sites/all/themes/tweme/assets/img/play1.jpg">
                         <p>"Next week, the Eash Queenland primary students visited the Borumba dam and had participated in rowing activity."</p>
                         <div class="btn-more-detail-hp"><span class="btn-more-text-hp">MORE DETAIL</span></div>
                   </div>
@@ -255,7 +255,7 @@
                         <div class="span12 work-content">
                             <div class="media">
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="/sites/all/themes/tweme/assets/img/work2.jpg">
+                                    <img class="media-object" src="sites/all/themes/tweme/assets/img/work2.jpg">
                                 </a>
                                 <div class="media-body">
                                     <p class="media-heading">A new Centre of Excellence that will lead the way in developing new water technology was opened today in Brisbane by the Minister for Climate Change, Energy Efficiency and Water, Senator Penny Wong.</p>
@@ -270,7 +270,7 @@
                         <div class="span12 work-content">
                             <div class="media">
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="/sites/all/themes/tweme/assets/img/work3.jpg">
+                                    <img class="media-object" src="sites/all/themes/tweme/assets/img/work3.jpg">
                                 </a>
                                 <div class="media-body">
                                     <p class="media-heading">The Gold Coast Desalination plant at Tugun has increased output and is helping to ensure a continued supply of high quality drinking water for South East Queensland.</p>
@@ -285,7 +285,7 @@
                         <div class="span12 work-content">
                             <div class="media">
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="/sites/all/themes/tweme/assets/img/work1.jpg">
+                                    <img class="media-object" src="sites/all/themes/tweme/assets/img/work1.jpg">
                                 </a>
                                 <div class="media-body">
                                     <p class="media-heading">The service barge that washed up on Tugun Beach yesterday following extreme weather on the Gold Coast was successfully refloated last night (Wednesday 11 August) and is making its way to Brisbane.</p>
@@ -339,21 +339,21 @@
         <div class="span5 offset1" id="service-description-gallery">
             <div class="table">
                 <div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su1.jpg" class="img-border" /></div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su1.jpg" /></div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su1.jpg" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" /></div>
                 </div>
 
                 <div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su2.jpg" /></div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su3.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su2.jpg" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su3.jpg" class="img-border" /></div>
                     <div></div>
                 </div>
 
                 <div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su3.jpg" class="img-border" /></div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su4.jpg" class="img-border" /></div>
-                    <div><img src="/sites/all/themes/tweme/assets/img/su5.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su3.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su4.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su5.jpg" class="img-border" /></div>
                 </div>
             </div>
         </div>
