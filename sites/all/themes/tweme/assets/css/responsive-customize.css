@@ -55,20 +55,24 @@
         margin-bottom: 70px;
     }
     .rotateTitle{
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        writing-mode: tb-rl;
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+        transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        -moz-transform: rotate(0deg) !important;
+        -o-transform: rotate(0deg) !important;
+        writing-mode: tb-rl !important;
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0) !important;
     }
     #people .title-block, #live .title-block,#play .title-block,#work .title-block{
-        left: 15px;
+        left: 15px !important;
         position: absolute;
-        top: 30px;
+        top: 30px !important;
     }
     #people, #live,#play,#work{
-        padding-top: 70px;
+        padding-top: 80px !important;
+    }
+    #play,#work{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
     
     #footer{
