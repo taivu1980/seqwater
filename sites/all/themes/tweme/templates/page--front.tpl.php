@@ -8,7 +8,7 @@
 <!----------------------------------------- START MENU -------------------------------------->
     <div id="menu">
         <div id="main-menu">
-        	<div class="span3" id="logo"><a href="/"><img src="sites/all/themes/tweme/assets/img/logo.png" title="Seqwater"/></a></div>
+        	<div class="span3" id="logo"><a href="/"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
         	<div id="menu-content">
                 <div class="span10 list-menu">
 			        <?php if ($page['main_menu']): ?>
