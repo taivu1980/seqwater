@@ -344,20 +344,20 @@
         <div class="span5 offset1" id="service-description-gallery">
             <div class="table">
                 <div>
-                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" class="img-border" /></div>
-                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" /></div>
-                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su4.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/store.jpg" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/source.jpg" /></div>
                 </div>
 
                 <div>
-                    <div><img src="sites/all/themes/tweme/assets/img/su2.jpg" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/supply.jpg" class="img-border"/></div>
                     <div><img src="sites/all/themes/tweme/assets/img/su3.jpg" class="img-border" /></div>
                     <div></div>
                 </div>
 
                 <div>
-                    <div><img src="sites/all/themes/tweme/assets/img/su3.jpg" class="img-border" /></div>
-                    <div><img src="sites/all/themes/tweme/assets/img/su4.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su2.jpg" class="img-border" /></div>
+                    <div><img src="sites/all/themes/tweme/assets/img/su1.jpg" class="img-border" /></div>
                     <div><img src="sites/all/themes/tweme/assets/img/su5.jpg" class="img-border" /></div>
                 </div>
             </div>
