@@ -4,14 +4,18 @@
 Drupal.behaviors.adminToolbar = {};
 Drupal.behaviors.adminToolbar.attach = function(context) {
   $('#admin-toolbar:not(.processed)').each(function() {
-    var toolbar = $(this);
+	var toolbar = $(this);
     toolbar.addClass('processed');
 
     // Set initial toolbar state.
     Drupal.adminToolbar.init(toolbar);
 
+    Drupal.adminToolbar.toggle(toolbar);
+
     // Admin toggle.
-    $('.admin-toggle', this).click(function() { Drupal.adminToolbar.toggle(toolbar); });
+    $('.admin-toggle', this).click(function() {
+    	Drupal.adminToolbar.toggle(toolbar); 
+    });
 
     // Admin tabs.
     $('div.admin-tab', this).click(function() { Drupal.adminToolbar.tab(toolbar, $(this), true); });
@@ -48,6 +52,7 @@ Drupal.behaviors.adminToolbar.attach = function(context) {
     });
   });
 };
+
 
 /**
  * Admin toolbar methods.
