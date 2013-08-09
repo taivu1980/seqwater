@@ -24,6 +24,12 @@ var clickSmallButton = false;
 
 
             $(".li-search-box").click(function(){
+
+                $(".search-box").find(".form-text").attr("class","form-text span5");
+                $(".search-box").find(".form-text").attr("style","height: 30px;");
+                $(".search-box").find(".form-text").attr("placeholder","SEARCH...");
+
+                $(".search-box").find(".btn").hide();
                 if(!clickSearch){
                     $(".search-box").show();
                     $(".search-box-follow").show();clickSearch = true;

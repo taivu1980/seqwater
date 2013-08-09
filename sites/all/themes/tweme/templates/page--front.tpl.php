@@ -3,6 +3,10 @@
  * @file
  * Custom theme implementation to display a single Drupal page.
  */
+/*
+ *  Preprocess page.tpl.php to inject the $search_box
+*/
+$search_box = drupal_render(drupal_get_form('search_form'));
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
@@ -32,9 +36,7 @@
 	<?php endif ?>
 
 	    <div class="search-box span5">
-            <form class="form-search" method="get" action="">
-                <input class="span5 search-text" type="text" placeholder="SEARCH..." name="name">
-            </form>
+	        <?php print $search_box; ?>
         </div>
         <div class="search-box-follow span5"></div>
 
