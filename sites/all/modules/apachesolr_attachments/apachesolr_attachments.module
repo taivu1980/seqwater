@@ -690,15 +690,15 @@ function apachesolr_attachments_preprocess_apachesolr_search_snippets__file(&$va
  * @return type
  */
 function theme_apachesolr_search_snippets__file($vars) {
-    dpm($vars);
+
   $doc = $vars['doc'];
   $snippets = $vars['flattened_snippets'];
   $parent_entity_links = array();
   // Retrieve our parent entities. They have been saved as
   // a small serialized entity
     dpm(drupal_json_decode($doc->zm_parent_entity));
-  foreach ($doc->zm_parent_entity as $parent_entity_encoded) {
-    $parent_decoded = (object) drupal_json_decode($parent_entity_encoded);
+  //foreach ($doc->zm_parent_entity as $parent_entity_encoded) {
+    $parent_decoded = (object) drupal_json_decode($doc->zm_parent_entity);
     dpm($parent_decoded);
     // Extract entity id from parent. List fetches the first item from the array.
     list($id) = entity_extract_ids($parent_decoded->entity_type, $parent_decoded);
@@ -711,7 +711,7 @@ function theme_apachesolr_search_snippets__file($vars) {
     $parent_entity_uri['options']['absolute'] = TRUE;
     $parent_label = entity_label($parent_decoded->entity_type, $parent_entity);
     $parent_entity_links[] = l($parent_label, $parent_entity_uri['path'], $parent_entity_uri['options']);
-  }
+  //}
 
   if (module_exists('file')) {
     $file_type = t('!icon @filemime', array('@filemime' => $doc->ss_filemime, '!icon' => theme('file_icon', array('file' => (object) array('filemime' => $doc->ss_filemime)))));
@@ -719,7 +719,6 @@ function theme_apachesolr_search_snippets__file($vars) {
   else {
     $file_type = t('@filemime', array('@filemime' => $doc->ss_filemime));
   }
-    dpm($snippets);
   return implode(' ... ', $snippets) . '<span>' . $file_type . ' <em>attached to:</em>' . implode(', ', $parent_entity_links) . '</span>';
 }
 
