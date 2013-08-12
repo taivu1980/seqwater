@@ -1,0 +1,96 @@
+<?php 
+// $Id$ 
+/* 
+* @file 
+* A short description about our simple module.
+*
+* This is a longer description of our bigbanner_slider.module describing
+* what it does in greater detail. 
+* Just like in the .info file, the //$Id$ at the top is for Drupal's CVS.
+*
+*/ 
+drupal_add_css(drupal_get_path('module', 'bigbanner_slider') . '/css/bigbanner_slider.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+
+/**
+* Implements hook_block_info().
+* Register new block to list drupal module
+*/
+function bigbanner_slider_block_info() {
+  $blocks['bigbanner_slider'] = array(
+    'info' => t('Big Banner Slider'),
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implementation of hook_help()
+ */
+function bigbanner_slider_help($path, $arg) {
+
+  if ($path == 'admin/help#bigbanner_slider' || $path == 'admin/help') {
+    $txt = 'The BigBanner Slider module will show image slider in homepage';
+    return '<p><h1>Introdution</h1>'. $txt .'</p>';
+  }
+}
+
+
+/**
+* Implements hook_block_view().
+*/
+function bigbanner_slider_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'bigbanner_slider':{
+        $block['content'] = _show_image_slide();
+        break;
+    }
+  }
+  return $block;
+}
+
+
+/**
+ * main function render html
+ */
+function _show_image_slide() {
+
+  $templateImage = '<div class="item"><img src="%s" alt="" /></div>';
+  $imageArray = array("sites/all/themes/tweme/assets/img/dam.jpg","sites/all/themes/tweme/assets/img/recreation.jpg",
+                      "sites/all/themes/tweme/assets/img/people.jpg","sites/all/themes/tweme/assets/img/project.jpg",
+                      "sites/all/themes/tweme/assets/img/clients.jpg");
+
+
+  $templateCaption = '<li class="%s"><a href="#">%s</a></li>';
+  $captionArray = array("MANAGE DAMS &amp; WATER","MANAGE RECREATION FACILITIES","OUR PEOPLE",
+                        "OUR PROJECTS","STAKEHOLDERS - IRRIGATORS, UNIVERSITIES, RETAILTERS...");
+
+
+  // Add list images
+  $out = '<div class="carousel slide" id="myCarousel2"><div class="carousel-inner"><div class="item active">';
+  $out .= '<img src="'.$imageArray[0].'" alt="" /></div>';
+  for($i=1;$i<count($imageArray);$i++) {
+      $out .= sprintf($templateImage, $imageArray[$i]);
+  }
+  $out .= '</div></div>';
+
+
+  // Add list caption
+  $out .= '<div class="span6" id="pitch"><ul>';
+  for($i=0;$i<count($captionArray);$i++) {
+      $classCaption = 'span6';
+      switch($i){
+        case "0" : $classCaption = "pitch1 span4";break;
+        case "1" : $classCaption = "pitch2 span6";break;
+        case "2" : $classCaption = "pitch3 span3";break;
+        case "3" : $classCaption = "pitch4 span4";break;
+        case "4" : $classCaption = "pitch5 span8";break;
+      }
+      $out .= sprintf($templateCaption, $classCaption, $captionArray[$i]);
+  }
+  $out .= '</ul></div>';
+
+
+  return $out;
+}

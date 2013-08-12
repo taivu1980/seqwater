@@ -1,0 +1,10 @@
+;$Id$
+name = "Big Banner Slider"
+description = "show image slider in big banner region - frontend"
+version = "7.x-1.13"
+core = "7.x"
+package = Seqwater Modules
+files[] = bigbanner_slider.module
+;dependencies[] = autoload
+;php = 5.2
+project = "Seqwater Modules"

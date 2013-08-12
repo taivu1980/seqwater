@@ -1,0 +1,55 @@
+
+body{
+    
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+/* ----------------- start customize admin menu ------------------- */
+.menu-admin-user ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.menu-admin-user li{
+    padding: 0px 5px; 
+}
+
+
+#admin-header{
+    float: left;
+    font-size: 12px;
+    width: 100%;
+    margin-top: -40px;
+}
+#branding{
+    margin-top: 40px;
+}
+.main-admin-header{
+    float: right;
+    padding-right: 40px;
+    line-height: 40px;
+}
+
+.bubble-content {
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-left: 12px;
+    padding: 0 20px;
+    position: relative;
+}
+.point{
+  border-bottom: 10px solid transparent;
+    border-right: 12px solid #FFFFFF;
+    border-top: 10px solid transparent;
+    left: -10px;
+    position: absolute;
+    top: 12px;
+}
+/* ----------------- end customize admin menu ------------------- */
