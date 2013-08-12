@@ -696,10 +696,10 @@ function theme_apachesolr_search_snippets__file($vars) {
   $parent_entity_links = array();
   // Retrieve our parent entities. They have been saved as
   // a small serialized entity
-    dpm(drupal_json_decode($doc->zm_parent_entity));
+    //dpm(drupal_json_decode($doc->zm_parent_entity));
   //foreach ($doc->zm_parent_entity as $parent_entity_encoded) {
     $parent_decoded = (object) drupal_json_decode($doc->zm_parent_entity);
-    dpm($parent_decoded);
+    //dpm($parent_decoded);
     // Extract entity id from parent. List fetches the first item from the array.
     list($id) = entity_extract_ids($parent_decoded->entity_type, $parent_decoded);
 
