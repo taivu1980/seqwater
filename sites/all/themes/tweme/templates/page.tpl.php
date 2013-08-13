@@ -48,10 +48,21 @@ $search_box = drupal_render(drupal_get_form('search_form'));
 	  <div class="container">
 	    <?php print $messages ?>
 	    <div class="row row-toggle">
+
 	      <!-- Content -->
 	      <section id="content" class="span<?php print $content_cols ?>">
+	            <?php if ($title): ?>
+                     <h1 class="title" id="page-title"><?php print $title; ?></h1>
+                <?php endif; ?>
+                     <?php if ($tabs): ?>
+                <div class="tabs">
+                     <?php //print render($tabs); ?>
+                </div>
+                <?php endif; ?>
 	        <?php print render($page['content']) ?>
+	        <?php print $feed_icons; ?>
 	      </section>
+
 	      <?php if ($has_sidebar_second): ?>
 	      <!-- Sidebar second -->
 	      <aside id="sidebar-second" class="sidebar span3 hidden-phone">
