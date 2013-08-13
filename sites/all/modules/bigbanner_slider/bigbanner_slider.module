@@ -57,14 +57,24 @@ function bigbanner_slider_block_view($delta = '') {
 function _show_image_slide() {
 
   $templateImage = '<div class="item"><img src="%s" alt="" /></div>';
-  $imageArray = array("sites/all/themes/tweme/assets/img/dam.jpg","sites/all/themes/tweme/assets/img/recreation.jpg",
-                      "sites/all/themes/tweme/assets/img/people.jpg","sites/all/themes/tweme/assets/img/project.jpg",
-                      "sites/all/themes/tweme/assets/img/clients.jpg");
+  $bigbanner_slider_image1 = variable_get('bigbanner_slider_image1', "sites/all/themes/tweme/assets/img/dam.jpg");
+  $bigbanner_slider_image2 = variable_get('bigbanner_slider_image2', "sites/all/themes/tweme/assets/img/recreation.jpg");
+  $bigbanner_slider_image3 = variable_get('bigbanner_slider_image3', "sites/all/themes/tweme/assets/img/people.jpg");
+  $bigbanner_slider_image4 = variable_get('bigbanner_slider_image4', "sites/all/themes/tweme/assets/img/project.jpg");
+  $bigbanner_slider_image5 = variable_get('bigbanner_slider_image5', "sites/all/themes/tweme/assets/img/clients.jpg");
+  
+  $imageArray = array($bigbanner_slider_image1,$bigbanner_slider_image2,
+                      $bigbanner_slider_image3,$bigbanner_slider_image4,$bigbanner_slider_image5);
 
 
   $templateCaption = '<li class="%s"><a href="#">%s</a></li>';
-  $captionArray = array("MANAGE DAMS &amp; WATER","MANAGE RECREATION FACILITIES","OUR PEOPLE",
-                        "OUR PROJECTS","STAKEHOLDERS - IRRIGATORS, UNIVERSITIES, RETAILTERS...");
+  $bigbanner_slider_caption1 = variable_get('bigbanner_slider_caption1', "MANAGE DAMS &amp; WATER");
+  $bigbanner_slider_caption2 = variable_get('bigbanner_slider_caption2', "MANAGE RECREATION FACILITIES");
+  $bigbanner_slider_caption3 = variable_get('bigbanner_slider_caption3', "OUR PEOPLE");
+  $bigbanner_slider_caption4 = variable_get('bigbanner_slider_caption4', "OUR PROJECTS");
+  $bigbanner_slider_caption5 = variable_get('bigbanner_slider_caption5', "STAKEHOLDERS - IRRIGATORS, UNIVERSITIES, RETAILTERS...");
+  $captionArray = array($bigbanner_slider_caption1,$bigbanner_slider_caption2,
+                        $bigbanner_slider_caption3,$bigbanner_slider_caption4,$bigbanner_slider_caption5);
 
 
   // Add list images
@@ -93,4 +103,184 @@ function _show_image_slide() {
 
 
   return $out;
+}
+
+
+
+
+
+/**
+* Implements hook_menu().
+* Preparing for a module configuration form
+* 1. Registering the URL
+* 2. Access check
+* 3. Setting properties
+* 4. Declaring the form
+*/
+function bigbanner_slider_menu() {
+  $items = array();
+
+  $items['admin/config/content/bigbanner_slider'] = array(
+    'title' => 'Show image slider in homepage',
+    'description' => 'Configuration for Big Banner Slider module',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bigbanner_slider_form'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+
+/**
+* Page callback: bigbanner slider settings
+*
+* @see bigbanner_slider_menu()
+*/
+function bigbanner_slider_form($form, &$form_state) {
+  $form['bigbanner_slider_image1'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image 1 for Big Banner Slider'),
+    '#default_value' => variable_get('bigbanner_slider_image1', "sites/all/themes/tweme/assets/img/dam.jpg"),
+    '#maxlength' => 255,
+    '#description' => t('Add url for Image 1 of Big Banner Slider'),
+    '#required' => TRUE,
+    );
+    $form['bigbanner_slider_caption1'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Caption 1 for Image 1'),
+    '#default_value' => variable_get('bigbanner_slider_caption1', "MANAGE DAMS &amp; WATER"),
+    '#maxlength' => 255,
+    '#description' => t('Add caption 1 for Image 1'),
+    '#required' => TRUE,
+    );
+
+
+    $form['bigbanner_slider_image2'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image 2 for Big Banner Slider'),
+    '#default_value' => variable_get('bigbanner_slider_image2', "sites/all/themes/tweme/assets/img/recreation.jpg"),
+    '#maxlength' => 255,
+    '#description' => t('Add url for Image 2 of Big Banner Slider'),
+    '#required' => TRUE,
+    );
+    $form['bigbanner_slider_caption2'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Caption 2 for Image 2'),
+    '#default_value' => variable_get('bigbanner_slider_caption2', "MANAGE RECREATION FACILITIES"),
+    '#maxlength' => 255,
+    '#description' => t('Add caption 2 for Image 2'),
+    '#required' => TRUE,
+    );
+
+
+    $form['bigbanner_slider_image3'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image 3 for Big Banner Slider'),
+    '#default_value' => variable_get('bigbanner_slider_image3', "sites/all/themes/tweme/assets/img/people.jpg"),
+    '#maxlength' => 255,
+    '#description' => t('Add url for Image 3 of Big Banner Slider'),
+    '#required' => TRUE,
+    );
+    $form['bigbanner_slider_caption3'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Caption 3 for Image 3'),
+    '#default_value' => variable_get('bigbanner_slider_caption3', "OUR PEOPLE"),
+    '#maxlength' => 255,
+    '#description' => t('Add caption 3 for Image 3'),
+    '#required' => TRUE,
+    );
+
+
+    $form['bigbanner_slider_image4'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image 4 for Big Banner Slider'),
+    '#default_value' => variable_get('bigbanner_slider_image4', "sites/all/themes/tweme/assets/img/project.jpg"),
+    '#maxlength' => 255,
+    '#description' => t('Add url for Image 4 of Big Banner Slider'),
+    '#required' => TRUE,
+    );
+    $form['bigbanner_slider_caption4'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Caption 4 for Image 4'),
+    '#default_value' => variable_get('bigbanner_slider_caption4', "OUR PROJECTS"),
+    '#maxlength' => 255,
+    '#description' => t('Add caption 4 for Image 4'),
+    '#required' => TRUE,
+    );
+
+
+    $form['bigbanner_slider_image5'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image 5 for Big Banner Slider'),
+    '#default_value' => variable_get('bigbanner_slider_image5', "sites/all/themes/tweme/assets/img/clients.jpg"),
+    '#maxlength' => 255,
+    '#description' => t('Add url for Image 5 of Big Banner Slider'),
+    '#required' => TRUE,
+    );
+    $form['bigbanner_slider_caption5'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Caption 5 for Image 5'),
+    '#default_value' => variable_get('bigbanner_slider_caption5', "STAKEHOLDERS - IRRIGATORS, UNIVERSITIES, RETAILTERS..."),
+    '#maxlength' => 255,
+    '#description' => t('Add caption 5 for Image 5'),
+    '#required' => TRUE,
+    );
+
+  return system_settings_form($form);
+}
+
+
+/**
+* Implements validation from the Form API.
+*
+* @param $form
+*   A structured array containing the elements and properties of the form.
+* @param $form_state
+*   An array that stores information about the form's current state
+*   during processing.
+*/
+function bigbanner_slider_form_validate($form, &$form_state){
+  $bigbanner_slider_image1 = $form_state['values']['bigbanner_slider_image1'];
+  $bigbanner_slider_image2 = $form_state['values']['bigbanner_slider_image2'];
+  $bigbanner_slider_image3 = $form_state['values']['bigbanner_slider_image3'];
+  $bigbanner_slider_image4 = $form_state['values']['bigbanner_slider_image4'];
+  $bigbanner_slider_image5 = $form_state['values']['bigbanner_slider_image5'];
+  if (empty($bigbanner_slider_image1)){
+    form_set_error('bigbanner_slider_image1', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_image2)){
+    form_set_error('bigbanner_slider_image1', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_image3)){
+    form_set_error('bigbanner_slider_image1', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_image4)){
+    form_set_error('bigbanner_slider_image1', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_image5)){
+    form_set_error('bigbanner_slider_image1', t('You must enter a value for this field.'));
+  }
+  
+  $bigbanner_slider_caption1 = $form_state['values']['bigbanner_slider_caption1'];
+  $bigbanner_slider_caption2 = $form_state['values']['bigbanner_slider_caption2'];
+  $bigbanner_slider_caption3 = $form_state['values']['bigbanner_slider_caption3'];
+  $bigbanner_slider_caption4 = $form_state['values']['bigbanner_slider_caption4'];
+  $bigbanner_slider_caption5 = $form_state['values']['bigbanner_slider_caption5'];
+  if (empty($bigbanner_slider_caption1)){
+    form_set_error('bigbanner_slider_caption1', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_caption2)){
+    form_set_error('bigbanner_slider_caption2', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_caption3)){
+    form_set_error('bigbanner_slider_caption3', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_caption4)){
+    form_set_error('bigbanner_slider_caption4', t('You must enter a value for this field.'));
+  }
+  if (empty($bigbanner_slider_caption5)){
+    form_set_error('bigbanner_slider_caption5', t('You must enter a value for this field.'));
+  }
 }

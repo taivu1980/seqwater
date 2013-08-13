@@ -8,3 +8,5 @@ files[] = bigbanner_slider.module
 ;dependencies[] = autoload
 ;php = 5.2
 project = "Seqwater Modules"
+
+configure = admin/config/content/bigbanner_slider
