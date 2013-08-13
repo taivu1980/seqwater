@@ -4,3 +4,27 @@
     width: 100%;
     height:745px;
 }
+
+#myCarousel2.carousel-fade .item {
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+#myCarousel2.carousel-fade .active.left,
+#myCarousel2.carousel-fade .active.right {
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#myCarousel2.carousel-fade .next,
+#myCarousel2carousel-fade .prev {
+  left: 0;
+  z-index: 1;
+}
+
+#myCarousel2.carousel-fade .carousel-control {
+  z-index: 3;
+}

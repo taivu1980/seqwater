@@ -78,7 +78,7 @@ function _show_image_slide() {
 
 
   // Add list images
-  $out = '<div class="carousel slide" id="myCarousel2"><div class="carousel-inner"><div class="item active">';
+  $out = '<div class="carousel slide carousel-fade" id="myCarousel2"><div class="carousel-inner"><div class="item active">';
   $out .= '<img src="'.$imageArray[0].'" alt="" /></div>';
   for($i=1;$i<count($imageArray);$i++) {
       $out .= sprintf($templateImage, $imageArray[$i]);
