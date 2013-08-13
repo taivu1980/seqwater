@@ -5,6 +5,9 @@
     height:745px;
 }
 
+#header #pitch{
+    z-index: 9999999999999;
+}
 #myCarousel2.carousel-fade .item {
   -webkit-transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
