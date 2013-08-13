@@ -31,7 +31,7 @@
     </ul>
     <hr/>
     <ul>
-        <li><a href="/seqwater/admin/config">Configuration</a></li>
+        <li><a href="/seqwater/admin/config">Configurations</a></li>
         <li><a href="/seqwater/admin/modules">Modules</a></li>
         <li><a href="/seqwater/admin/reports">Reports</a></li>
         <li><a href="/seqwater/admin/people">People</a></li>
