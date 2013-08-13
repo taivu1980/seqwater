@@ -20,7 +20,7 @@ body{
     text-transform: uppercase;
     text-decoration: none !important;
 }
-.sf-menu a:hover,.sf-menu a:active{
+.sf-menu a:hover,.sf-menu a:active, .sf-menu .active{
     color: white !important;
     background-color: #00B0F0 !important;
 }
