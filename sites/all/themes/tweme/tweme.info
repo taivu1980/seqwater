@@ -23,6 +23,7 @@ scripts[] = assets/js/twitter-bootstrap-hover-dropdown.js
 scripts[] = assets/js/common.js
 
 regions[main_menu] = Main Menu
+regions[search_form_seqwater] = Search Form Seqwater
 regions[big_banner] = Big Banner
 
 regions[content] = Content

@@ -35,10 +35,12 @@ $search_box = drupal_render(drupal_get_form('search_form'));
 	</div>
 	<?php endif ?>
 
+	<?php if ($page['search_form_seqwater']): ?>
 	    <div class="search-box span5">
-	        <?php print $search_box; ?>
+			            <?php print render($page['search_form_seqwater']) ?>
         </div>
         <div class="search-box-follow span5"></div>
+    <?php endif ?>
 
 
 <div id="wraper-content">
