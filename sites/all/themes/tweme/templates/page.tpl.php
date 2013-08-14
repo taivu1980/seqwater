@@ -3,19 +3,14 @@
  * @file
  * Custom theme implementation to display a single Drupal page.
  */
-
-/*
- *  Preprocess page.tpl.php to inject the $search_box
-*/
-$search_box = drupal_render(drupal_get_form('search_form'));
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
-    <div id="menu">
+    <div id="menu-second-template">
         <div id="main-menu">
-        	<div class="span3" id="logo"><a href="/"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
+        	<div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo-second-template.png" title="Seqwater"/></a></div>
         	<div id="menu-content">
-                <div class="span10 list-menu">
+                <div class="span11 list-menu">
 			        <?php if ($page['main_menu']): ?>
 			            <?php print render($page['main_menu']) ?>
 					<?php endif ?>
@@ -28,35 +23,74 @@ $search_box = drupal_render(drupal_get_form('search_form'));
             </div>
         </div>
     </div>
+
+    <div class="params"></div>
 <!----------------------------------------- END MENU -------------------------------------->
 
 
     <div id="header" class="header-second-style">
-			<img style="height:445px; width:100%" src="<?php echo $base_path.path_to_theme()?>/assets/img/dam.jpg" alt="">
+			<img src="<?php echo $base_path.path_to_theme()?>/assets/img/dam.jpg" alt="">
+			<?php if(strlen(menu_get_active_title()) <= 19): ?>
+			<div id="pitch-second-template" class="span7">
+                    <ul>
+                        <li class="pitch1-second-template span5"><a href="#"><?php echo menu_get_active_title();?></a></li>
+                    </ul>
+            </div>
+            <?php endif;?>
 	</div>
+	<div class="header-overlay-blue"></div>
+	<div class="header-overlay-tree"></div>
 
+	<?php if ($page['search_form_seqwater']): ?>
 	    <div class="search-box span5">
-	        <?php print $search_box; ?>
+			    <?php print render($page['search_form_seqwater']) ?>
         </div>
         <div class="search-box-follow span5"></div>
+    <?php endif ?>
 
 
 	<!-- Main -->
 	<div id="main" class="main-second-style">
+
 	  <div class="container">
 	    <?php print $messages ?>
+
+	    <div id="breadcumb-second-template">
+	        <div class="image-control-breadcumb"><i class="icon-home-image"></i></div>
+	        <a href="<?php echo $base_path;?>">Home /</a><span><?php echo menu_get_active_title();?></span>
+	    </div>
+
 	    <div class="row row-toggle">
 	      <!-- Content -->
 	      <section id="content" class="span<?php print $content_cols ?>">
+	            <?php if ($title): ?>
+                     <h1 class="title" id="page-title"><?php print $title; ?></h1>
+                <?php endif; ?>
+                     <?php if ($tabs): ?>
+                <div class="tabs">
+                     <?php //print render($tabs); ?>
+                </div>
+                <?php endif; ?>
 	        <?php print render($page['content']) ?>
+	        <?php print $feed_icons; ?>
 	      </section>
-	      <?php if ($has_sidebar_second): ?>
+
 	      <!-- Sidebar second -->
 	      <aside id="sidebar-second" class="sidebar span3 hidden-phone">
-	        <?php print render($page['sidebar_second']) ?>
-	        <?php print render($page['sidebar_second_affix']) ?>
+	       <?php if ($has_sidebar_second): ?>
+	            <?php print render($page['sidebar_second']) ?>
+	       <?php endif ?>
+
+	       <?php if($page['sidebar_second_affix']):?>
+	            <?php print render($page['sidebar_second_affix']) ?>
+	       <?php endif ?>
+	       <div class="region region-sidebar-second second-template-service">
+	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service1.jpg">
+	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service2.jpg">
+	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service3.jpg">
+	       </div>
 	      </aside>
-	      <?php endif ?>
+
 	    </div>
 		</div>
 	</div>
@@ -135,3 +169,11 @@ $search_box = drupal_render(drupal_get_form('search_form'));
 </div>
 </div>
 <!-- END RENDER footer BLOCK -->
+
+<div id="powered-by">
+<div class="container">
+    <div class="span12 center">
+         Powered by Drupal  <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/powered-blue-80x15.png">
+    </div>
+</div>
+</div>
