@@ -76,14 +76,6 @@
 	    <div class="row row-toggle">
 	      <!-- Content -->
 	      <section id="content" class="span<?php print $content_cols ?>">
-	            <?php if ($title): ?>
-                     <h1 class="title" id="page-title"><?php print $title; ?></h1>
-                <?php endif; ?>
-                     <?php if ($tabs): ?>
-                <div class="tabs">
-                     <?php //print render($tabs); ?>
-                </div>
-                <?php endif; ?>
 	        <?php print render($page['content']) ?>
 	        <?php print $feed_icons; ?>
 	      </section>
