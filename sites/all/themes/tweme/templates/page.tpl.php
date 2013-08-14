@@ -23,9 +23,8 @@
             </div>
         </div>
     </div>
-    <div class="params">
-        <div id="title-menu-active"><?php echo menu_get_active_title();?></div>
-    </div>
+
+    <div class="params"></div>
 <!----------------------------------------- END MENU -------------------------------------->
 
 
@@ -33,7 +32,7 @@
 			<img src="<?php echo $base_path.path_to_theme()?>/assets/img/dam.jpg" alt="">
 			<div id="pitch-second-template" class="span7">
                     <ul>
-                        <li class="pitch1-second-template span5"><a href="#"></a></li>
+                        <li class="pitch1-second-template span5"><a href="#"><?php echo menu_get_active_title();?></a></li>
                     </ul>
             </div>
 	</div>

@@ -7,7 +7,6 @@ var clickSmallButton = false;
         $(document).ready(function() {
 
         	$(".pitch1").find(".bigbannerslider-active").show('slow');
-        	$(".pitch1-second-template a").html($("#title-menu-active").text());
 
             //for condition show toolbar manager drupal in top menu
         	if($("#toolbar").length > 0){
