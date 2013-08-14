@@ -36,6 +36,19 @@
                         <li class="pitch1-second-template span5"><a href="#"><?php echo menu_get_active_title();?></a></li>
                     </ul>
             </div>
+            <?php else:?>
+            <?php
+            	$active_trail = menu_get_active_trail();
+
+            		if(isset($active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name)):
+            ?>
+			            <div id="pitch-second-template" class="span7">
+			                    <ul>
+			                        <li class="pitch1-second-template span5">
+			                        <a href="#"><?php echo $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name;?></a></li>
+			                    </ul>
+			            </div>
+            		<?php endif;?>
             <?php endif;?>
 	</div>
 	<div class="header-overlay-blue"></div>
