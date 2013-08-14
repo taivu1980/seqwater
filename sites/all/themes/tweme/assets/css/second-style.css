@@ -24,6 +24,14 @@
 #block-views-top-new-articles-block .views-row{
 	padding-bottom:10px
 }
+
+.node-teaser > h2 > a{
+	font-size:20px;
+	text-decoration:none;
+}
+.node-teaser > h2 > a:hover{
+	text-decoration:none;
+}
 /* -------------------- end style for block-----------------------*/
 
 /* -------------------- start style second template-----------------------*/
