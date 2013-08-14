@@ -31,3 +31,11 @@
 #myCarousel2.carousel-fade .carousel-control {
   z-index: 3;
 }
+
+.bigbannerslider-active{
+    width: 20px;
+    height: 100%;
+    background-color: rgb(0,153,169);
+    float: right;
+    display: none;
+}

@@ -3,10 +3,6 @@
  * @file
  * Custom theme implementation to display a single Drupal page.
  */
-/*
- *  Preprocess page.tpl.php to inject the $search_box
-*/
-$search_box = drupal_render(drupal_get_form('search_form'));
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
@@ -34,10 +30,12 @@ $search_box = drupal_render(drupal_get_form('search_form'));
 	    <?php print render($page['big_banner']) ?>
 	</div>
 	<?php endif ?>
+	<div class="header-overlay-blue"></div>
+	<div class="header-overlay-tree"></div>
 
 	<?php if ($page['search_form_seqwater']): ?>
 	    <div class="search-box span5">
-			            <?php print render($page['search_form_seqwater']) ?>
+			    <?php print render($page['search_form_seqwater']) ?>
         </div>
         <div class="search-box-follow span5"></div>
     <?php endif ?>
@@ -555,3 +553,11 @@ $search_box = drupal_render(drupal_get_form('search_form'));
 </div>
 </div>
 <!-- END RENDER footer BLOCK -->
+
+<div id="powered-by">
+<div class="container">
+    <div class="span12 center">
+         Powered by Drupal  <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/powered-blue-80x15.png">
+    </div>
+</div>
+</div>

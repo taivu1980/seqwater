@@ -7,11 +7,22 @@
 body{
     padding-top: 0px !important;
 }
+#powered-by {
+    float: left;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+#powered-by img{
+    padding-left: 10px;
+}
 
 #search-form--2 #edit-keys--2{
      border-radius: 0 0 0 0 !important;
 }
-
+#content{
+    padding-bottom: 30px;
+}
 #content > .tabs ul{
     padding: 0px;
     margin: 0px;
@@ -33,6 +44,23 @@ body{
     color: white;
     background-color: #0088CC;
 }
+
+/* --------------------start common layout-----------------------*/
+.header-overlay-blue{
+    width: 100%;height: 15px;background: none repeat scroll 0 0 #0099A9;
+    float: left;position: relative;margin-top: -15px;
+    z-index: 99999;
+    opacity: 0.9;
+}
+.header-overlay-tree{
+    width: 100%;height: 15px;background: none repeat scroll 0 0 #7AA37B;
+    float: left;position: relative;margin-top: -30px;
+    z-index: 99999;
+    opacity: 0.8;
+}
+/* --------------------end common layout-----------------------*/
+
+
 /* --------------------fix super fish menu-----------------------*/
 .sf-menu a{
     color: #777777 !important;
@@ -54,8 +82,8 @@ ul.menu li{
 .sf-menu > li{
     height: 80px;
 }
-.sf-menu > li > a{
-    padding-top: 25px !important;
+#menu .sf-menu > li > a{
+    padding-top: 25px;
 }
 .sf-menu > li > a > .sf-sub-indicator{
     top: 29px !important;
@@ -80,14 +108,7 @@ ul.menu li{
     list-style-type: none;
 }
 
-
 /* --------------------header-----------------------*/
-.header-second-style{
-    height: 445px !important;
-}
-.main-second-style{
-    padding-top: 20px;
-}
 #header{
     width: 100%;
     height: 745px;
@@ -298,6 +319,9 @@ div.center, p.center, img.center, a.center , span.center {
     right: 15px;
     top: 92px;
     z-index: 99999999999999;
+}
+.search-box input{
+    border-radius:0px !important;
 }
 .search-box-follow {
     background-color: white;

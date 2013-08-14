@@ -2,3 +2,83 @@
     padding: 40px 0;
     position: relative;
 }
+
+/* -------------------- start style second template-----------------------*/
+.header-second-style{
+    height: 330px !important;
+}
+.header-second-style img{
+    height:330px; width:100%
+}
+#menu-second-template{
+    background-color: white !important;
+    height: 58px;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+#menu-second-template h2{
+    display: none;
+}
+.main-second-style{
+    padding-top: 20px;
+}
+#menu-second-template .sf-menu > li{
+    height: 58px !important;
+}
+#menu-second-template .sf-menu > li > a{
+    padding: 14px 22px 0;
+}
+#menu-second-template .sf-menu > li > a > .sf-sub-indicator{
+    top:18px !important;
+}
+#menu-second-template .menu-main-name{
+    height: 58px;
+    padding: 0 17px !important;
+}
+#menu-second-template .sf-menu > li > ul{
+    top: 50px;
+}
+#pitch-second-template{
+    position: absolute;
+    left: 0px;
+    top: 180px;
+    margin-left: 0px !important;
+}
+
+#pitch-second-template ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#pitch-second-template li {
+    background: none repeat scroll 0 0 black;
+    height: 58px;
+    margin-bottom: -1px;
+    opacity: 0.6;
+    margin-left: 0px;
+}
+#pitch-second-template a {
+    color: white;
+    font-size: 34px;
+    padding-left: 30px;
+    padding-top: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    float: left;
+}
+#pitch-second-template a:hover, #pitch-second-template a:active {
+    color: white;
+    background: none repeat scroll 0 0 black;
+    text-decoration: none;
+    float: left;
+}
+
+.params{
+    display: none;
+}
+/* -------------------- end style second template-----------------------*/
