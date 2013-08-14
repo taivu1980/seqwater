@@ -12,7 +12,7 @@ $search_box = drupal_render(drupal_get_form('search_form'));
 <!----------------------------------------- START MENU -------------------------------------->
     <div id="menu">
         <div id="main-menu">
-        	<div class="span3" id="logo"><a href="/"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
+        	<div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
         	<div id="menu-content">
                 <div class="span10 list-menu">
 			        <?php if ($page['main_menu']): ?>
