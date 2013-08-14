@@ -1029,3 +1029,8 @@ div.add-or-remove-shortcuts {
     padding-left: 9px;
     color: red;
 }
+
+.block-function ul li{
+    display: inline-block;
+    margin: 20px 25px;
+}
