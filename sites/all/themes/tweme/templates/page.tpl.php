@@ -30,11 +30,13 @@
 
     <div id="header" class="header-second-style">
 			<img src="<?php echo $base_path.path_to_theme()?>/assets/img/dam.jpg" alt="">
+			<?php if(strlen(menu_get_active_title()) <= 19): ?>
 			<div id="pitch-second-template" class="span7">
                     <ul>
                         <li class="pitch1-second-template span5"><a href="#"><?php echo menu_get_active_title();?></a></li>
                     </ul>
             </div>
+            <?php endif;?>
 	</div>
 	<div class="header-overlay-blue"></div>
 	<div class="header-overlay-tree"></div>
@@ -49,8 +51,10 @@
 
 	<!-- Main -->
 	<div id="main" class="main-second-style">
+
 	  <div class="container">
 	    <?php print $messages ?>
+
 	    <div class="row row-toggle">
 
 	      <!-- Content -->
@@ -67,13 +71,22 @@
 	        <?php print $feed_icons; ?>
 	      </section>
 
-	      <?php if ($has_sidebar_second): ?>
 	      <!-- Sidebar second -->
 	      <aside id="sidebar-second" class="sidebar span3 hidden-phone">
-	        <?php print render($page['sidebar_second']) ?>
-	        <?php print render($page['sidebar_second_affix']) ?>
+	       <?php if ($has_sidebar_second): ?>
+	            <?php print render($page['sidebar_second']) ?>
+	       <?php endif ?>
+
+	       <?php if($page['sidebar_second_affix']):?>
+	            <?php print render($page['sidebar_second_affix']) ?>
+	       <?php endif ?>
+	       <div class="region region-sidebar-second second-template-service">
+	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service1.jpg">
+	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service2.jpg">
+	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service3.jpg">
+	       </div>
 	      </aside>
-	      <?php endif ?>
+
 	    </div>
 		</div>
 	</div>
