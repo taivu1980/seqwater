@@ -10,7 +10,7 @@
         <div id="main-menu">
         	<div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo-second-template.png" title="Seqwater"/></a></div>
         	<div id="menu-content">
-                <div class="span10 list-menu">
+                <div class="span11 list-menu">
 			        <?php if ($page['main_menu']): ?>
 			            <?php print render($page['main_menu']) ?>
 					<?php endif ?>
