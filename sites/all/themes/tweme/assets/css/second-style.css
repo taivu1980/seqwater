@@ -3,6 +3,29 @@
     position: relative;
 }
 
+/* -------------------- start style for block-----------------------*/
+#block-views-related-block{
+	border: 10px solid rgb(122, 163, 123);
+}
+
+#block-views-related-block h2,#block-views-top-new-articles-block h2{
+    color: #0088CC;
+    padding-left: 10px;
+}
+
+#block-views-top-new-articles-block{
+	border: 10px solid rgb(122, 163, 123);
+	margin-top:20px;
+}
+#block-views-top-new-articles-block .content{
+	padding-left:10px;
+}
+
+#block-views-top-new-articles-block .views-row{
+	padding-bottom:10px
+}
+/* -------------------- end style for block-----------------------*/
+
 /* -------------------- start style second template-----------------------*/
 .header-second-style{
     height: 330px !important;
