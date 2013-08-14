@@ -90,4 +90,36 @@
     width: 100%;
     margin-bottom: 20px;
 }
+
+/*--------------------------- MAIN CONTENT-------------------------------*/
+.icon-home-image {
+    background-image: url("../img/visual assets.png");
+    background-position: -143px -71px;
+    display: inline-block;
+    height: 57px;
+    opacity: 1;
+    width: 40px;
+}
+#breadcumb-second-template{
+    float: left;
+    width: 100%;
+}
+#breadcumb-second-template .image-control-breadcumb{
+    float: left;
+}
+#breadcumb-second-template a{
+    padding-right: 5px;
+}
+#breadcumb-second-template a:hover{text-decoration: none;}
+#breadcumb-second-template a, #breadcumb-second-template span{
+    padding-top: 25px;
+    float: left;
+    text-transform: uppercase;
+    color: #0088CC;
+    font-weight: bold;
+}
+
+#main #page-title{
+    font-size: 30px;
+}
 /* -------------------- end style second template-----------------------*/

@@ -55,8 +55,12 @@
 	  <div class="container">
 	    <?php print $messages ?>
 
-	    <div class="row row-toggle">
+	    <div id="breadcumb-second-template">
+	        <div class="image-control-breadcumb"><i class="icon-home-image"></i></div>
+	        <a href="<?php echo $base_path;?>">Home /</a><span><?php echo menu_get_active_title();?></span>
+	    </div>
 
+	    <div class="row row-toggle">
 	      <!-- Content -->
 	      <section id="content" class="span<?php print $content_cols ?>">
 	            <?php if ($title): ?>
