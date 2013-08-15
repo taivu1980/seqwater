@@ -1090,3 +1090,11 @@ div.add-or-remove-shortcuts {
     text-align: center;
     width: 125px;
 }
+
+.left-menu-item h2 {
+    background-color: #E0E0D8;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 1em;
+    padding: 3px 10px;
+}
