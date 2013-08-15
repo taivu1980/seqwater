@@ -18,7 +18,7 @@
     <h2> Usually function</h2>
     <ul>
         <li class="add-article"><a title="Add Article" href="/seqwater/node/add/article">Add Article</a></li>
-        <li class="add-video"><a title="Add Video" href="#">Add Video</a></li>
+        <li class="add-video"><a title="Add Video" href="/seqwater/node/add/media">Add Video</a></li>
         <li class="add-picture"><a title="Add Picture" href="#">Add Picture</a></li>
         <li class="add-gallery"><a title="Add Gallery" href="#">Add Gallery</a></li>
     </ul>
