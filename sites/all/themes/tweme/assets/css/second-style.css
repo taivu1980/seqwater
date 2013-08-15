@@ -166,7 +166,7 @@
 #main #page-title{
     font-size: 20px;
 }
-#main .region-content{
-    font-size: 16px;
+#main .region-content, .content{
+    font-size: 14px !important;
 }
 /* -------------------- end style second template-----------------------*/
