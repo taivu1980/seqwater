@@ -1,6 +1,6 @@
 
 
-
+var $ = jQuery;
 var clickSearch = false;
 var clickSmallButton = false;
 

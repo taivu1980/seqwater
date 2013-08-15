@@ -11,7 +11,7 @@ stylesheets[all][] = assets/css/site-blocks.css
 stylesheets[all][] = assets/css/site.css
 stylesheets[all][] = assets/css/second-style.css
 
-scripts[] = assets/js/jquery.js
+;scripts[] = assets/js/jquery.js
 scripts[] = assets/js/application.js
 scripts[] = assets/js/bootstrap.js
 scripts[] = assets/js/jcarousel.js
