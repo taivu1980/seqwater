@@ -70,12 +70,10 @@ $categoryName = null;
 	<div id="main" class="main-second-style">
 
 	  <div class="container">
-	    <?php print $messages ?>
 
 	    <div class="row row-toggle">
 	      <!-- Content -->
-	      <section id="content" class="span<?php print $content_cols ?>">
-
+	      <section id="content" class="span9">
 	      <!-- ---------------------- start show breadcumb in second tempalte ---------------------- -->
 	     <div id="breadcumb-second-template">
 	        <div class="image-control-breadcumb"><i class="icon-home-image"></i></div>
