@@ -1020,12 +1020,18 @@ div.add-or-remove-shortcuts {
 .notification {
     float: right;
 }
+.notification1{
+    background-image: url(images/menu_left/remind.png);
+}
+.notification2{
+    background-image: url(images/menu_left/alert.png);
+}
 .notification2,.notification1 {
-    background-image: url(images/notification_icon.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;    
     width: 24px;
     float: left;
     height: 29px;
-    padding-top: 5px;
     padding-left: 9px;
     color: red;
 }
@@ -1080,7 +1086,7 @@ div.add-or-remove-shortcuts {
 
 .block-function ul li{
     display: inline-block;
-    margin: 20px 25px;
+    margin: 20px;
     text-align: center;
-    width: 115px;
+    width: 125px;
 }

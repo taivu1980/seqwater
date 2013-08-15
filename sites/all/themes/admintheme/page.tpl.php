@@ -9,8 +9,8 @@
     <div id="branding" class="clearfix">
         <!-- notification-->
         <div class="notification">
-            <span class="notification1" title="Waiting approve">(2)</span>
-            <span class="notification2" title="News change">(5)</span>
+            <span class="notification1" title="Waiting approve(5)"></span>
+            <span class="notification2" title="News change(2)"></span>
             <span><a href="/seqwater/user/logout">Logout</a></span>
         </div>
         <!-- end - notification-->
