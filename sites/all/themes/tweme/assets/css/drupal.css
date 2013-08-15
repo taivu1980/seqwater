@@ -131,3 +131,6 @@ html.js fieldset.collapsed {
   color: grey;
   margin-top: 5px;
 }
+field-slideshow-pager ul li{
+    margin: 5px;
+}
