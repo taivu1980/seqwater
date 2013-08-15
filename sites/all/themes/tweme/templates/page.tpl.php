@@ -3,6 +3,7 @@
  * @file
  * Custom theme implementation to display a single Drupal page.
  */
+$categoryName = null;
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
@@ -45,7 +46,10 @@
 			            <div id="pitch-second-template" class="span7">
 			                    <ul>
 			                        <li class="pitch1-second-template span5">
-			                        <a href="#"><?php echo $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name;?></a></li>
+			                        <a href="#"><?php
+			                             $categoryName = $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name;
+			                             echo $categoryName;
+			                        ?></a></li>
 			                    </ul>
 			            </div>
             		<?php endif;?>
@@ -68,10 +72,18 @@
 	  <div class="container">
 	    <?php print $messages ?>
 
+
+<!-- ---------------------- start show breadcumb in second tempalte ---------------------- -->
 	    <div id="breadcumb-second-template">
 	        <div class="image-control-breadcumb"><i class="icon-home-image"></i></div>
-	        <a href="<?php echo $base_path;?>">Home /</a><span><?php echo menu_get_active_title();?></span>
+	        <a href="<?php echo $base_path;?>">Home /</a>
+			<?php if(!empty($categoryName)):?>
+				<a href="?q=taxonomy/term/<?php echo $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->tid;?>"><?php echo $categoryName." / ";?></a>
+			<?php endif;?>
+	        <span><?php echo menu_get_active_title();?></span>
 	    </div>
+<!-- ---------------------- end show breadcumb in second tempalte ---------------------- -->
+
 
 	    <div class="row row-toggle">
 	      <!-- Content -->

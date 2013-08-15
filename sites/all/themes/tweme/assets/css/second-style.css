@@ -2,6 +2,13 @@
     padding: 40px 0;
     position: relative;
 }
+#user-login-form .form-actions {
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 5px 20px 20px;
+}
+
 
 /* -------------------- start style for comment-----------------------*/
 #comments{
