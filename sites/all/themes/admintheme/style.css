@@ -1030,7 +1030,57 @@ div.add-or-remove-shortcuts {
     color: red;
 }
 
+.left-menu .add-article{
+    background: url(images/menu_left/add-article.png) no-repeat 0 11px !important;
+}
+
+.left-menu .add-video{
+    background: url(images/menu_left/add-video.png) no-repeat 0 11px !important;
+}
+
+.left-menu .add-picture{
+    background: url(images/menu_left/add-picture.png) no-repeat 0 11px !important;
+}
+
+.left-menu .add-gallery{
+    background: url(images/menu_left/add-gallery.png) no-repeat 0 11px !important;
+}
+
+.left-menu .admin-page{
+    background: url(images/menu_left/home.png) no-repeat 0 11px !important;
+}
+.left-menu .content{
+    background: url(images/menu_left/content.png) no-repeat 0 11px !important;
+}
+
+.left-menu .structure{
+    background: url(images/menu_left/structure.png) no-repeat 0 11px !important;
+}
+.left-menu .dashboard{
+    background: url(images/menu_left/dashboard.png) no-repeat 0 11px !important;
+}
+.left-menu .help{
+    background: url(images/menu_left/help.png) no-repeat 0 11px !important;
+}
+.left-menu .configuration{
+    background: url(images/menu_left/configuration.png) no-repeat 0 11px !important;
+}
+.left-menu .module{
+    background: url(images/menu_left/modules.png) no-repeat 0 11px !important;
+}
+.left-menu .report{
+    background: url(images/menu_left/reports.png) no-repeat 0 11px !important;
+}
+.left-menu .people{
+    background: url(images/menu_left/people.png) no-repeat 0 11px !important;
+}
+.left-menu .appearance{
+    background: url(images/menu_left/appearance.png) no-repeat 0 11px !important;
+}
+
 .block-function ul li{
     display: inline-block;
     margin: 20px 25px;
+    text-align: center;
+    width: 100px;
 }
