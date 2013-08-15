@@ -9,6 +9,10 @@
     padding: 5px 20px 20px;
 }
 
+.region-sidebar-second-affix{
+    padding-top:20px;
+}
+
 
 /* -------------------- start style for comment-----------------------*/
 #comments{
