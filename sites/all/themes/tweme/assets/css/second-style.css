@@ -56,10 +56,11 @@
 
 /* -------------------- start style second template-----------------------*/
 .header-second-style{
-    height: 330px !important;
+    height: 250px !important;
 }
 .header-second-style img{
-    height:330px; width:100%
+    height: 250px; 
+    width:100%;
 }
 #menu-second-template{
     background-color: white !important;
@@ -96,7 +97,7 @@
 #pitch-second-template{
     position: absolute;
     left: 0px;
-    top: 180px;
+    top: 140px;
     margin-left: 0px !important;
 }
 
@@ -168,7 +169,7 @@
     float: left;
     text-transform: uppercase;
     color: #0088CC;
-    font-weight: bold;
+    font-size: 20px;
 }
 
 #main #page-title{

@@ -18,6 +18,8 @@ var clickSmallButton = false;
 
 	                $(".search-box").css("top","157px");
 	                $(".search-box-follow").css("top","145px");
+
+	                $("#header").css("margin-top","65px");
 	            }
             }
 
