@@ -31,16 +31,8 @@ $categoryName = null;
 
     <div id="header" class="header-second-style">
 			<img src="<?php echo $base_path.path_to_theme()?>/assets/img/dam.jpg" alt="">
-			<?php if(strlen(menu_get_active_title()) <= 19): ?>
-			<div id="pitch-second-template" class="span7">
-                    <ul>
-                        <li class="pitch1-second-template span5"><a href="#"><?php echo menu_get_active_title();?></a></li>
-                    </ul>
-            </div>
-            <?php else:?>
             <?php
-            	$active_trail = menu_get_active_trail();
-
+            		$active_trail = menu_get_active_trail();
             		if(isset($active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name)):
             ?>
 			            <div id="pitch-second-template" class="span7">
@@ -52,8 +44,15 @@ $categoryName = null;
 			                        ?></a></li>
 			                    </ul>
 			            </div>
+			        <?php else:?>
+			        	<?php if(strlen(menu_get_active_title()) <= 19): ?>
+						<div id="pitch-second-template" class="span7">
+                    		<ul>
+                        		<li class="pitch1-second-template span5"><a href="#"><?php echo menu_get_active_title();?></a></li>
+                    		</ul>
+            			</div>
+            			<?php endif;?>
             		<?php endif;?>
-            <?php endif;?>
 	</div>
 	<div class="header-overlay-blue"></div>
 	<div class="header-overlay-tree"></div>
