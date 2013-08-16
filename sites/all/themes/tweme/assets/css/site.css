@@ -326,7 +326,7 @@ div.center, p.center, img.center, a.center , span.center {
     position: absolute;
     right: 15px;
     top: 92px;
-    z-index: 9;
+    z-index: 50;
 }
 .search-box input{
     border-radius:0px !important;
