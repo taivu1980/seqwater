@@ -142,3 +142,8 @@ html.js fieldset.collapsed {
     text-transform: uppercase;
     text-decoration: underline;
 }
+.search-result .search-snippet strong{
+    font-size: 14px;
+    font-style: italic;
+    color: #00B0F0;
+}
