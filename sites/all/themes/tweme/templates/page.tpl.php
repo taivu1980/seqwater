@@ -199,4 +199,10 @@ $categoryName = null;
 </div>
 </div>
 
-<script type="text/javascript" src="<?php echo $base_path.path_to_theme()?>/assets/js/common.js"></script>
+<?php
+$date = new DateTime();
+$timestamp = $date->getTimestamp();
+?>
+<script type="text/javascript" src="<?php echo $base_path.path_to_theme()?>/assets/js/common.js?t=<?php echo $timestamp;?>"></script>
+
+
