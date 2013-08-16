@@ -86,15 +86,15 @@ ul.menu li{
     height: 80px;
 }
 #menu .sf-menu > li > a{
-    padding-top: 25px;
+    padding-top: 29px;
 }
 .sf-menu > li > a > .sf-sub-indicator{
     top: 29px !important;
 }
 
-.sf-menu > li > a{
+#menu .sf-menu > li > a{
     border-left: 1px solid #DDDDDD !important;
-    height: 44px;
+    height: 40px;
     border-top: 0px !important;
 }
 .sf-menu.sf-style-default li li,.sf-menu.sf-style-default li, .sf-menu.sf-style-default.sf-navbar{
