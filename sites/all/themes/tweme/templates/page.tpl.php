@@ -70,24 +70,28 @@ $categoryName = null;
 	<div id="main" class="main-second-style">
 
 	  <div class="container">
-	    <?php print $messages ?>
-
-
-<!-- ---------------------- start show breadcumb in second tempalte ---------------------- -->
-	    <div id="breadcumb-second-template">
-	        <div class="image-control-breadcumb"><i class="icon-home-image"></i></div>
-	        <a href="<?php echo $base_path;?>">Home /</a>
-			<?php if(!empty($categoryName)):?>
-				<a href="?q=taxonomy/term/<?php echo $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->tid;?>"><?php echo $categoryName." / ";?></a>
-			<?php endif;?>
-	        <span><?php echo menu_get_active_title();?></span>
-	    </div>
-<!-- ---------------------- end show breadcumb in second tempalte ---------------------- -->
-
 
 	    <div class="row row-toggle">
 	      <!-- Content -->
-	      <section id="content" class="span<?php print $content_cols ?>">
+	      <section id="content" class="span9">
+	      <!-- ---------------------- start show breadcumb in second tempalte ---------------------- -->
+	     <div id="breadcumb-second-template">
+	        <div class="image-control-breadcumb"><i class="icon-home-image"></i></div>
+	        <a href="<?php echo $base_path;?>">Home /</a>
+			<?php if(!empty($categoryName)):?>
+				<a href="?q=taxonomy/term/<?php echo $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->tid;?>"><?php echo $categoryName;?></a>
+			<?php else:?>
+				<span><?php echo menu_get_active_title();?></span>
+			<?php endif;?>
+	     </div>
+		 <!-- ---------------------- end show breadcumb in second tempalte ---------------------- -->
+
+	     <?php if ($title && !empty($categoryName)): ?>
+         <h1 class="title" id="page-title">
+            <?php print $title; ?>
+         </h1>
+         <?php endif; ?>
+
 	        <?php print render($page['content']) ?>
 	        <?php print $feed_icons; ?>
 	      </section>

@@ -67,7 +67,7 @@ function _show_image_slide() {
                       $bigbanner_slider_image3,$bigbanner_slider_image4,$bigbanner_slider_image5);
 
 
-  $templateCaption = '<li class="%s"><a href="#">%s</a><span class="bigbannerslider-active"></span></li>';
+  $templateCaption = '<li class="%s"><a href="#"><span class="title">%s</span></a><span class="bigbannerslider-active"></span></li>';
   $bigbanner_slider_caption1 = variable_get('bigbanner_slider_caption1', "MANAGE DAMS &amp; WATER");
   $bigbanner_slider_caption2 = variable_get('bigbanner_slider_caption2', "MANAGE RECREATION FACILITIES");
   $bigbanner_slider_caption3 = variable_get('bigbanner_slider_caption3', "OUR PEOPLE");

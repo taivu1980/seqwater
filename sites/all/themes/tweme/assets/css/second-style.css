@@ -24,25 +24,20 @@
 /* -------------------- end style for comment-----------------------*/
 
 /* -------------------- start style for block-----------------------*/
-#block-views-related-block{
-	border: 10px solid rgb(122, 163, 123);
+#sidebar-second .block{
+    border-bottom: 1px solid #C5C5C5;
 }
-
-#block-views-related-block h2,#block-views-top-new-articles-block h2{
-    color: #0088CC;
-    padding-left: 10px;
+#sidebar-second{
+    background: none repeat scroll 0 0 #FFFBD9;
+    padding-top: 15px;
 }
-
-#block-views-top-new-articles-block{
-	border: 10px solid rgb(122, 163, 123);
-	margin-top:20px;
+.block > h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
 }
-#block-views-top-new-articles-block .content{
-	padding-left:10px;
-}
-
-#block-views-top-new-articles-block .views-row{
-	padding-bottom:10px
+.region-sidebar-second .views-row{
+    padding-bottom: 10px;
 }
 
 .node-teaser > h2 > a{
@@ -74,9 +69,6 @@
 }
 #menu-second-template h2{
     display: none;
-}
-.main-second-style{
-    padding-top: 20px;
 }
 #menu-second-template .sf-menu > li{
     height: 58px !important;
@@ -135,14 +127,13 @@
 }
 
 .second-template-service{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 30px 10px 10px;
+    border: medium none !important;
 }
 .second-template-service img{
     width: 100%;
     margin-bottom: 20px;
 }
-
 /*--------------------------- MAIN CONTENT-------------------------------*/
 .icon-home-image {
     background-image: url("../img/visual assets.png");
@@ -173,6 +164,9 @@
 }
 
 #main #page-title{
-    font-size: 30px;
+    font-size: 20px;
+}
+#main .region-content, .content{
+    font-size: 14px !important;
 }
 /* -------------------- end style second template-----------------------*/

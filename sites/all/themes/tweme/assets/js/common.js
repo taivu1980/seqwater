@@ -6,7 +6,15 @@ var clickSmallButton = false;
 
         $(document).ready(function() {
 
-        	$(".pitch1").find(".bigbannerslider-active").show('slow');
+        	ResizeHeightSiderBar();
+        	function ResizeHeightSiderBar(){
+        		var heightMain = $("#main").height();
+        		$("#sidebar-second").height(heightMain);
+        	}
+        	
+        	var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
+
+        	$(".pitch1").find(".bigbannerslider-active").show();
 
             //for condition show toolbar manager drupal in top menu
         	if($("#toolbar").length > 0){
@@ -58,6 +66,7 @@ var clickSmallButton = false;
                 //when window is resized by customer
                 $(window).resize(function () {
                     resizeHeightMenu();resizePeopleBlock();
+                    ResizeHeightSiderBar();
                 });
 
                 function resizeHeightMenu(){
@@ -82,39 +91,39 @@ var clickSmallButton = false;
                });
 
                $('#myCarousel2').carousel().on('slid', function() {
-            	   $("#pitch").find(".bigbannerslider-active").hide('slow');
+            	   $("#pitch").find(".bigbannerslider-active").hide();
             	   var index = $(this).find(".active").index() + 1;
-                   $(".pitch"+index).find(".bigbannerslider-active").show('slow');
+                   $(".pitch"+index).find(".bigbannerslider-active").show();
                });
 
                $(".pitch1").click(function(){
-            	   $("#pitch").find(".bigbannerslider-active").hide('slow');
+            	   $("#pitch").find(".bigbannerslider-active").hide();
                    var item = 0;$('#myCarousel2').carousel(item);
-                   $(".pitch1").find(".bigbannerslider-active").show('slow');
+                   $(".pitch1").find(".bigbannerslider-active").show();
                    return false;
                });
                $(".pitch2").click(function(){
-            	   $("#pitch").find(".bigbannerslider-active").hide('slow');
+            	   $("#pitch").find(".bigbannerslider-active").hide();
                    var item = 1;$('#myCarousel2').carousel(item);
-                   $(".pitch2").find(".bigbannerslider-active").show('slow');
+                   $(".pitch2").find(".bigbannerslider-active").show();
                    return false;
                });
                $(".pitch3").click(function(){
-            	   $("#pitch").find(".bigbannerslider-active").hide('slow');
+            	   $("#pitch").find(".bigbannerslider-active").hide();
                    var item = 2;$('#myCarousel2').carousel(item);
-                   $(".pitch3").find(".bigbannerslider-active").show('slow');
+                   $(".pitch3").find(".bigbannerslider-active").show();
                    return false;
                });
                $(".pitch4").click(function(){
-            	   $("#pitch").find(".bigbannerslider-active").hide('slow');
+            	   $("#pitch").find(".bigbannerslider-active").hide();
                    var item = 3;$('#myCarousel2').carousel(item);
-                   $(".pitch4").find(".bigbannerslider-active").show('slow');
+                   $(".pitch4").find(".bigbannerslider-active").show();
                    return false;
                });
                $(".pitch5").click(function(){
-            	   $("#pitch").find(".bigbannerslider-active").hide('slow');
+            	   $("#pitch").find(".bigbannerslider-active").hide();
                    var item = 4;$('#myCarousel2').carousel(item);
-                   $(".pitch5").find(".bigbannerslider-active").show('slow');
+                   $(".pitch5").find(".bigbannerslider-active").show();
                    return false;
                });
         });

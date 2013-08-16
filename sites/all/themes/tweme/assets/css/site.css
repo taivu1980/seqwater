@@ -241,21 +241,26 @@ ul.menu li{
     list-style-type: none;
 }
 #pitch li {
-    background: none repeat scroll 0 0 black;
-    height: 58px;
     margin-bottom: -1px;
-    opacity: 0.6;
     margin-left: 0px;
+    position: relative;
+    float: left;
 }
 #pitch a {
     color: white;
+    background: none repeat scroll 0 0 black;
+    height: 43px;
     font-size: 22px;
-    padding-left: 30px;
     padding-top: 15px;
     text-align: left;
     text-transform: uppercase;
     text-decoration: none;
     float: left;
+    opacity: 0.6;
+    width: 100%;
+}
+#pitch .title {
+    padding-left: 30px;
 }
 #pitch a:hover, #pitch a:active {
     color: white;
