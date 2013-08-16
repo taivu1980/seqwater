@@ -7,12 +7,7 @@ var clickSmallButton = false;
 
 ResizeHeightSiderBar();
 function ResizeHeightSiderBar(){
-    var heightMain = parseInt($("#main").height());
-    var heightSidebar = parseInt($("#sidebar-second").height());
-
-    if(heightMain > heightSidebar) {
-        $("#sidebar-second").height(heightMain);
-    }
+    $("#sidebar-second").height(Math.max($("#main").height(), $("#sidebar-second").height()));
 }
 
         $(document).ready(function() {
