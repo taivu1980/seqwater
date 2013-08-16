@@ -169,7 +169,7 @@
 #main .region-content, .content{
     font-size: 14px !important;
 }
-#main .view-content{
+#main .region-content .view-content{
     min-height: 700px;
 }
 /* -------------------- end style second template-----------------------*/
