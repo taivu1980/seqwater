@@ -13,6 +13,8 @@ function ResizeHeightSiderBar(){
         $(document).ready(function() {
 
             $(".pitch1").find(".bigbannerslider-active").show();
+            
+            var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
 
             //for condition show toolbar manager drupal in top menu
             if($("#toolbar").length > 0){
