@@ -6,7 +6,7 @@
 }
 
 #header #pitch{
-    z-index: 9999999999999;
+    z-index: 20;
 }
 #myCarousel2.carousel-fade .item {
   -webkit-transition: opacity 2s ease-in-out;
