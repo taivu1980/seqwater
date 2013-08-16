@@ -340,6 +340,7 @@ div.center, p.center, img.center, a.center , span.center {
     position: absolute;
     right: 0;
     top: 80px;
+    z-index: 40;
 }
 .search-box form{
     margin:0px;
