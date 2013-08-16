@@ -30,6 +30,7 @@
 #sidebar-second{
     background: none repeat scroll 0 0 #FFFBD9;
     padding-top: 15px;
+    overflow:hidden;
 }
 .block > h2 {
   text-transform: uppercase;
