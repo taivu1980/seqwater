@@ -198,3 +198,5 @@ $categoryName = null;
     </div>
 </div>
 </div>
+
+<script type="text/javascript" src="<?php echo $base_path.path_to_theme()?>/assets/js/common.js"></script>

@@ -4,29 +4,18 @@ var $ = jQuery;
 var clickSearch = false;
 var clickSmallButton = false;
 
+
+ResizeHeightSiderBar();
+function ResizeHeightSiderBar(){
+    var heightMain = parseInt($("#main").height());
+    var heightSidebar = parseInt($("#sidebar-second").height());
+
+    if(heightMain > heightSidebar) {
+        $("#sidebar-second").height(heightMain);
+    }
+}
+
         $(document).ready(function() {
-
-            ResizeHeightSiderBar();
-            function ResizeHeightSiderBar(){
-                var heightMain = parseInt($("#main").height());
-                var heightSidebar = parseInt($("#sidebar-second").height());
-
-                if(heightMain > heightSidebar) {
-                    $("#sidebar-second").height(heightMain);
-                }
-            }
-            
-            var t=setTimeout(function(){
-	            var heightMain = parseInt($("#main").height());
-	            var heightSidebar = parseInt($("#sidebar-second").height());
-	
-	            if(heightMain >= heightSidebar) {
-	                $("#sidebar-second").height(heightMain);
-	            }
-	            else{
-	            	$("#sidebar-second").attr("style","");
-	            }
-            },1000);
 
             $(".pitch1").find(".bigbannerslider-active").show();
 
