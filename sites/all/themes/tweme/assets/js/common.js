@@ -6,14 +6,6 @@ var clickSmallButton = false;
 
         $(document).ready(function() {
 
-        	ResizeHeightSiderBar();
-        	function ResizeHeightSiderBar(){
-        		var heightMain = $("#main").height();
-        		$("#sidebar-second").height(heightMain);
-        	}
-        	
-        	var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
-
         	$(".pitch1").find(".bigbannerslider-active").show();
 
             //for condition show toolbar manager drupal in top menu
@@ -66,7 +58,6 @@ var clickSmallButton = false;
                 //when window is resized by customer
                 $(window).resize(function () {
                     resizeHeightMenu();resizePeopleBlock();
-                    ResizeHeightSiderBar();
                 });
 
                 function resizeHeightMenu(){
