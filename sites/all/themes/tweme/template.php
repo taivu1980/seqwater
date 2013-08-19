@@ -51,6 +51,11 @@ function tweme_theme($existing, $type, $theme, $path) {
         'actions' => array(),
       ),
     ),
+    'user_login'=>array(
+        'template'=> 'user-login',
+        'path' => $path . '/templates',
+        'arguments' => array('form' => NULL)
+    ),
     'copyright' => array(
       'variables' => array(
         'name' => NULL,

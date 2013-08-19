@@ -46,16 +46,19 @@ body{
 }
 
 /* --------------------start common layout-----------------------*/
+#main table{
+    float: left;
+}
 .header-overlay-blue{
     width: 100%;height: 15px;background: none repeat scroll 0 0 #0099A9;
     float: left;position: relative;margin-top: -15px;
-    z-index: 99999;
+    z-index: 9;
     opacity: 0.9;
 }
 .header-overlay-tree{
     width: 100%;height: 15px;background: none repeat scroll 0 0 #7AA37B;
     float: left;position: relative;margin-top: -30px;
-    z-index: 99999;
+    z-index: 9;
     opacity: 0.8;
 }
 /* --------------------end common layout-----------------------*/
@@ -83,15 +86,15 @@ ul.menu li{
     height: 80px;
 }
 #menu .sf-menu > li > a{
-    padding-top: 25px;
+    padding-top: 29px;
 }
 .sf-menu > li > a > .sf-sub-indicator{
     top: 29px !important;
 }
 
-.sf-menu > li > a{
+#menu .sf-menu > li > a{
     border-left: 1px solid #DDDDDD !important;
-    height: 44px;
+    height: 40px;
     border-top: 0px !important;
 }
 .sf-menu.sf-style-default li li,.sf-menu.sf-style-default li, .sf-menu.sf-style-default.sf-navbar{
@@ -138,7 +141,7 @@ ul.menu li{
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 9999999;
+    z-index: 40;
 }
 #menu h2{
     display: none;
@@ -219,7 +222,7 @@ ul.menu li{
     min-width: 160px;
     padding: 20px;
     top: 100%;
-    z-index: 1000;
+    z-index: 10;
 }
 .menu-small{
 	position: absolute;
@@ -271,7 +274,7 @@ ul.menu li{
 .search-text{
     height: 30px !important;
     background-color: white;
-    z-index: 9999999999;
+    z-index: 9;
     border-radius: 0 0 0 0 !important;
 }
 
@@ -323,7 +326,7 @@ div.center, p.center, img.center, a.center , span.center {
     position: absolute;
     right: 15px;
     top: 92px;
-    z-index: 99999999999999;
+    z-index: 50;
 }
 .search-box input{
     border-radius:0px !important;
@@ -337,6 +340,7 @@ div.center, p.center, img.center, a.center , span.center {
     position: absolute;
     right: 0;
     top: 80px;
+    z-index: 40;
 }
 .search-box form{
     margin:0px;

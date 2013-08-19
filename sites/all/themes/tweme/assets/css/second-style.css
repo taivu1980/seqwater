@@ -30,6 +30,7 @@
 #sidebar-second{
     background: none repeat scroll 0 0 #FFFBD9;
     padding-top: 15px;
+    overflow:hidden;
 }
 .block > h2 {
   text-transform: uppercase;
@@ -74,10 +75,11 @@
     height: 58px !important;
 }
 #menu-second-template .sf-menu > li > a{
-    padding: 14px 22px 0;
+    height: 39px;
+    padding: 18px 22px 0;
 }
 #menu-second-template .sf-menu > li > a > .sf-sub-indicator{
-    top:18px !important;
+    top:21px !important;
 }
 #menu-second-template .menu-main-name{
     height: 58px;
@@ -168,5 +170,8 @@
 }
 #main .region-content, .content{
     font-size: 14px !important;
+}
+#main .region-content .view-content{
+    min-height: 700px;
 }
 /* -------------------- end style second template-----------------------*/
