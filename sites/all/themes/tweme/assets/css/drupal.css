@@ -156,3 +156,6 @@ html.js fieldset.collapsed {
     font-style: italic;
     color: #666666;
 }
+#search-form>h2{
+    display: none;
+}

@@ -215,9 +215,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'drupal',
-      'username' => 'developer',
-      'password' => 'workaholic',
+      'database' => 'seqwater',
+      'username' => 'root',
+      'password' => 'password',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
@@ -256,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = 'sgJ2n7pNf46xvUe4qAldZENsodMEh66LysPQ3BxI6rw';
+$drupal_hash_salt = 'WxARc3R__56dGWPw5p0hkXSF0lyDU-Vzsvo3oUE2EoY';
 
 /**
  * Base URL (optional).
