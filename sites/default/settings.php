@@ -215,9 +215,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'seqwater',
-      'username' => 'root',
-      'password' => 'password',
+      'database' => 'drupal',
+      'username' => 'developer',
+      'password' => 'workaholic',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
