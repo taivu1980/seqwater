@@ -4,6 +4,9 @@
 .right {
     float: right;
 }
+a{
+    color: #7AA37B;
+}
 body{
     padding-top: 0px !important;
 }
@@ -250,7 +253,7 @@ ul.menu li{
     float: left;
 }
 #pitch a {
-    color: white;
+    color: white !important;
     background: none repeat scroll 0 0 black;
     height: 43px;
     font-size: 22px;
@@ -461,7 +464,7 @@ div.center, p.center, img.center, a.center , span.center {
 }
 
 #live .title-live{
-    color: white;
+    color: white !important;
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
