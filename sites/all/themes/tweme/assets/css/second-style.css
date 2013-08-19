@@ -13,7 +13,12 @@
     padding-top:20px;
 }
 
-
+.btn-news-customize{
+    color: white !important;
+}
+#block-views-related-block .views-field-changed, #block-views-top-new-articles-block .views-field-changed{
+    color:#999999;font-size:13px;font-style:italic;
+}
 /* -------------------- start style for comment-----------------------*/
 #comments{
 	margin-top: 100px;
