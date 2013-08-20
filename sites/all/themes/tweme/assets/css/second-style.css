@@ -28,7 +28,33 @@
 }
 /* -------------------- end style for comment-----------------------*/
 
+
+/* -------------------- start style for taxonomy news -----------------------*/
+.btn-more-detail-hp a{
+    float: left;
+    padding: 7px 14px;
+    color: white;
+    text-align: center;
+    text-transform : uppercase;
+    text-decoration: none;
+}
+.filed-images-style-customize{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#content .field-name-title h2{
+    line-height: 30px;
+    font-size: 22px;
+}
+#content .field-name-title a{
+    text-decoration: none;
+}
+/* -------------------- news style for taxonomy news -----------------------*/
+
+
 /* -------------------- start style for block-----------------------*/
+
 #sidebar-second .block{
     border-bottom: 1px solid #C5C5C5;
 }
