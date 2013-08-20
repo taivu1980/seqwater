@@ -35,6 +35,10 @@
     border-bottom:1px solid #CCCCCC;
     padding-bottom:30px;
 }
+.field-item > img{
+    width:300px;
+    padding-right:20px;
+}
 .btn-more-detail-hp a{
     float: left;
     padding: 7px 14px;
