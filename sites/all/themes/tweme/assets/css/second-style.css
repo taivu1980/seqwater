@@ -30,6 +30,10 @@
 
 
 /* -------------------- start style for taxonomy news -----------------------*/
+
+.ds-1col{
+    border-bottom:1px solid #CCCCCC;padding-bottom:10px;
+}
 .btn-more-detail-hp a{
     float: left;
     padding: 7px 14px;
