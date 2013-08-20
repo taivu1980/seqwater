@@ -32,7 +32,8 @@
 /* -------------------- start style for taxonomy news -----------------------*/
 
 .ds-1col{
-    border-bottom:1px solid #CCCCCC;padding-bottom:10px;
+    border-bottom:1px solid #CCCCCC;
+    padding-bottom:30px;
 }
 .btn-more-detail-hp a{
     float: left;
