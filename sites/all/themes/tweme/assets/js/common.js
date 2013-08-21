@@ -18,6 +18,10 @@ function ResizeHeightSiderBar(){
             $("#content").find(".field-name-field-image").addClass("filed-images-style-customize");
 
 
+            // Customize for display for block play
+            $(".region-play-block-home-page").find(".views-row").addClass("span4");
+
+
             $(".pitch1").find(".bigbannerslider-active").show();
             var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
 

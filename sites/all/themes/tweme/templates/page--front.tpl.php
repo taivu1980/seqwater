@@ -8,12 +8,12 @@
 <!----------------------------------------- START MENU -------------------------------------->
     <div id="menu">
         <div id="main-menu">
-        	<div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
-        	<div id="menu-content">
+            <div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
+            <div id="menu-content">
                 <div class="span11 list-menu">
-			        <?php if ($page['main_menu']): ?>
-			            <?php print render($page['main_menu']) ?>
-					<?php endif ?>
+                    <?php if ($page['main_menu']): ?>
+                        <?php print render($page['main_menu']) ?>
+                    <?php endif ?>
 
                          <ul class="extra-menu">
                              <li class="li-search-box"><a href="#" class="menu-main-name"><span class="menu-main-title search-images"></span></a></li>
@@ -27,15 +27,15 @@
 
     <?php if ($page['big_banner']): ?>
     <div id="header">
-	    <?php print render($page['big_banner']) ?>
-	</div>
-	<?php endif ?>
-	<div class="header-overlay-blue"></div>
-	<div class="header-overlay-tree"></div>
+        <?php print render($page['big_banner']) ?>
+    </div>
+    <?php endif ?>
+    <div class="header-overlay-blue"></div>
+    <div class="header-overlay-tree"></div>
 
-	<?php if ($page['search_form_seqwater']): ?>
-	    <div class="search-box span5">
-			    <?php print render($page['search_form_seqwater']) ?>
+    <?php if ($page['search_form_seqwater']): ?>
+        <div class="search-box span5">
+                <?php print render($page['search_form_seqwater']) ?>
         </div>
         <div class="search-box-follow span5"></div>
     <?php endif ?>
@@ -218,31 +218,13 @@
 <!-- START RENDER play BLOCK -->
 <div id="play">
     <div class="title-block">
-                <div class="rotateTitle">PLAY</div>
+         <div class="rotateTitle">PLAY</div>
     </div>
     <div class="container">
         <div class="row-fluid">
-            <div class="span4 play-content-1">
-                  <div class="thumbnail">
-                        <img class="" src="sites/all/themes/tweme/assets/img/play3.jpg">
-                        <p>"Last week, the Eash Queenland primary students visited the Borumba dam and had participated in rowing activity."</p>
-                        <div class="btn-more-detail-hp"><span class="btn-more-text-hp">MORE DETAIL</span></div>
-                  </div>
-            </div>
-            <div class="span4 play-content-2">
-                <div class="thumbnail">
-                        <img class="" src="sites/all/themes/tweme/assets/img/play2.jpg">
-                        <p>"Next Sunday, a BBQ is organised by the South East Queenland council to celebrate the completion of the maintenance/upgrade work for the Gold Creek dam..."</p>
-                        <div class="btn-more-detail-hp"><span class="btn-more-text-hp">MORE DETAIL</span></div>
-                  </div>
-            </div>
-            <div class="span4">
-                <div class="thumbnail">
-                        <img class="" src="sites/all/themes/tweme/assets/img/play1.jpg">
-                        <p>"Next week, the Eash Queenland primary students visited the Borumba dam and had participated in rowing activity."</p>
-                        <div class="btn-more-detail-hp"><span class="btn-more-text-hp">MORE DETAIL</span></div>
-                  </div>
-            </div>
+        <?php if ($page['play_block_home_page']): ?>
+             <?php print render($page['play_block_home_page']) ?>
+        <?php endif ?>
         </div>
    </div>
 </div>
