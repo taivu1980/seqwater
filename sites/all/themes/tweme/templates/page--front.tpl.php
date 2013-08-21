@@ -409,19 +409,23 @@
                 <div class="span4"></div>
                 <div class="span8">
                     <div class="educate-items">
+                        <a class="link-ads" href="http://www.seqwater.com.au/education/seqwater-learning-centre">
                         <div class="educate-item">
                             <span class="arrow" ></span>
                             <div>SEQWATER LEARNING CENTER</div>
-                        </div>
+                        </div></a>
+                        <a class="link-ads" href="http://www.seqwater.com.au/schools/water-grid-asset-tours">
                         <div class="educate-item"><span class="arrow" ></span>
                             <div>SITE TOURS</div>
-                        </div>
+                        </div></a>
+                        <a class="link-ads" href="http://www.seqwater.com.au/public/virtual-tours">
                         <div class="educate-item"><span class="arrow" ></span>
                             <div>VIRTUAL TOUR SUITE</div>
-                        </div>
+                        </div></a>
+                        <a class="link-ads" href="http://www.seqwater.com.au/education/water-island-game">
                         <div class="educate-item"><span class="arrow" ></span>
                             <div>WATER ISLAND GAME</div>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
             </div>
