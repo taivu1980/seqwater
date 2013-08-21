@@ -8152,3 +8152,15 @@ osmplayer.teaser.prototype.setNode = function(node) {
     };
   })(this));
 };
+
+//redirect page from a tag
+jQuery(document).ready(function() {
+  // Handler for .ready() called.
+	jQuery('span.field-content').each(function(){
+		var aTag = $(this).find('a:first');	
+		aTag.click(function(){
+			var href = aTag.attr('href');
+			if(href != 'undefined' && href != '') document.location = aTag.attr('href');
+		});
+	});
+});
