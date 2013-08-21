@@ -1,0 +1,259 @@
+<?php
+/**
+ * @file
+ * Scald Galleria is a player for Scald Gallery.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function scald_galleria_theme() {
+  return array(
+    'scald_galleria' => array(
+      'variables' => array(
+        'atom' => NULL,
+        'images' => array(),
+        'options' => array(),
+      ),
+      'template' => 'scald_galleria',
+    ),
+  );
+}
+
+/**
+ * Implements hook_scald_player().
+ */
+function scald_galleria_scald_player() {
+  module_load_include('constants.inc', 'scald_galleria');
+  return array(
+    'galleria' => array(
+      'name' => 'Galleria',
+      'description' => 'Display image gallery using Galleria, a JavaScript image gallery framework.',
+      'type' => array('gallery'),
+      'settings' => array(
+        'width' => SCALD_GALLERIA_WIDTH,
+        'height' => SCALD_GALLERIA_HEIGHT,
+        'thumb_style' => SCALD_GALLERIA_STYLE_THUMB,
+        'normal_style' => SCALD_GALLERIA_STYLE_NORMAL,
+        'big_style' => SCALD_GALLERIA_STYLE_BIG,
+        'theme' => SCALD_GALLERIA_THEME,
+      ),
+    ),
+  );
+
+  // This code will never be hit, but is necessary to mark the string
+  // for translation on localize.d.o
+  t('Galleria');
+  t('Display image gallery using Galleria, a JavaScript image gallery framework.');
+}
+
+/**
+ * Implements hook_scald_player_settings_form().
+ */
+function scald_galleria_scald_player_settings_form($form, &$form_state) {
+  $form['theme'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Galleria theme'),
+    '#description' => t('Theme that should be used for Galleria display. Defaults to "classic".'),
+    '#size' => 40,
+    '#default_value' => $form['#scald']['player_settings']['theme'],
+  );
+
+  $form['width'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Galleria width'),
+    '#description' => t('Width of Galleria in px.'),
+    '#size' => 40,
+    '#default_value' => $form['#scald']['player_settings']['width'],
+  );
+
+  $form['height'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Galleria height'),
+    '#description' => t('Height of Galleria in px.'),
+    '#size' => 40,
+    '#default_value' => $form['#scald']['player_settings']['height'],
+  );
+
+  $styles = image_styles();
+  $image_styles = array(
+    'original' => t('Original image'),
+  );
+  foreach ($styles as $key => $style) {
+    $image_styles[$key] = $style['name'];
+  }
+
+  $form['thumb_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Thumbnail style'),
+    '#description' => t('Select image style that should be used for thumbnails.'),
+    '#options' => $image_styles,
+    '#default_value' => $form['#scald']['player_settings']['thumb_style'],
+  );
+
+  $form['normal_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Normal style'),
+    '#description' => t('Select image style that should be used for standard images (big images in Galleria).'),
+    '#options' => $image_styles,
+    '#default_value' => $form['#scald']['player_settings']['normal_style'],
+  );
+
+  $form['big_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Big style'),
+    '#description' => t('Select image style that should be used for fullscreen images.'),
+    '#options' => $image_styles,
+    '#default_value' => $form['#scald']['player_settings']['big_style'],
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_scald_prerender().
+ */
+function scald_galleria_scald_prerender($atom, $context, $options, $mode) {
+  if ($mode == 'player') {
+    if (!$items = field_get_items('scald_atom', $atom, 'gallery_items')) {
+      return;
+    }
+
+    // Galleria display settings.
+    $config = scald_context_config_load($context);
+    $normal_style = $config->player[$atom->type]['settings']['normal_style'];
+    $thumb_style = $config->player[$atom->type]['settings']['thumb_style'];
+    $big_style = $config->player[$atom->type]['settings']['big_style'];
+    $galleria_opts = array(
+      'width' => $config->player[$atom->type]['settings']['width'],
+      'height' => $config->player[$atom->type]['settings']['height'],
+      'theme' => $config->player[$atom->type]['settings']['theme'],
+    );
+
+    // Load URLs to thumb, normal and fullscreen images.
+    $images = array();
+    foreach ($items as $item) {
+      $item_atom = scald_atom_load($item['sid']);
+      $thumbnail = field_get_items('scald_atom', $item_atom, 'scald_thumbnail');
+
+      if (!empty($thumbnail[0]['fid'])) {
+        $file = file_load($thumbnail[0]['fid']);
+        if ($file) {
+          $image = array(
+            'thumb' => $thumb_style == 'original' ? file_create_url($file->uri) : image_style_url($thumb_style, $file->uri),
+            'normal' => $normal_style == 'original' ? file_create_url($file->uri) : image_style_url($normal_style, $file->uri),
+            'big' => $big_style == 'original' ? file_create_url($file->uri) : image_style_url($big_style, $file->uri),
+            'title' => check_plain($item_atom->title),
+          );
+
+          if (isset($atom->data['items'])) {
+            $item_data = $atom->data['items'][$item['sid']];
+            if (!empty($item_data['title_overriden'])) {
+              $image['title'] = $item_data['title'];
+            }
+            $image['description'] = $item_data['description'];
+          }
+
+          // Hardcode for some video providers. However the $atom->file_source
+          // should be used.
+          if ($item_atom->provider == 'scald_youtube') {
+            $image['iframe'] = 'http://www.youtube.com/embed/' . $item_atom->base_id;
+          }
+          elseif ($item_atom->provider == 'scald_vimeo') {
+            $image['iframe'] = 'http://player.vimeo.com/video/' . $item_atom->base_id;
+          }
+          elseif ($item_atom->provider == 'scald_dailymotion') {
+            $image['iframe'] = 'http://www.dailymotion.com/embed/video/' . $item_atom->base_id;
+          }
+          elseif ($item_atom->type == 'video') {
+            $image['iframe'] = $item_atom->file_source;
+          }
+          $images[] = $image;
+        }
+      }
+    }
+
+    $atom->rendered->player = theme('scald_galleria', array('atom' => $atom, 'images' => $images, 'options' => $galleria_opts));
+    // We are not caching since we include JS in preprocess.
+    $atom->rendered->nocache = TRUE;
+  }
+}
+
+/**
+ * Preprocess function for scald_galleria.tpl.php.
+ */
+function scald_gallery_preprocess_scald_galleria(&$vars) {
+  // Prepare items.
+  $items = array();
+  foreach ($vars['images'] as $image) {
+    $attributes = array(
+      'data-title' => $image['title'],
+      'data-big' => $image['big'],
+    );
+    if (isset($image['description'])) {
+      $attributes['data-description'] = $image['description'];
+    }
+    if (isset($image['iframe'])) {
+      $attributes['class'] = 'iframe';
+    }
+
+    $thumb = theme(
+      'image',
+      array(
+        'path' => $image['thumb'],
+        'attributes' => $attributes,
+      )
+    );
+    $items[] = l($thumb, isset($image['iframe']) ? $image['iframe'] : $image['normal'], array('html' => TRUE));
+  }
+
+  $vars['items'] = $items;
+
+  // Init galleria.
+  $vars['galleria_id'] = 'scald-gallery-' . $vars['atom']->sid;
+  $galleria_path = libraries_get_path('galleria');
+  $galleria_js_path = scald_gallery_get_library_file();
+  drupal_add_js($galleria_js_path);
+
+  $theme_js_path = scald_gallery_get_library_file($vars['options']['theme']);
+  drupal_add_js($theme_js_path);
+
+  $inline_js = "Galleria.run('#" . $vars['galleria_id'] . "');";
+  drupal_add_js($inline_js, array('type' => 'inline', 'scope' => 'footer'));
+}
+
+/**
+ * Gets Galleria js file (based on galleria.module).
+ *
+ * @param $theme Defines theme that should be loaded. Main Galleria JS will be
+ *   returned if set to NULL.
+ */
+function scald_gallery_get_library_file($theme = NULL) {
+  $cache_suffix = $theme ? "_$theme" : '';
+  $cache = cache_get('scald_gallery_galleria_lib_file' . $cache_suffix);
+  if (($cache !== FALSE) && file_exists($cache->data))
+    return $cache->data;
+
+  // Search for library file
+  $libpath = libraries_get_path('galleria');
+
+  // Seach for minimized files first.
+  // Sort the found files to use the newest version if there's more than one.
+  $minpath = $normalpath = $libpath;
+  $minpath .= $theme ? "/themes/$theme/galleria.$theme*.min.js" : '/galleria-*.min.js';
+  $normalpath .= $theme ? "/themes/$theme/galleria.$theme*.js" : '/galleria-*.js';
+  $js = glob($minpath);
+  if ($js === FALSE || count($js) == 0)
+    $js = glob($normalpath);
+
+  if (count($js) > 0) {
+    rsort($js);
+    cache_set('scald_gallery_galleria_lib_file' . $cache_suffix, $js[0]);
+    return $js[0];
+  }
+  else {
+    // Could not find JavaScript library
+    return FALSE;
+  }
+}
+

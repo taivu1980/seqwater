@@ -1,0 +1,14 @@
+name = Scald: Gallery
+description = Provides Gallery atoms from any atom types.
+package = Scald Providers
+core = 7.x
+dependencies[] = atom_reference
+dependencies[] = libraries
+
+
+; Information added by drupal.org packaging script on 2013-07-02
+version = "7.x-2.0"
+core = "7.x"
+project = "scald_gallery"
+datestamp = "1372800951"
+
