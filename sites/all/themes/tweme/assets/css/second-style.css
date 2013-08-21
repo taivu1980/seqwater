@@ -45,6 +45,10 @@
 
 
 /* -------------------- start style for taxonomy news -----------------------*/
+.region-sidebar-second-affix, .region-sidebar-second-affix .block{
+    float: left;
+    width: 100%;
+}
 
 .ds-1col{
     border-bottom:1px solid #CCCCCC;
