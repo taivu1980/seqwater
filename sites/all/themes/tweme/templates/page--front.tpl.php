@@ -10,7 +10,7 @@
         <div id="main-menu">
         	<div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
         	<div id="menu-content">
-                <div class="span10 list-menu">
+                <div class="span11 list-menu">
 			        <?php if ($page['main_menu']): ?>
 			            <?php print render($page['main_menu']) ?>
 					<?php endif ?>
@@ -443,10 +443,12 @@
             <div id="ads1-img" class="circle">
                 <div></div>
             </div>
-            <div id="ads1-popover" class="ads-popover">
-                <div></div>
-                <span>REGISTER FOR DAM RELEASE ALERTS</span>
-            </div>
+            <a class="link-ads" href="http://www.previous.seqwater.com.au/public/node/338" target="_blank">
+                <div id="ads1-popover" class="ads-popover">
+                    <div></div>
+                    <span>REGISTER FOR DAM RELEASE ALERTS</span>
+                </div>
+            </a>
             <div class="ads-description">Seqwater provides a free Dam Release
                 Notification service which can provide subscribers with
                 notifications by email, SMS / text messages to mobile phones or
@@ -455,20 +457,24 @@
 
         <div class="span4 ">
             <div id="ads2-img" class="circle"><div></div></div>
-            <div id="ads2-popover" class="ads-popover">
-                <div></div>
-                <span> CHECK YOUR WATER QUALITY </span>
-            </div>
+            <a class="link-ads" href="http://seqwgm.qld.gov.au/bulk-water-quality/customer-confidence-report-bulk-water" target="_blank">
+                <div id="ads2-popover" class="ads-popover">
+                   <div></div>
+                   <span> CHECK YOUR WATER QUALITY </span>
+                </div>
+            </a>
             <div class="ads-description">**THE CUSTOMER CONFIDENCE REPORT IS
                 CURRENTLY DOWN**</div>
         </div>
 
         <div class="span4">
             <div id="ads3-img" class="circle"><div></div></div>
-            <div id="ads3-popover" class="ads-popover">
-                <div></div>
-                <span>OPERATIONAL SAFETY CAMERA</span>
-            </div>
+            <a class="link-ads" href="http://www.previous.seqwater.com.au/public/source-store-treat-supply/dams/wivenhoe-dam" target="_blank">
+                <div id="ads3-popover" class="ads-popover">
+                    <div></div>
+                    <span>OPERATIONAL SAFETY CAMERA</span>
+                </div>
+            </a>
             <div class="ads-description">As the viewing platform Wivenhoe Dam
                 remains closed for safety reasons, members of the public wishing to
                 observe gate release operations may do so online via the Operational
