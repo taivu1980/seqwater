@@ -85,6 +85,12 @@ $categoryName = null;
 	     </div>
 		 <!-- ---------------------- end show breadcumb in second tempalte ---------------------- -->
 
+	     <?php if ($tabs): ?>
+            <div class="tabs">
+                <?php print render($tabs); ?>
+            </div>
+         <?php endif; ?>
+
 	     <?php if ($title && !empty($categoryName)): ?>
          <h1 class="title" id="page-title">
             <?php print $title; ?>

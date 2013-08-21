@@ -8,9 +8,22 @@
     margin: 0px;
     padding: 5px 20px 20px;
 }
+#main .tabs{
+    padding-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+.feed-icon{
+    float: left;
+    width: 100%;
+}
 
 .region-sidebar-second-affix{
     padding-top:20px;
+}
+
+.region-content{
+    float: left;
 }
 
 .btn-news-customize{
@@ -22,6 +35,8 @@
 /* -------------------- start style for comment-----------------------*/
 #comments{
 	margin-top: 100px;
+	float: left;
+	width: 100%;
 }
 #comments > h2{
 	font-size: 20px;
@@ -66,6 +81,7 @@
 
 #sidebar-second .block{
     border-bottom: 1px solid #C5C5C5;
+    float: left;
 }
 #sidebar-second{
     background: none repeat scroll 0 0 #FFFBD9;
@@ -209,8 +225,12 @@
 #main #page-title{
     font-size: 20px;
 }
+.region-content .content,.region-content{
+    width: 100%;
+}
 #main .region-content, .content{
     font-size: 14px !important;
+    float: left;
 }
 #main .region-content .view-content{
     min-height: 700px;
