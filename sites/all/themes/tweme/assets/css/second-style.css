@@ -46,6 +46,16 @@
 
 /* -------------------- start style for taxonomy news -----------------------*/
 
+.recreation-news-button{
+    background: none repeat scroll 0 0 #C4A974;
+    padding: 0 10px;
+}
+.projects-news-button{
+    background: none repeat scroll 0 0 #004E7E;
+    padding: 0 10px;
+}
+
+
 .term-listing-heading{
     float: left;
 }
