@@ -25,11 +25,9 @@ function ResizeHeightSiderBar(){
             $(".live-news-update-button").each(function(){
                   var cat = $(this).text().toLowerCase();
                   if(cat == "projects"){
-                      $(this).removeClass("live-news-update-button");
                       $(this).addClass("projects-news-button");
                   }
                   if(cat == "recreation"){
-                      $(this).removeClass("live-news-update-button");
                       $(this).addClass("recreation-news-button");
                   }
             });
