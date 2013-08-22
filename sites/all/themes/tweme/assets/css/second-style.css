@@ -29,7 +29,7 @@
 .btn-news-customize{
     color: white !important;
 }
-#block-views-related-block .views-field-changed, #block-views-top-new-articles-block .views-field-changed{
+#sidebar-second .news-update-date{
     color:#999999;font-size:13px;font-style:italic;
 }
 /* -------------------- start style for comment-----------------------*/
@@ -86,11 +86,31 @@
 
 
 /* -------------------- start style for block-----------------------*/
+#sidebar-second .content{
+    float: left;
+    width: 100%;
+}
+.show-update-news-sidebar ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.news-update-sidebar a, .news-update-sidebar a:hover, .news-update-sidebar a:active{
+    text-decoration: none;
+    color: #7AA37B !important;
+}
 
 #sidebar-second .block{
     border-bottom: 1px solid #C5C5C5;
     float: left;
+    width: 100%;
+    padding: 10px;
 }
+#sidebar-second .live-content-news{
+    margin-left: 0 !important;
+    padding-bottom: 10px;
+}
+
 #sidebar-second{
     background: none repeat scroll 0 0 #FFFBD9;
     padding-top: 15px;

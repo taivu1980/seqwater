@@ -447,6 +447,7 @@ div.center, p.center, img.center, a.center , span.center {
 #live .show-update-news-hp ul{
     margin: 0px;
     padding: 0px;
+    list-style-type: none;
 }
 #live .live-description > .title-live{
     float: left;
