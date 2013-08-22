@@ -106,10 +106,12 @@ ul.menu li{
     height: 80px;
 }
 #menu .sf-menu > li > a{
+    padding-right: 15px;
     padding-top: 29px;
 }
 .sf-menu > li > a > .sf-sub-indicator{
-    top: 29px !important;
+    top: 32px !important;
+    right: 2px;
 }
 
 #menu .sf-menu > li > a{
