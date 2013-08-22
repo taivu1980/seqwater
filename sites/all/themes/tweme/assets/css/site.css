@@ -444,6 +444,10 @@ div.center, p.center, img.center, a.center , span.center {
     color: white;
 }
 
+#live .show-update-news-hp ul{
+    margin: 0px;
+    padding: 0px;
+}
 #live .live-description > .title-live{
     float: left;
 }
@@ -531,12 +535,18 @@ div.center, p.center, img.center, a.center , span.center {
 .live-news-update-button,.live-media-button,.live-alerts-button{
     float: left;
     height: 19px;
-    width: 42px;
     margin-right: 10px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     font-style: italic;
 }
+.live-news-update-button a,.live-media-button a,.live-alerts-button a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
 .live-news-update-button {
     background: none repeat scroll 0 0 #598769;
     padding: 0 10px;
@@ -553,14 +563,17 @@ div.center, p.center, img.center, a.center , span.center {
 .live-content-new{
     width: 100%;
 }
-.live-content-news{
-    padding-top: 10px;
-}
 .news-update-date,.news-update-information{
     font-size: 14px;
 }
-.news-update-information{
+.news-update-information a,.news-update-information a:hover{
     font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.news-update-information{
+    float:left;
+    width:100%;
 }
 
 
@@ -573,6 +586,10 @@ div.center, p.center, img.center, a.center , span.center {
     padding: 12px 30px;
     text-align: center;
     width: 214px;
+}
+.live-btn-more-text a, .live-btn-more-text a:hover{
+    color: white;
+    text-decoration: none;
 }
 
 .live-main-content {

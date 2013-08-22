@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="center">
-                        <span class="live-btn-more-text">MORE DETAIL</span>
+                        <span class="live-btn-more-text"><a href="http://previous.seqwater.com.au/public/dam-levels#CT_Footer">MORE DETAIL</a></span>
                     </div>
             </div>
 
@@ -180,7 +180,7 @@
                         </div>
                     </div>
                     <div class="center">
-                        <span class="live-btn-more-text">VIEW ALL DAMS</span>
+                        <span class="live-btn-more-text"><a href="http://previous.seqwater.com.au/public/dam-levels">VIEW ALL DAMS</a></span>
                     </div>
             </div>
 
@@ -189,7 +189,12 @@
                             <div class="span2"><i class="news-image"></i></div>
                             <div class="span10 title-live">NEWS UPDATE</div>
                     </div>
-                    <div class="live-content-news span12">
+
+                    <?php if ($page['live_update_news_block_home_page']): ?>
+                        <?php print render($page['live_update_news_block_home_page']) ?>
+                    <?php endif ?>
+
+                    <!-- <div class="live-content-news span12">
                         <div class="live-content-new"><div class="live-news-update-button">NEWS</div><div class="news-update-date">29 January 2013</div></div>
                         <div class="news-update-information">Seqwater consumption and security update</div>
                     </div>
@@ -208,7 +213,7 @@
                     <div class="live-content-news span12">
                         <div class="live-content-new"><div class="live-news-update-button">NEWS</div><div class="news-update-date">29 January 2013</div></div>
                         <div class="news-update-information">Seqwater dam releases update</div>
-                    </div>
+                    </div> -->
             </div>
         </div>
    </div>
