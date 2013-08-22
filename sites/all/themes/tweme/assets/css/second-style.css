@@ -162,10 +162,11 @@
 }
 #menu-second-template .sf-menu > li > a{
     height: 39px;
-    padding: 18px 22px 0;
+    padding: 18px 12px 0;
 }
 #menu-second-template .sf-menu > li > a > .sf-sub-indicator{
     top:21px !important;
+    right: 2px;
 }
 #menu-second-template .menu-main-name{
     height: 58px;
