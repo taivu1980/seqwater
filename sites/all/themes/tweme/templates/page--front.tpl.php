@@ -138,7 +138,8 @@
         <div class="row-fluid">
             <div class="span4">
                     <div class="live-description center">
-                            <a class="title-live" href="#"><i class="flood-image"></i>FLOOD STORAGE</a>
+                            <div class="span6"><i class="flood-image right"></i></div>
+                            <div class="span6 title-live">FLOOD STORAGE</div>
                     </div>
                     <div class="live-main-content">
                         <div class="live-content span12">
@@ -161,7 +162,8 @@
 
             <div class="span4 live-border">
                     <div class="live-description center">
-                            <a class="title-live" href="#"><i class="dam-image"></i>DAM LEVEL</a>
+                            <div class="span6"><i class="dam-image right"></i></div>
+                            <div class="span6 title-live">DAM LEVEL</div>
                     </div>
                     <div class="live-main-content">
                         <div class="live-content span12">

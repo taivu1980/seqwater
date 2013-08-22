@@ -443,6 +443,10 @@ div.center, p.center, img.center, a.center , span.center {
     position: relative;
     color: white;
 }
+
+#live .live-description > .title-live{
+    float: left;
+}
 .title-block-live{
     float: left; 
 }
@@ -471,7 +475,6 @@ div.center, p.center, img.center, a.center , span.center {
     width: 67px;
 }
 
-
 .news-image {
     background-image: url("../img/visual assets.png");
     background-position: -92px 236px;
@@ -482,15 +485,24 @@ div.center, p.center, img.center, a.center , span.center {
 
 #live .title-live{
     color: white !important;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
     text-decoration: none;
+    text-align: left;
+    margin-left: 0px;
 }
 .live-description{
+    float: left;
+    height: 35px;
     padding-bottom: 20px;
+    width: 100%;
 }
 .live-description-customize{
+    width: 100%;
+    float: left;
+    height: 35px;
+    padding-bottom: 10px;
     width: 100%;
 }
 .live-description,.live-content{
