@@ -85,6 +85,12 @@ $categoryName = null;
 	     </div>
 		 <!-- ---------------------- end show breadcumb in second tempalte ---------------------- -->
 
+	     <?php if ($tabs): ?>
+            <div class="tabs">
+                <?php print render($tabs); ?>
+            </div>
+         <?php endif; ?>
+
 	     <?php if ($title && !empty($categoryName)): ?>
          <h1 class="title" id="page-title">
             <?php print $title; ?>
@@ -105,9 +111,15 @@ $categoryName = null;
 	            <?php print render($page['sidebar_second_affix']) ?>
 	       <?php endif ?>
 	       <div class="region region-sidebar-second second-template-service">
-	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service1.jpg">
-	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service2.jpg">
-	           <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service3.jpg">
+	           <a href="http://seqwgm.qld.gov.au/bulk-water-quality/customer-confidence-report-bulk-water" target="_blank">
+	              <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service1.jpg">
+	           </a>
+	           <a href="http://www.previous.seqwater.com.au/public/node/338" target="_blank">
+	              <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service2.jpg">
+	           </a>
+	           <a href="http://www.previous.seqwater.com.au/public/source-store-treat-supply/dams/wivenhoe-dam" target="_blank">
+	              <img alt="" src="<?php echo $base_path.path_to_theme()?>/assets/img/service3.jpg">
+	           </a>
 	       </div>
 	      </aside>
 

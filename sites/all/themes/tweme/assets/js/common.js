@@ -11,9 +11,18 @@ function ResizeHeightSiderBar(){
 }
 
         $(document).ready(function() {
+        	
+        	//Customize for display a list news of taxonomy
+            $("#content").find(".field-label").remove();
+            $("#content").find(".field-name-field-image").removeClass("clearfix");
+            $("#content").find(".field-name-field-image").addClass("filed-images-style-customize");
+
+
+            // Customize for display for block play
+            $(".region-play-block-home-page").find(".views-row").addClass("span4");
+
 
             $(".pitch1").find(".bigbannerslider-active").show();
-            
             var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
 
             //for condition show toolbar manager drupal in top menu

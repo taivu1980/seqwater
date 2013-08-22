@@ -1,3 +1,20 @@
+/* ------------------------------- Start style for Homepage --------------------------------- */
+
+.work-title a{
+    color:rgb(102,102,102);
+    text-decoration: none;
+}
+.work-title a:hover{
+    text-decoration: none;
+}
+.image-customize-padding{
+    padding-right:15px;
+}
+
+.link-ads:hover, .link-ads:focus, .link-ads:active{
+    text-decoration: none !important;
+}
+
 .left {
     float: left;
 }

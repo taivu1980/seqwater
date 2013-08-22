@@ -4,6 +4,7 @@
 }
 #sidebar-second > .region {
   padding-left: 10px;
+  float: left;
 }
 .sidebar input.form-text {
   width: 70%;

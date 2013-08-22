@@ -24,6 +24,8 @@ scripts[] = assets/js/twitter-bootstrap-hover-dropdown.js
 regions[main_menu] = Main Menu
 regions[search_form_seqwater] = Search Form Seqwater
 regions[big_banner] = Big Banner
+regions[play_block_home_page] = Play Block For Home Page
+regions[work_block_home_page] = Work Block For Home Page
 
 regions[content] = Content
 regions[sidebar_second] = Sidebar second
