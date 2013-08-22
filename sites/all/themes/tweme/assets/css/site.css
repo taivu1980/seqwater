@@ -536,9 +536,8 @@ div.center, p.center, img.center, a.center , span.center {
     float: left;
     height: 19px;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
-    font-style: italic;
 }
 .live-news-update-button a,.live-media-button a,.live-alerts-button a{
     color: white;
