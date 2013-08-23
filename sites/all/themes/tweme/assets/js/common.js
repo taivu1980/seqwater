@@ -21,6 +21,17 @@ function ResizeHeightSiderBar(){
             // Customize for display for block play
             $(".region-play-block-home-page").find(".views-row").addClass("span4");
 
+            //Customize background label category
+            $(".live-news-update-button").each(function(){
+                  var cat = $(this).text().toLowerCase();
+                  if(cat == "projects"){
+                      $(this).addClass("projects-news-button");
+                  }
+                  if(cat == "recreation"){
+                      $(this).addClass("recreation-news-button");
+                  }
+            });
+
 
             $(".pitch1").find(".bigbannerslider-active").show();
             var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
