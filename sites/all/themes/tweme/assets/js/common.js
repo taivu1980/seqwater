@@ -4,8 +4,6 @@ var $ = jQuery;
 var clickSearch = false;
 var clickSmallButton = false;
 
-
-ResizeHeightSiderBar();
 function ResizeHeightSiderBar(){
     $("#sidebar-second").height(Math.max($("#main").height(), $("#sidebar-second").height()));
 }
@@ -106,44 +104,4 @@ function ResizeHeightSiderBar(){
                     }
                 }
 
-               $('#myCarousel2').carousel({
-                    interval: 5000
-               });
-
-               $('#myCarousel2').carousel().on('slid', function() {
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var index = $(this).find(".active").index() + 1;
-                   $(".pitch"+index).find(".bigbannerslider-active").show();
-               });
-
-               $(".pitch1").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 0;$('#myCarousel2').carousel(item);
-                   $(".pitch1").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch2").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 1;$('#myCarousel2').carousel(item);
-                   $(".pitch2").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch3").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 2;$('#myCarousel2').carousel(item);
-                   $(".pitch3").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch4").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 3;$('#myCarousel2').carousel(item);
-                   $(".pitch4").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch5").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 4;$('#myCarousel2').carousel(item);
-                   $(".pitch5").find(".bigbannerslider-active").show();
-                   return false;
-               });
         });

@@ -41,6 +41,50 @@
     <?php endif ?>
 
 
+<script type="text/javascript">
+$('#myCarousel2').carousel({
+    interval: 5000
+});
+
+$('#myCarousel2').carousel().on('slid', function() {
+   $("#pitch").find(".bigbannerslider-active").hide();
+   var index = $(this).find(".active").index() + 1;
+   $(".pitch"+index).find(".bigbannerslider-active").show();
+});
+
+$(".pitch1").click(function(){
+   $("#pitch").find(".bigbannerslider-active").hide();
+   var item = 0;$('#myCarousel2').carousel(item);
+   $(".pitch1").find(".bigbannerslider-active").show();
+   return false;
+});
+$(".pitch2").click(function(){
+   $("#pitch").find(".bigbannerslider-active").hide();
+   var item = 1;$('#myCarousel2').carousel(item);
+   $(".pitch2").find(".bigbannerslider-active").show();
+   return false;
+});
+$(".pitch3").click(function(){
+   $("#pitch").find(".bigbannerslider-active").hide();
+   var item = 2;$('#myCarousel2').carousel(item);
+   $(".pitch3").find(".bigbannerslider-active").show();
+   return false;
+});
+$(".pitch4").click(function(){
+   $("#pitch").find(".bigbannerslider-active").hide();
+   var item = 3;$('#myCarousel2').carousel(item);
+   $(".pitch4").find(".bigbannerslider-active").show();
+   return false;
+});
+$(".pitch5").click(function(){
+   $("#pitch").find(".bigbannerslider-active").hide();
+   var item = 4;$('#myCarousel2').carousel(item);
+   $(".pitch5").find(".bigbannerslider-active").show();
+   return false;
+});
+</script>
+
+
 <div id="wraper-content">
 <!-- START RENDER PEOPLE BLOCK -->
 <div id="people">
@@ -193,27 +237,6 @@
                     <?php if ($page['live_update_news_block_home_page']): ?>
                         <?php print render($page['live_update_news_block_home_page']) ?>
                     <?php endif ?>
-
-                    <!-- <div class="live-content-news span12">
-                        <div class="live-content-new"><div class="live-news-update-button">NEWS</div><div class="news-update-date">29 January 2013</div></div>
-                        <div class="news-update-information">Seqwater consumption and security update</div>
-                    </div>
-                    <div class="live-content-news span12">
-                        <div class="live-content-new"><div class="live-news-update-button">NEWS</div><div class="news-update-date">29 January 2013</div></div>
-                        <div class="news-update-information">Water security and consumption update</div>
-                    </div>
-                    <div class="live-content-news span12">
-                        <div class="live-content-new"><div class="live-media-button">MEDIA</div><div class="news-update-date">29 January 2013</div></div>
-                        <div class="news-update-information">Seqwater water security and consumption update</div>
-                    </div>
-                    <div class="live-content-news span12">
-                        <div class="live-content-new"><div class="live-alerts-button">ALERTS</div><div class="news-update-date">29 January 2013</div></div>
-                        <div class="news-update-information">Seqwater partners with universities and industry in research programs</div>
-                    </div>
-                    <div class="live-content-news span12">
-                        <div class="live-content-new"><div class="live-news-update-button">NEWS</div><div class="news-update-date">29 January 2013</div></div>
-                        <div class="news-update-information">Seqwater dam releases update</div>
-                    </div> -->
             </div>
         </div>
    </div>
@@ -519,10 +542,4 @@
     </div>
 </div>
 </div>
-
-<?php
-$date = new DateTime();
-$timestamp = $date->getTimestamp();
-?>
-<script type="text/javascript" src="<?php echo $base_path.path_to_theme()?>/assets/js/common.js?t=<?php echo $timestamp;?>"></script>
 

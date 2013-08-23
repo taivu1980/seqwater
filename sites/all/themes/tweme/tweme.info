@@ -15,6 +15,7 @@ stylesheets[all][] = assets/css/second-style.css
 scripts[] = assets/js/application.js
 scripts[] = assets/js/bootstrap.js
 scripts[] = assets/js/jcarousel.js
+scripts[] = assets/js/common.js
 
 
 scripts[] = assets/js/drupal.js
