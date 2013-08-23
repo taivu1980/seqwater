@@ -33,3 +33,7 @@
 .row-block-news{
     padding-bottom: 20px;
 }
+
+#site-map .site-map-menus h2.title {
+    display: none;
+}
