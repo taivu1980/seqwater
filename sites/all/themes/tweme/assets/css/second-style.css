@@ -124,6 +124,7 @@
     background: none repeat scroll 0 0 #FFFBD9;
     padding-top: 15px;
     overflow:hidden;
+    min-height: 750px;
 }
 .block > h2 {
   text-transform: uppercase;
