@@ -27,7 +27,7 @@ function scald_video_scald_add_form(&$form, &$form_state) {
     '#type' => $defaults->upload_type,
     '#title' => 'Video',
     '#upload_location' => 'public://atoms/video/',
-    '#upload_validators' => array('file_validate_extensions' => array('webm mp4 ogv mov')),
+    '#upload_validators' => array('file_validate_extensions' => array('webm mp4 ogv')),
   );
   $form['width'] =array(
     '#type' => 'textfield',
