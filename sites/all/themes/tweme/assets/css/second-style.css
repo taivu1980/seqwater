@@ -152,15 +152,17 @@
     height: 250px; 
     width:100%;
 }
-#menu-second-template{
+#vituar-menu-second-template{
     background-color: white !important;
+    opacity: 0.8;
+}
+#vituar-menu-second-template,#menu-second-template{
     height: 58px;
     left: 0;
-    opacity: 0.8;
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 9999999;
+    z-index: 30;
 }
 #menu-second-template h2{
     display: none;
@@ -170,7 +172,7 @@
 }
 #menu-second-template .sf-menu > li > a{
     height: 39px;
-    padding: 18px 12px 0;
+    padding: 19px 12px 0;
 }
 #menu-second-template .sf-menu > li > a > .sf-sub-indicator{
     top:21px !important;

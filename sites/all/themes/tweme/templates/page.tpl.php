@@ -7,6 +7,7 @@ $categoryName = null;
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
+    <div id="vituar-menu-second-template"></div>
     <div id="menu-second-template">
         <div id="main-menu">
         	<div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo-second-template.png" title="Seqwater"/></a></div>

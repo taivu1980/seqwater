@@ -6,7 +6,8 @@
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
-    <div id="menu">
+	<div id="virtual-menu"></div>
+    <div id="real-menu">
         <div id="main-menu">
             <div class="span3" id="logo"><a href="<?php echo $base_path;?>"><img src="<?php echo $base_path.path_to_theme()?>/assets/img/logo.png" title="Seqwater"/></a></div>
             <div id="menu-content">

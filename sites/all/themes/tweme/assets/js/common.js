@@ -37,10 +37,10 @@ function ResizeHeightSiderBar(){
             //for condition show toolbar manager drupal in top menu
             if($("#toolbar").length > 0){
                 if($("#toolbar").html() != ''){
-                    $("#menu").css("top","65px");
-                    $("#menu").css("z-index","30");
+                    $("#real-menu").css("top","65px");
+                    $("#virtual-menu").css("top","65px");
                     $("#menu-second-template").css("top","65px");
-                    $("#menu-second-template").css("z-index","30");
+                    $("#vituar-menu-second-template").css("top","65px");
 
                     $(".search-box").css("top","157px");
                     $(".search-box-follow").css("top","145px");

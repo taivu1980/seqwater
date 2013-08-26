@@ -91,10 +91,12 @@ body{
     font-size: 14px !important;
     text-transform: uppercase;
     text-decoration: none !important;
+    border-left: 1px solid #CCCCCC !important;
 }
 .sf-menu a:hover,.sf-menu a:active, .sf-menu .active{
     color: white !important;
     background-color: #00B0F0 !important;
+    border-top: 0px !important;
 }
 ul.menu li{
     margin: 0px !important;
@@ -105,7 +107,7 @@ ul.menu li{
 .sf-menu > li{
     height: 80px;
 }
-#menu .sf-menu > li > a{
+#real-menu .sf-menu > li > a{
     padding-right: 15px;
     padding-top: 29px;
 }
@@ -114,8 +116,8 @@ ul.menu li{
     right: 2px;
 }
 
-#menu .sf-menu > li > a{
-    border-left: 1px solid #DDDDDD !important;
+#real-menu .sf-menu > li > a{
+    border-left: 1px solid #CCCCCC !important;
     height: 40px;
     border-top: 0px !important;
 }
@@ -133,6 +135,14 @@ ul.menu li{
     list-style-type: none;
 }
 
+#extra-menu{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 50;
+    margin-left: 0px;
+}
+
 /* --------------------header-----------------------*/
 #header{
     width: 100%;
@@ -142,6 +152,7 @@ ul.menu li{
 #logo{
     position: absolute;
     top: 0px;
+    z-index: 50;
 }
 #menu-content{
     position: absolute;
@@ -155,17 +166,19 @@ ul.menu li{
 	color: white;
 	background: none;
 }
-#menu{
+#virtual-menu{
+    opacity: 0.8;
     background-color: white !important;
+}
+#virtual-menu,#real-menu{
     height: 80px;
     left: 0;
-    opacity: 0.8;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 40;
 }
-#menu h2{
+#real-menu h2{
     display: none;
 }
 .main-wraper{
@@ -202,7 +215,7 @@ ul.menu li{
     opacity: 0.8;
 }
 .menu-main-name{
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #CCCCCC;
 	padding:10px 17px !important;
 }
 .dropdown, .menu-main-name{
