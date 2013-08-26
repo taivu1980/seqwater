@@ -1,0 +1,174 @@
+<?php
+
+/**
+ * @file
+ * Scald Video is a Scald Atom Provider for video files.
+ */
+
+/*******************************************************************************
+ * SCALD HOOK IMPLEMENTATIONS
+ */
+
+/**
+ * Implements hook_scald_atom_providers().
+ */
+function scald_video_scald_atom_providers() {
+  return array(
+    'video' => 'Upload Video file'
+  );
+}
+
+/**
+ * Implements hook_scald_add_form().
+ */
+function scald_video_scald_add_form(&$form, &$form_state) {
+  $defaults = scald_atom_defaults('video');
+  $form['file'] = array(
+    '#type' => $defaults->upload_type,
+    '#title' => 'Video',
+    '#upload_location' => 'public://atoms/video/',
+    '#upload_validators' => array('file_validate_extensions' => array('webm mp4 ogv')),
+  );
+  $form['width'] =array(
+    '#type' => 'textfield',
+    '#title' => t('Width'),
+    '#size' => 10,
+    '#element_validate' => array('element_validate_integer_positive'),
+  );
+  $form['height'] =array(
+    '#type' => 'textfield',
+    '#title' => t('Height'),
+    '#size' => 10,
+    '#element_validate' => array('element_validate_integer_positive'),
+  );
+}
+
+/**
+ * Implements hook_scald_add_atom_count().
+ */
+function scald_video_scald_add_atom_count(&$form, &$form_state) {
+  if (is_array($form_state['values']['file'])) {
+    return max(count($form_state['values']['file']), 1);
+  }
+  return 1;
+}
+
+/**
+ * Implements hook_scald_add_form_fill().
+ */
+function scald_video_scald_add_form_fill(&$atoms, $form, $form_state) {
+  $dir_video_thumb = 'public://atoms/video/thumb';
+  foreach ($atoms as $delta => $atom) {
+    if (is_array($form_state['values']['file']) && module_exists('plupload')) {
+      module_load_include('inc', 'scald', 'includes/scald.plupload');
+      $file = scald_plupload_save_file($form_state['values']['file'][$delta]['tmppath'], $form['file']['#upload_location'] . $form_state['values']['file'][$delta]['name']);
+    }
+    else {
+      $file = file_load($form_state['values']['file']);
+    }
+    $atom->base_id = $file->fid;
+    $atom->file_source = $file->uri;
+    $atom->data['video_file'] = $file->uri;
+    $atom->data['video_id'] = $file->fid;
+    $atom->title = $file->filename;
+    $atom->data['video_width'] = $form_state['values']['width'];
+    $atom->data['video_height'] = $form_state['values']['height'];
+
+    // @TODO : find lib to get metadatas from video files
+  }
+}
+
+/**
+ * Implements hook_scald_fetch().
+ */
+function scald_video_scald_fetch($atom, $type) {
+  $file_items = field_get_items('scald_atom', $atom, 'scald_thumbnail');
+  if (!empty($file_items)) {
+    $file_item = current($file_items);
+    if (file_exists($file_item['uri'])) {
+      $atom->thumbnail_source = $file_item['uri'];
+    }
+  }
+  $atom->file_source = $atom->data['video_file'];
+}
+
+/**
+ * Implements hook_scald_atom_insert().
+ */
+function scald_video_scald_atom_insert($atom) {
+  if ($atom->provider == 'scald_video') {
+    $file = file_load($atom->data['video_id']);
+    if ($file) {
+      $file->status = FILE_STATUS_PERMANENT;
+      file_save($file);
+      file_usage_add($file, 'scald_video', 'scald_atom', $atom->sid);
+    }
+  }
+}
+
+/**
+ * Implements hook_scald_prerender().
+ */
+function scald_video_scald_prerender($atom, $context, $options, $mode) {
+  if ($mode == 'atom') {
+    $atom->rendered->player = theme('scald_video_player',
+      array('vars' =>
+        array(
+          'atom'          => $atom,
+          'video_uri'     => $atom->file_source,
+          'video_width'   => check_plain($atom->data['video_width']),
+          'video_height'  => check_plain($atom->data['video_height']),
+          'video_type'    => file_get_mimetype($atom->file_source),
+          'thumbnail'     => $atom->thumbnail_source,
+        ),
+      )
+    );
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function scald_video_theme() {
+  return array(
+    'scald_video_player' => array(
+      'variables' => array('vars' => NULL),
+      'template' => 'scald_video_player'
+    )
+  );
+}
+
+
+/**
+ * Implements hook_file_mimetype_mapping_alter().
+ */
+function scald_video_file_mimetype_mapping_alter(&$mapping) {
+  if (!in_array('video/webm', $mapping['mimetypes'])) {
+    $mapping['mimetypes'][] = 'video/webm';
+    $mapping['extensions']['webm'] = count($mapping['mimetypes']) - 1;
+  }
+}
+
+
+/**
+ * Implements hook_init().
+ */
+function scald_video_init() {
+  global $base_url;
+  drupal_add_css('sites/all/libraries/video-js/video-js.min.css');
+  drupal_add_js(
+    $base_url . '/sites/all/libraries/video-js/video.js',
+    array(
+      'scope' => 'header',
+      'group' => JS_LIBRARY,
+    )
+  );
+  drupal_add_js(
+    'videojs.options.flash.swf = "' . $base_url . '/sites/all/libraries/video-js/video-js.swf";',
+    array(
+      'type' => 'inline',
+      'scope' => 'header',
+    )
+  );
+}
