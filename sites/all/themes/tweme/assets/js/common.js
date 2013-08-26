@@ -30,7 +30,6 @@ function ResizeHeightSiderBar(){
                   }
             });
 
-
             $(".pitch1").find(".bigbannerslider-active").show();
             var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
 

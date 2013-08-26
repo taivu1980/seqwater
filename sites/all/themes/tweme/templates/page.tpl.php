@@ -4,6 +4,10 @@
  * Custom theme implementation to display a single Drupal page.
  */
 $categoryName = null;
+$active_trail = menu_get_active_trail();
+if(isset($active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name)){
+	$categoryName = $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name;
+}
 ?>
 
 <!----------------------------------------- START MENU -------------------------------------->
@@ -26,26 +30,23 @@ $categoryName = null;
         </div>
     </div>
 
-    <div class="params"></div>
+    <div class="params">
+        <div id="categoryName"><?php echo $categoryName;?></div>
+        <div id="menu-active-title"><?php echo menu_get_active_title();?></div>
+    </div>
 <!----------------------------------------- END MENU -------------------------------------->
 
 
     <div id="header" class="header-second-style">
 			<img src="<?php echo $base_path.path_to_theme()?>/assets/img/dam.jpg" alt="">
-            <?php
-            		$active_trail = menu_get_active_trail();
-            		if(isset($active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name)):
-            ?>
+            <?php if(!empty($categoryName)): ?>
 			            <div id="pitch-second-template" class="span7">
 			                    <ul>
 			                        <li class="pitch1-second-template span5">
-			                        <a href="#"><?php
-			                             $categoryName = $active_trail[1]["map"][1]->field_category["und"][0]["taxonomy_term"]->name;
-			                             echo $categoryName;
-			                        ?></a></li>
+			                        <a href="#"><?php echo $categoryName; ?></a></li>
 			                    </ul>
 			            </div>
-			        <?php else:?>
+			<?php else:?>
 			        	<?php if(strlen(menu_get_active_title()) <= 19): ?>
 						<div id="pitch-second-template" class="span7">
                     		<ul>
@@ -53,7 +54,7 @@ $categoryName = null;
                     		</ul>
             			</div>
             			<?php endif;?>
-            		<?php endif;?>
+            <?php endif;?>
 	</div>
 	<div class="header-overlay-blue"></div>
 	<div class="header-overlay-tree"></div>
@@ -212,7 +213,18 @@ $categoryName = null;
 </div>
 
 <script type="text/javascript">
+
 ResizeHeightSiderBar();
+
+//fix active of menu super fish
+var categoryNameLog = $("#categoryName").text().toLowerCase();
+var menuNameLog = $("#menu-active-title").text().toLowerCase();
+$("#menu-content a").each(function(){
+     var menuNameTmp = $(this).text().toLowerCase();
+     if(menuNameTmp == categoryNameLog || menuNameTmp == menuNameLog){
+         $(this).addClass("active");
+     }
+});
 </script>
 
 
