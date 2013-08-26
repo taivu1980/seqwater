@@ -35,8 +35,17 @@ function scald_video_requirements($phase) {
       'severity' => REQUIREMENT_OK,
     );
     // @TODO: find a better way to check if files exist
-    $base_path_site = str_replace(array('/modules/scald_video', '/modules/contrib/scald_video'), '', dirname(__FILE__));
-    $sourcepath = $base_path_site . '/libraries/video-js';
+    //$base_path_site = str_replace(array('/modules/scald_video', '/modules/contrib/scald_video'), '', dirname(__FILE__));
+    //$sourcepath = $base_path_site . '/libraries/video-js';
+    $path = dirname(__FILE__); $shortPath = '';
+		$pArr = explode('/', $path);
+		$ttArr = count($pArr);
+		if($ttArr > 2){
+			for($i=0; $i < count($pArr)-2; $i++){
+				$shortPath .= $pArr[$i].'/';
+			}
+		}
+    $sourcepath = $shortPath . 'libraries/video-js';
     $jsp = file_exists($sourcepath . '/video.js');
     $cssp = file_exists($sourcepath . '/video-js.min.css');
     if (!($jsp && $cssp)) {
