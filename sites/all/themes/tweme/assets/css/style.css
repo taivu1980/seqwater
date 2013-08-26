@@ -3,8 +3,8 @@
   padding-right: 10px;
 }
 #sidebar-second > .region {
-  padding-left: 10px;
   float: left;
+  width: 100%;
 }
 .sidebar input.form-text {
   width: 70%;
@@ -32,4 +32,8 @@
 
 .row-block-news{
     padding-bottom: 20px;
+}
+
+#site-map .site-map-menus h2.title {
+    display: none;
 }

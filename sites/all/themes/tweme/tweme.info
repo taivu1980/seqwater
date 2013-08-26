@@ -15,6 +15,7 @@ stylesheets[all][] = assets/css/second-style.css
 scripts[] = assets/js/application.js
 scripts[] = assets/js/bootstrap.js
 scripts[] = assets/js/jcarousel.js
+scripts[] = assets/js/common.js
 
 
 scripts[] = assets/js/drupal.js
@@ -24,6 +25,8 @@ scripts[] = assets/js/twitter-bootstrap-hover-dropdown.js
 regions[main_menu] = Main Menu
 regions[search_form_seqwater] = Search Form Seqwater
 regions[big_banner] = Big Banner
+
+regions[live_update_news_block_home_page] = Block Update News For Home Page
 regions[play_block_home_page] = Play Block For Home Page
 regions[work_block_home_page] = Work Block For Home Page
 

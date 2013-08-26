@@ -4,8 +4,6 @@ var $ = jQuery;
 var clickSearch = false;
 var clickSmallButton = false;
 
-
-ResizeHeightSiderBar();
 function ResizeHeightSiderBar(){
     $("#sidebar-second").height(Math.max($("#main").height(), $("#sidebar-second").height()));
 }
@@ -21,6 +19,17 @@ function ResizeHeightSiderBar(){
             // Customize for display for block play
             $(".region-play-block-home-page").find(".views-row").addClass("span4");
 
+            //Customize background label category
+            $(".live-news-update-button").each(function(){
+                  var cat = $(this).text().toLowerCase();
+                  if(cat == "projects"){
+                      $(this).addClass("projects-news-button");
+                  }
+                  if(cat == "recreation"){
+                      $(this).addClass("recreation-news-button");
+                  }
+            });
+
 
             $(".pitch1").find(".bigbannerslider-active").show();
             var t=setTimeout(function(){ResizeHeightSiderBar();},1000);
@@ -28,10 +37,10 @@ function ResizeHeightSiderBar(){
             //for condition show toolbar manager drupal in top menu
             if($("#toolbar").length > 0){
                 if($("#toolbar").html() != ''){
-                    $("#menu").css("top","65px");
-                    $("#menu").css("z-index","30");
+                    $("#real-menu").css("top","65px");
+                    $("#virtual-menu").css("top","65px");
                     $("#menu-second-template").css("top","65px");
-                    $("#menu-second-template").css("z-index","30");
+                    $("#vituar-menu-second-template").css("top","65px");
 
                     $(".search-box").css("top","157px");
                     $(".search-box-follow").css("top","145px");
@@ -95,44 +104,4 @@ function ResizeHeightSiderBar(){
                     }
                 }
 
-               $('#myCarousel2').carousel({
-                    interval: 5000
-               });
-
-               $('#myCarousel2').carousel().on('slid', function() {
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var index = $(this).find(".active").index() + 1;
-                   $(".pitch"+index).find(".bigbannerslider-active").show();
-               });
-
-               $(".pitch1").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 0;$('#myCarousel2').carousel(item);
-                   $(".pitch1").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch2").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 1;$('#myCarousel2').carousel(item);
-                   $(".pitch2").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch3").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 2;$('#myCarousel2').carousel(item);
-                   $(".pitch3").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch4").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 3;$('#myCarousel2').carousel(item);
-                   $(".pitch4").find(".bigbannerslider-active").show();
-                   return false;
-               });
-               $(".pitch5").click(function(){
-                   $("#pitch").find(".bigbannerslider-active").hide();
-                   var item = 4;$('#myCarousel2').carousel(item);
-                   $(".pitch5").find(".bigbannerslider-active").show();
-                   return false;
-               });
         });

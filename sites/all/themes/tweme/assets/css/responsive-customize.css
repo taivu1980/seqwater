@@ -1,5 +1,11 @@
 
 @media (min-width: 980px) {
+    #sidebar-second{
+        width: 320px;
+    }
+    #content{
+        width: 820px;
+    }
 }
 
 @media (max-width: 979px) {

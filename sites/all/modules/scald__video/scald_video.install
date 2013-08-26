@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Scald Video Installation
+ */
+
+/**
+ * Implements hook_install().
+ */
+function scald_video_install() {
+  scald_add_type('video', 'Video', 'Video');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function scald_video_uninstall() {
+  scald_remove_type('video');
+}
+
+
+/**
+ * Implementation of hook_requirements().
+ *
+ * This hook will issue warnings if
+ * The videojs library source files are not found.
+ */
+function scald_video_requirements($phase) {
+  if ($phase == 'runtime') {
+    $requirements['scald_video'] = array(
+      'title' => t('Scald Video'),
+      'description' => t('State of the video js library'),
+      'value' => t('Present'),
+      'severity' => REQUIREMENT_OK,
+    );
+    // @TODO: find a better way to check if files exist
+    $base_path_site = str_replace(array('/modules/scald_video', '/modules/contrib/scald_video'), '', dirname(__FILE__));
+    $sourcepath = $base_path_site . '/libraries/video-js';
+    $jsp = file_exists($sourcepath . '/video.js');
+    $cssp = file_exists($sourcepath . '/video-js.min.css');
+    if (!($jsp && $cssp)) {
+      $requirements['scald_video']['description'] = t('videojs library was not found in <code>%sourcepath</code>.', array('%sourcepath' => $sourcepath));
+      $requirements['scald_video']['value'] = t('Missing');
+      $requirements['scald_video']['severity'] = REQUIREMENT_WARNING;
+    }
+  }
+  return $requirements;
+}

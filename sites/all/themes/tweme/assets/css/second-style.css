@@ -29,7 +29,7 @@
 .btn-news-customize{
     color: white !important;
 }
-#block-views-related-block .views-field-changed, #block-views-top-new-articles-block .views-field-changed{
+#sidebar-second .news-update-date{
     color:#999999;font-size:13px;font-style:italic;
 }
 /* -------------------- start style for comment-----------------------*/
@@ -45,6 +45,14 @@
 
 
 /* -------------------- start style for taxonomy news -----------------------*/
+
+.recreation-news-button{
+    background: none repeat scroll 0 0 #C4A974 !important;
+}
+.projects-news-button{
+    background: none repeat scroll 0 0 #004E7E !important;
+}
+
 
 .term-listing-heading{
     float: left;
@@ -86,11 +94,32 @@
 
 
 /* -------------------- start style for block-----------------------*/
+#sidebar-second .content{
+    float: left;
+    width: 100%;
+}
+.show-update-news-sidebar ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.news-update-sidebar a, .news-update-sidebar a:hover, .news-update-sidebar a:active{
+    text-decoration: none;
+    color: #7AA37B !important;
+}
 
 #sidebar-second .block{
     border-bottom: 1px solid #C5C5C5;
     float: left;
+    width: 100%;
+    padding: 10px;
 }
+#sidebar-second .live-content-news{
+    margin-left: 0 !important;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
 #sidebar-second{
     background: none repeat scroll 0 0 #FFFBD9;
     padding-top: 15px;
@@ -123,15 +152,17 @@
     height: 250px; 
     width:100%;
 }
-#menu-second-template{
+#vituar-menu-second-template{
     background-color: white !important;
+    opacity: 0.8;
+}
+#vituar-menu-second-template,#menu-second-template{
     height: 58px;
     left: 0;
-    opacity: 0.8;
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 9999999;
+    z-index: 30;
 }
 #menu-second-template h2{
     display: none;
@@ -141,10 +172,11 @@
 }
 #menu-second-template .sf-menu > li > a{
     height: 39px;
-    padding: 18px 22px 0;
+    padding: 19px 12px 0;
 }
 #menu-second-template .sf-menu > li > a > .sf-sub-indicator{
     top:21px !important;
+    right: 2px;
 }
 #menu-second-template .menu-main-name{
     height: 58px;
