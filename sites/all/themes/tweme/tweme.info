@@ -10,12 +10,14 @@ stylesheets[all][] = assets/css/responsive-customize.css
 stylesheets[all][] = assets/css/site-blocks.css
 stylesheets[all][] = assets/css/site.css
 stylesheets[all][] = assets/css/second-style.css
+stylesheets[all][] = assets/css/nivo-slider.css
 
 ;scripts[] = assets/js/jquery.js
 scripts[] = assets/js/application.js
 scripts[] = assets/js/bootstrap.js
 scripts[] = assets/js/jcarousel.js
 scripts[] = assets/js/common.js
+scripts[] = assets/js/jquery.nivo.slider.js
 
 
 scripts[] = assets/js/drupal.js

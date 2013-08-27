@@ -299,6 +299,7 @@ ul.menu li{
 }
 #pitch .title {
     padding-left: 30px;
+    padding-right: 50px;
 }
 #pitch a:hover, #pitch a:active {
     color: white;
@@ -311,6 +312,9 @@ ul.menu li{
     background-color: white;
     z-index: 9;
     border-radius: 0 0 0 0 !important;
+}
+#pitch .active{
+    background: none repeat scroll 0 0 #00B0F0;
 }
 
 
