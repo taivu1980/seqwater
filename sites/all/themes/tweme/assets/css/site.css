@@ -146,7 +146,6 @@ ul.menu li{
 /* --------------------header-----------------------*/
 #header{
     width: 100%;
-    height: 745px;
     position: relative;
 }
 #logo{
@@ -284,7 +283,7 @@ ul.menu li{
     position: relative;
     float: left;
 }
-#pitch a {
+#pitch .nivo-caption-content {
     color: white !important;
     background: none repeat scroll 0 0 black;
     height: 43px;
@@ -296,6 +295,7 @@ ul.menu li{
     float: left;
     opacity: 0.6;
     width: 100%;
+    cursor: pointer;
 }
 #pitch .title {
     padding-left: 30px;

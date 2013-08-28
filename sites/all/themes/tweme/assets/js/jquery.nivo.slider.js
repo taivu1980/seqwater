@@ -100,8 +100,8 @@
                 if($(this).attr('title') != '' && $(this).attr('title') != undefined){
                      titleCaption = $(this).attr('title');
                 }
-                strCaption += '<li class="nivo-caption-customize '+strActive+'" rel="'+countCaption+'"><a href="#"><span class="title">'+titleCaption;
-                strCaption += '</span></a></li><div class="clear-all"></div>';
+                strCaption += '<li class="nivo-caption-customize '+strActive+'" rel="'+countCaption+'"><div class="nivo-caption-content"><span class="title">'+titleCaption;
+                strCaption += '</span></div></li><div class="clear-all"></div>';
 
                 //count up
                 countCaption++;

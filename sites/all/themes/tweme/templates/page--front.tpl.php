@@ -85,7 +85,7 @@ $(".pitch5").click(function(){
 });
 </script>
 
-
+<div class="clear-all"></div>
 <div id="wraper-content">
 <!-- START RENDER PEOPLE BLOCK -->
 <div id="people">
