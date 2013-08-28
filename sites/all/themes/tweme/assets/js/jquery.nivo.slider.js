@@ -94,11 +94,14 @@
             var countCaption = 0;
             $(".nivoSlider .slide").each(function(){
                 var titleCaption = 'N/A';
+                var strActive = '';
+                if(countCaption == 0) strActive = 'active';
+
                 if($(this).attr('title') != '' && $(this).attr('title') != undefined){
                      titleCaption = $(this).attr('title');
                 }
-                strCaption += '<li class="nivo-caption-customize" rel="'+countCaption+'"><a href="#"><span class="title">'+titleCaption;
-                strCaption += '</span></a><span class="bigbannerslider-active"></span></li><br/>';
+                strCaption += '<li class="nivo-caption-customize '+strActive+'" rel="'+countCaption+'"><a href="#"><span class="title">'+titleCaption;
+                strCaption += '</span></a></li><div class="clear-all"></div>';
 
                 //count up
                 countCaption++;

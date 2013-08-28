@@ -37,3 +37,6 @@
 #site-map .site-map-menus h2.title {
     display: none;
 }
+.clear-all{
+    clear:both;
+}
