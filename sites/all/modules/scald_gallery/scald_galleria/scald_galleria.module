@@ -216,8 +216,8 @@ function scald_gallery_preprocess_scald_galleria(&$vars) {
   drupal_add_js($galleria_js_path);
 
   $theme_js_path = scald_gallery_get_library_file($vars['options']['theme']);
-  drupal_add_js($theme_js_path);
-
+  drupal_add_js($theme_js_path, array('scope' => 'footer'));
+	
   $inline_js = "Galleria.run('#" . $vars['galleria_id'] . "');";
   drupal_add_js($inline_js, array('type' => 'inline', 'scope' => 'footer'));
 }
